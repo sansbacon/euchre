@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>FitzPredict</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>Test Cricket Predictor</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('run_prediction')}}"method="post">
+    	<input type="text" name="url" placeholder="Cricinfo Scorecard Link" required="required" value="{{ url_value }}" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ error_text }}
+   <h2><a href={{ url_value }} target="_blank">{{ summary_header }}</a></h2>
+   <p>{{ summary_team1 }}</p>
+   <p>{{ summary_team2 }}</p>
+   <br>
+   <h2>{{ prediction_header }}</h2>
+   <p>{{ prediction_text }}</p>
+   <p>{{ prediction_team1 }}</p>
+   <p>{{ prediction_team2 }}</p>
+
+ </div>
+</body>
+</html>
