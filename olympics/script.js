@@ -25,6 +25,13 @@ function populateNavbar(events) {
 // Update lanes when an event is clicked
 function updateLanes(selectedEvent) {
   const pool = document.getElementById('pool');
+  # TODO: add to function
+  if (selectedEvent.sport === 'Athletics') {
+    pool.style.backgroundColor = '#A74C3A';
+  } else {
+    pool.style.backgroundColor = '#039ECC'; // Default blue for swimming
+  }
+  
   pool.innerHTML = ''; // Clear existing lanes
 
   selectedEvent.results.forEach(result => {
