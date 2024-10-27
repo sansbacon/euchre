@@ -1,0 +1,322 @@
+{
+  "events": [
+    {
+      "event": "50m Freestyle",
+      "sport": "Swimming",
+      "laps": 1,
+      "results": [
+        {
+          "lane": 1,
+          "athlete": "Athlete 50m F L1",
+          "country": "AUS",
+          "timeSeconds": 25.00386738
+        },
+        {
+          "lane": 2,
+          "athlete": "Athlete 50m F L2",
+          "country": "NZL",
+          "timeSeconds": 25.18608265
+        },
+        {
+          "lane": 3,
+          "athlete": "Athlete 50m F L3",
+          "country": "GBR",
+          "timeSeconds": 25.52679794
+        },
+        {
+          "lane": 4,
+          "athlete": "Athlete 50m F L4",
+          "country": "USA",
+          "timeSeconds": 25.29944026
+        },
+        {
+          "lane": 5,
+          "athlete": "Athlete 50m F L5",
+          "country": "FRA",
+          "timeSeconds": 23.98960163
+        },
+        {
+          "lane": 6,
+          "athlete": "Athlete 50m F L6",
+          "country": "GER",
+          "timeSeconds": 23.22841767
+        },
+        {
+          "lane": 7,
+          "athlete": "Athlete 50m F L7",
+          "country": "JPN",
+          "timeSeconds": 23.17912064
+        },
+        {
+          "lane": 8,
+          "athlete": "Athlete 50m F L8",
+          "country": "ITA",
+          "timeSeconds": 25.45634487
+        }
+      ]
+    },
+    {
+      "event": "100m Freestyle",
+      "sport": "Swimming",
+      "laps": 2,
+      "results": [
+        {
+          "lane": 1,
+          "athlete": "Athlete 100m F L1",
+          "country": "AUS",
+          "timeSeconds": 51.42201832
+        },
+        {
+          "lane": 2,
+          "athlete": "Athlete 100m F L2",
+          "country": "NZL",
+          "timeSeconds": 44.31556448
+        },
+        {
+          "lane": 3,
+          "athlete": "Athlete 100m F L3",
+          "country": "GBR",
+          "timeSeconds": 45.18674265
+        },
+        {
+          "lane": 4,
+          "athlete": "Athlete 100m F L4",
+          "country": "USA",
+          "timeSeconds": 48.50263042
+        },
+        {
+          "lane": 5,
+          "athlete": "Athlete 100m F L5",
+          "country": "FRA",
+          "timeSeconds": 50.22868557
+        },
+        {
+          "lane": 6,
+          "athlete": "Athlete 100m F L6",
+          "country": "GER",
+          "timeSeconds": 44.52770156
+        },
+        {
+          "lane": 7,
+          "athlete": "Athlete 100m F L7",
+          "country": "JPN",
+          "timeSeconds": 46.44640479
+        },
+        {
+          "lane": 8,
+          "athlete": "Athlete 100m F L8",
+          "country": "ITA",
+          "timeSeconds": 45.47432142
+        }
+      ]
+    },
+    {
+      "event": "200m Freestyle",
+      "sport": "Swimming",
+      "laps": 4,
+      "results": [
+        {
+          "lane": 1,
+          "athlete": "Athlete 200m F L1",
+          "country": "AUS",
+          "timeSeconds": 88.21259722
+        },
+        {
+          "lane": 2,
+          "athlete": "Athlete 200m F L2",
+          "country": "NZL",
+          "timeSeconds": 97.38042023
+        },
+        {
+          "lane": 3,
+          "athlete": "Athlete 200m F L3",
+          "country": "GBR",
+          "timeSeconds": 100.8116541
+        },
+        {
+          "lane": 4,
+          "athlete": "Athlete 200m F L4",
+          "country": "USA",
+          "timeSeconds": 97.29129815
+        },
+        {
+          "lane": 5,
+          "athlete": "Athlete 200m F L5",
+          "country": "FRA",
+          "timeSeconds": 92.58717645
+        },
+        {
+          "lane": 6,
+          "athlete": "Athlete 200m F L6",
+          "country": "GER",
+          "timeSeconds": 94.85180194
+        },
+        {
+          "lane": 7,
+          "athlete": "Athlete 200m F L7",
+          "country": "JPN",
+          "timeSeconds": 88.82320106
+        },
+        {
+          "lane": 8,
+          "athlete": "Athlete 200m F L8",
+          "country": "ITA",
+          "timeSeconds": 94.4518428
+        },
+        {
+          "lane": 9,
+          "athlete": "Athlete 200m F L9",
+          "country": "AUS",
+          "timeSeconds": 100.6753645
+        },
+        {
+          "lane": 10,
+          "athlete": "Athlete 200m F L10",
+          "country": "NZL",
+          "timeSeconds": 90.07941174
+        }
+      ]
+    },
+    {
+      "event": "400m Freestyle",
+      "sport": "Swimming",
+      "laps": 8,
+      "results": [
+        {
+          "lane": 1,
+          "athlete": "Athlete 400m F L1",
+          "country": "GBR",
+          "timeSeconds": 195.7524316
+        },
+        {
+          "lane": 2,
+          "athlete": "Athlete 400m F L2",
+          "country": "USA",
+          "timeSeconds": 195.3919027
+        },
+        {
+          "lane": 3,
+          "athlete": "Athlete 400m F L3",
+          "country": "FRA",
+          "timeSeconds": 189.881732
+        },
+        {
+          "lane": 4,
+          "athlete": "Athlete 400m F L4",
+          "country": "GER",
+          "timeSeconds": 177.7337428
+        },
+        {
+          "lane": 5,
+          "athlete": "Athlete 400m F L5",
+          "country": "JPN",
+          "timeSeconds": 205.1275572
+        },
+        {
+          "lane": 6,
+          "athlete": "Athlete 400m F L6",
+          "country": "ITA",
+          "timeSeconds": 183.7740736
+        }
+      ]
+    },
+    {
+      "event": "100m",
+      "sport": "Athletics",
+      "laps": 1,
+      "results": [
+        {
+          "lane": 1,
+          "athlete": "Athlete 100m L1",
+          "country": "AUS",
+          "timeSeconds": 10.81754926
+        },
+        {
+          "lane": 2,
+          "athlete": "Athlete 100m L2",
+          "country": "NZL",
+          "timeSeconds": 11.30567285
+        },
+        {
+          "lane": 3,
+          "athlete": "Athlete 100m L3",
+          "country": "GBR",
+          "timeSeconds": 11.53149051
+        },
+        {
+          "lane": 4,
+          "athlete": "Athlete 100m L4",
+          "country": "USA",
+          "timeSeconds": 11.20248447
+        },
+        {
+          "lane": 5,
+          "athlete": "Athlete 100m L5",
+          "country": "FRA",
+          "timeSeconds": 10.55095081
+        },
+        {
+          "lane": 6,
+          "athlete": "Athlete 100m L6",
+          "country": "GER",
+          "timeSeconds": 10.42309148
+        },
+        {
+          "lane": 7,
+          "athlete": "Athlete 100m L7",
+          "country": "JPN",
+          "timeSeconds": 11.57627841
+        }
+      ]
+    },
+    {
+      "event": "200m",
+      "sport": "Athletics",
+      "laps": 1,
+      "results": [
+        {
+          "lane": 1,
+          "athlete": "Athlete 200m L1",
+          "country": "ITA",
+          "timeSeconds": 23.98539431
+        },
+        {
+          "lane": 2,
+          "athlete": "Athlete 200m L2",
+          "country": "FRA",
+          "timeSeconds": 24.2974459
+        },
+        {
+          "lane": 3,
+          "athlete": "Athlete 200m L3",
+          "country": "AUS",
+          "timeSeconds": 24.56129223
+        },
+        {
+          "lane": 4,
+          "athlete": "Athlete 200m L4",
+          "country": "USA",
+          "timeSeconds": 24.71284701
+        },
+        {
+          "lane": 5,
+          "athlete": "Athlete 200m L5",
+          "country": "GER",
+          "timeSeconds": 23.99449518
+        },
+        {
+          "lane": 6,
+          "athlete": "Athlete 200m L6",
+          "country": "JPN",
+          "timeSeconds": 25.68492092
+        },
+        {
+          "lane": 7,
+          "athlete": "Athlete 200m L7",
+          "country": "NZL",
+          "timeSeconds": 26.03077696
+        }
+      ]
+    }
+  ]
+}

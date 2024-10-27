@@ -3,6 +3,59 @@ const totalLaps = 2
 const totalLanes = 8
 const playbackSpeedFactor = 1
 
+// Fetch the event data
+fetch('./events.json')
+  .then(response => response.json())
+  .then(data => {
+    const events = data.events;
+    populateNavbar(events);
+  })
+  .catch(error => console.error('Error fetching data:', error));
+
+// Populate the navbar with unique events
+function populateNavbar(events) {
+  const navbar = document.getElementById('navbar');
+  events.forEach(event => {
+    const eventButton = document.createElement('div');
+    eventButton.textContent = event.event;
+    eventButton.className = 'event-item';
+    eventButton.onclick = () => simulateRace(event);
+    navbar.appendChild(eventButton);
+  });
+}
+
+// Update lanes when an event is clicked
+function updateLanes(selectedEvent) {
+  const pool = document.getElementById('pool');
+  pool.innerHTML = ''; // Clear existing lanes
+
+  selectedEvent.results.forEach(result => {
+    const lane = document.createElement('div');
+    lane.className = 'lane';
+    lane.id = `lane-${result.lane}`
+    
+    const laneLabel = document.createElement('div');
+    laneLabel.className = 'lane-label';
+    laneLabel.textContent = result.athlete; // Set athlete's name
+    
+    // Dot that moves along the lane
+    const dot = document.createElement('div');
+    dot.className = 'dot';
+    dot.id = `dot-${result.lane}`;
+
+    const totalTimeLabel = document.createElement('div');
+    totalTimeLabel.className = 'total-time';
+    totalTimeLabel.id = `total-time-${result.lane}`;
+    // totalTimeLabel.textContent = result.timeSeconds.toFixed(2); // Set timeSeconds
+    
+    lane.appendChild(laneLabel);
+    lane.appendChild(totalTimeLabel);
+    lane.appendChild(dot);
+
+    pool.appendChild(lane);
+  });
+}
+
 // Function to create lanes dynamically
 function createLanes(totalLanes) {
   const pool = document.getElementById('pool');
@@ -63,16 +116,20 @@ function animateDot(dot, poolWidth, totalTime, totalTimeElement, playbackSpeedFa
 }
 
 // Create the lanes
-createLanes(totalLanes);
+// createLanes(totalLanes);
 
 // Get page elements
-const pool = document.getElementById('pool');
-const poolWidth = pool.offsetWidth;
-const dots = document.querySelectorAll('.dot');
+function simulateRace(event) {
+  updateLanes(event)
+  const pool = document.getElementById('pool');
+  const poolWidth = pool.offsetWidth;
+  const dots = document.querySelectorAll('.dot');
 
-// Move each dot
-dots.forEach((dot, index) => {
-  const totalTime = 1 + Math.random();
-  const totalTimeElement = document.getElementById(`total-time-${index + 1}`);
-  animateDot(dot, poolWidth, totalTime, totalTimeElement, playbackSpeedFactor);
-});
+
+  // Move each dot
+  dots.forEach((dot, index) => {
+    const totalTime = 1 + Math.random();
+    const totalTimeElement = document.getElementById(`total-time-${index + 1}`);
+    animateDot(dot, poolWidth, totalTime, totalTimeElement, playbackSpeedFactor);
+  })
+}
