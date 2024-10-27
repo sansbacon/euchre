@@ -1,7 +1,5 @@
 // Define constants
-const totalLaps = 2
-const totalLanes = 8
-const playbackSpeedFactor = 1
+const playbackSpeedFactor = 10
 
 // Fetch the event data
 fetch('./events.json')
@@ -56,37 +54,6 @@ function updateLanes(selectedEvent) {
   });
 }
 
-// Function to create lanes dynamically
-function createLanes(totalLanes) {
-  const pool = document.getElementById('pool');
-  for (let i = 1; i <= totalLanes; i++) {
-    const lane = document.createElement('div');
-    lane.className = 'lane';
-    lane.id = `lane-${i}`;
-    
-    // Lane label (competitor name)
-    const laneLabel = document.createElement('div');
-    laneLabel.className = 'lane-label';
-    laneLabel.textContent = `200F_${i}`;
-    
-    // Dot that moves along the lane
-    const dot = document.createElement('div');
-    dot.className = 'dot';
-    dot.id = `dot-${i}`;
-    
-    // Total time label that displays at the end
-    const totalTimeLabel = document.createElement('div');
-    totalTimeLabel.className = 'total-time';
-    totalTimeLabel.id = `total-time-${i}`;
-    
-    lane.appendChild(laneLabel);
-    lane.appendChild(dot);
-    lane.appendChild(totalTimeLabel);
-    
-    pool.appendChild(lane);
-  }
-}
-
 // Function to animate a dot in its lane
 function animateDot(dot, poolWidth, totalLaps, totalTime, totalTimeElement, playbackSpeedFactor) {
   let lapsCompleted = 0;
@@ -115,12 +82,12 @@ function animateDot(dot, poolWidth, totalLaps, totalTime, totalTimeElement, play
   completeNextLap();
 }
 
-// Create the lanes
-// createLanes(totalLanes);
 
-// Get page elements
+// Simulate the race
 function simulateRace(event) {
+
   updateLanes(event)
+
   const totalLaps = event.laps
   const pool = document.getElementById('pool');
   const poolWidth = pool.offsetWidth;
@@ -128,7 +95,11 @@ function simulateRace(event) {
 
   // Move each dot
   dots.forEach((dot, index) => {
-    const totalTime = 1 + Math.random();
+    
+    const result = event.results[index]
+    
+    // const totalTime = 1 + Math.random();
+    const totalTime = result.timeSeconds;
     const totalTimeElement = document.getElementById(`total-time-${index + 1}`);
     animateDot(dot, poolWidth, totalLaps, totalTime, totalTimeElement, playbackSpeedFactor);
   })
