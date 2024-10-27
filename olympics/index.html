@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pool Race Simulation</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #e0f7fa;
+    }
+    .pool {
+      position: relative;
+      width: 800px;
+      height: 400px;
+      background-color: #0077be;
+      border: 2px solid #005a99;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .lane {
+      position: relative;
+      width: 100%;
+      height: 12.5%;
+      display: flex;
+      align-items: center;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+    }
+    .lane-label {
+      width: 60px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+    }
+    .dot {
+      width: 20px;
+      height: 20px;
+      background-color: #ff5722;
+      border-radius: 50%;
+      position: absolute;
+      left: 60px;
+      transition: transform 1s linear;
+    }
+  </style>
+</head>
+<body>
+  <div class="pool" id="pool">
+    <div class="lane" id="lane-1">
+      <div class="lane-label">200F_1</div>
+      <div class="dot" id="dot-1"></div>
+    </div>
+    <div class="lane" id="lane-2">
+      <div class="lane-label">200F_2</div>
+      <div class="dot" id="dot-2"></div>
+    </div>
+    <div class="lane" id="lane-3">
+      <div class="lane-label">200F_3</div>
+      <div class="dot" id="dot-3"></div>
+    </div>
+    <div class="lane" id="lane-4">
+      <div class="lane-label">200F_4</div>
+      <div class="dot" id="dot-4"></div>
+    </div>
+    <div class="lane" id="lane-5">
+      <div class="lane-label">200F_5</div>
+      <div class="dot" id="dot-5"></div>
+    </div>
+    <div class="lane" id="lane-6">
+      <div class="lane-label">200F_6</div>
+      <div class="dot" id="dot-6"></div>
+    </div>
+    <div class="lane" id="lane-7">
+      <div class="lane-label">200F_7</div>
+      <div class="dot" id="dot-7"></div>
+    </div>
+    <div class="lane" id="lane-8">
+      <div class="lane-label">200F_8</div>
+      <div class="dot" id="dot-8"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
