@@ -1,4 +1,5 @@
-const totalLaps = 8
+const totalLaps = 3
+const playbackSpeedFactor = 1
 
 // Helper function to create a random time between 3 and 4 seconds
 function getRandomTime() {
@@ -10,6 +11,8 @@ function animateDot(dot, time, poolWidth, totalTimeElement) {
   let laps = 0;
   const distance = poolWidth - 100; // Total distance minus dot's start position (left margin of 60px + dot width of 20px)
 
+  screenTime = time / playbackSpeedFactor
+
   function move() {
     if (laps >= totalLaps) {
       totalTimeElement.textContent = `${time.toFixed(2)}`;
@@ -18,14 +21,14 @@ function animateDot(dot, time, poolWidth, totalTimeElement) {
 
     // Determine the position based on lap
     const position = laps % 2 === 0 ? distance : 0;
-    dot.style.transitionDuration = `${time / totalLaps}s`;
+    dot.style.transitionDuration = `${screenTime / totalLaps}s`;
     dot.style.transform = `translateX(${position}px)`;
 
     // Move the dot and increment laps count
     setTimeout(() => {
       laps++;
       move(); // Continue to the next lap
-    }, (time / totalLaps) * 1000); // Wait half the time before each lap move
+    }, (screenTime / totalLaps) * 1000); // Wait half the time before each lap move
   }
 
   move();
