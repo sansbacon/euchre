@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,24 +8,27 @@
   <style>
     body {
       display: flex;
-      justify-content: flex-start; /* Align items to the start */
+      justify-content: flex-start;
       align-items: center;
       height: 100vh;
       margin: 0;
       background-color: #e0f7fa;
     }
+
     .nav-panel {
-      width: 200px; /* Fixed width for the navigation panel */
-      height: 100vh; /* Full height */
+      width: 200px;
+      height: 100vh;
       background-color: #0077be;
       color: white;
       padding: 10px;
-      overflow-y: auto; /* Make it scrollable */
+      overflow-y: auto;
     }
+
     .nav-item {
       margin: 10px 0;
       cursor: pointer;
     }
+
     .pool {
       position: relative;
       width: 800px;
@@ -34,8 +38,9 @@
       display: flex;
       flex-direction: column;
       overflow: hidden;
-      margin-left: 20px; /* Add margin to create space */
+      margin-left: 20px;
     }
+
     .lane {
       position: relative;
       width: 100%;
@@ -45,30 +50,34 @@
       border-top: 1px solid white;
       border-bottom: 1px solid white;
     }
+
     .lane-label {
       width: 60px;
       color: white;
       font-weight: bold;
       text-align: center;
     }
+
     .dot {
       width: 20px;
       height: 20px;
       background-color: #ff5722;
       border-radius: 50%;
       position: absolute;
-      left: 60px; /* Adjust based on your design */
+      left: 60px;
       transition: transform 1s linear;
     }
+
     .total-time {
-      position: absolute; /* Position absolute relative to the lane */
-      left: 80px; /* Adjust left position to place it next to the dot */
+      position: absolute;
+      left: 80px;
       color: white;
       font-weight: bold;
-      padding-left: 5px; /* Add left padding */
+      padding-left: 5px;
     }
   </style>
 </head>
+
 <body>
   <div class="nav-panel">
     <div class="nav-item">100m Freestyle</div>
@@ -77,10 +86,11 @@
     <div class="nav-item">800m Freestyle</div>
     <div class="nav-item">1500m Freestyle</div>
   </div>
-  
+
   <div class="pool" id="pool">
     <!-- Lanes will be created dynamically here -->
   </div>
   <script src="script.js"></script>
 </body>
+
 </html>

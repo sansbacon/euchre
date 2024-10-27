@@ -1,27 +1,30 @@
+// Define constants
 const totalLaps = 2
 const totalLanes = 8
 const playbackSpeedFactor = 1
 
-
-// Create lanes dynamically
-function createLanes() {
+// Function to create lanes dynamically
+function createLanes(totalLanes) {
   const pool = document.getElementById('pool');
   for (let i = 1; i <= totalLanes; i++) {
     const lane = document.createElement('div');
     lane.className = 'lane';
     lane.id = `lane-${i}`;
     
+    // Lane label (competitor name)
     const laneLabel = document.createElement('div');
     laneLabel.className = 'lane-label';
     laneLabel.textContent = `200F_${i}`;
     
+    // Dot that moves along the lane
     const dot = document.createElement('div');
     dot.className = 'dot';
     dot.id = `dot-${i}`;
     
+    // Total time label that displays at the end
     const totalTimeLabel = document.createElement('div');
     totalTimeLabel.className = 'total-time';
-    totalTimeLabel.id = `time-${i}`;
+    totalTimeLabel.id = `total-time-${i}`;
     
     lane.appendChild(laneLabel);
     lane.appendChild(dot);
@@ -31,53 +34,45 @@ function createLanes() {
   }
 }
 
-// Helper function to create a random time between 3 and 4 seconds
-function getRandomTime() {
-  return 1 + Math.random();
-}
-
 // Function to animate a dot in its lane
-function animateDot(dot, time, poolWidth, totalTimeElement) {
-  let laps = 0;
-  const distance = poolWidth - 100; // Total distance minus dot's start position (left margin of 60px + dot width of 20px)
+function animateDot(dot, poolWidth, totalTime, totalTimeElement, playbackSpeedFactor) {
+  let lapsCompleted = 0;
+  const lapDistance = poolWidth - 100; // Total distance minus dot's start position
+  const totalClockTime = totalTime / playbackSpeedFactor // animation time
 
-  screenTime = time / playbackSpeedFactor
-
-  function move() {
-    if (laps >= totalLaps) {
-      totalTimeElement.textContent = `${time.toFixed(2)}`;
+  function completeNextLap() {
+    // Last lap: set time label and exit function
+    if (lapsCompleted >= totalLaps) {
+      totalTimeElement.textContent = `${totalTime.toFixed(2)}`;
       return;
     }
 
     // Determine the position based on lap
-    const position = laps % 2 === 0 ? distance : 0;
-    dot.style.transitionDuration = `${screenTime / totalLaps}s`;
-    dot.style.transform = `translateX(${position}px)`;
+    const newPosition = lapsCompleted % 2 === 0 ? lapDistance : 0;
+    dot.style.transitionDuration = `${totalClockTime / totalLaps}s`;
+    dot.style.transform = `translateX(${newPosition}px)`;
 
     // Move the dot and increment laps count
     setTimeout(() => {
-      laps++;
-      move(); // Continue to the next lap
-    }, (screenTime / totalLaps) * 1000); // Wait half the time before each lap move
+      lapsCompleted++;
+      completeNextLap(); // Continue to the next lap
+    }, (totalClockTime / totalLaps) * 1000);
   }
 
-  move();
+  completeNextLap();
 }
 
+// Create the lanes
+createLanes(totalLanes);
 
-createLanes();
-
-
+// Get page elements
 const pool = document.getElementById('pool');
 const poolWidth = pool.offsetWidth;
 const dots = document.querySelectorAll('.dot');
 
+// Move each dot
 dots.forEach((dot, index) => {
-  let time;
-  if (index === 0) time = 2;       // 200F_1 lane
-  else if (index === 1) time = 1.5;   // 200F_2 lane
-  else time = getRandomTime();      // Random time between 3 and 4 for others
-
-  const totalTimeElement = document.getElementById(`time-${index + 1}`);
-  animateDot(dot, time, poolWidth, totalTimeElement);
+  const totalTime = 1 + Math.random();
+  const totalTimeElement = document.getElementById(`total-time-${index + 1}`);
+  animateDot(dot, poolWidth, totalTime, totalTimeElement, playbackSpeedFactor);
 });
