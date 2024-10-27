@@ -1,5 +1,35 @@
-const totalLaps = 3
+const totalLaps = 2
+const totalLanes = 8
 const playbackSpeedFactor = 1
+
+
+// Create lanes dynamically
+function createLanes() {
+  const pool = document.getElementById('pool');
+  for (let i = 1; i <= totalLanes; i++) {
+    const lane = document.createElement('div');
+    lane.className = 'lane';
+    lane.id = `lane-${i}`;
+    
+    const laneLabel = document.createElement('div');
+    laneLabel.className = 'lane-label';
+    laneLabel.textContent = `200F_${i}`;
+    
+    const dot = document.createElement('div');
+    dot.className = 'dot';
+    dot.id = `dot-${i}`;
+    
+    const totalTimeLabel = document.createElement('div');
+    totalTimeLabel.className = 'total-time';
+    totalTimeLabel.id = `time-${i}`;
+    
+    lane.appendChild(laneLabel);
+    lane.appendChild(dot);
+    lane.appendChild(totalTimeLabel);
+    
+    pool.appendChild(lane);
+  }
+}
 
 // Helper function to create a random time between 3 and 4 seconds
 function getRandomTime() {
@@ -34,7 +64,10 @@ function animateDot(dot, time, poolWidth, totalTimeElement) {
   move();
 }
 
-// Select the pool width dynamically and assign times to dots
+
+createLanes();
+
+
 const pool = document.getElementById('pool');
 const poolWidth = pool.offsetWidth;
 const dots = document.querySelectorAll('.dot');
