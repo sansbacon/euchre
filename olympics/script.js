@@ -88,7 +88,7 @@ function createLanes(totalLanes) {
 }
 
 // Function to animate a dot in its lane
-function animateDot(dot, poolWidth, totalTime, totalTimeElement, playbackSpeedFactor) {
+function animateDot(dot, poolWidth, totalLaps, totalTime, totalTimeElement, playbackSpeedFactor) {
   let lapsCompleted = 0;
   const lapDistance = poolWidth - 100; // Total distance minus dot's start position
   const totalClockTime = totalTime / playbackSpeedFactor // animation time
@@ -121,15 +121,15 @@ function animateDot(dot, poolWidth, totalTime, totalTimeElement, playbackSpeedFa
 // Get page elements
 function simulateRace(event) {
   updateLanes(event)
+  const totalLaps = event.laps
   const pool = document.getElementById('pool');
   const poolWidth = pool.offsetWidth;
   const dots = document.querySelectorAll('.dot');
-
 
   // Move each dot
   dots.forEach((dot, index) => {
     const totalTime = 1 + Math.random();
     const totalTimeElement = document.getElementById(`total-time-${index + 1}`);
-    animateDot(dot, poolWidth, totalTime, totalTimeElement, playbackSpeedFactor);
+    animateDot(dot, poolWidth, totalLaps, totalTime, totalTimeElement, playbackSpeedFactor);
   })
 }
