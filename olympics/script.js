@@ -1,5 +1,5 @@
 // Define constants
-const playbackSpeedFactor = 10
+const playbackSpeedFactor = 20
 
 // Fetch the event data
 fetch('./events.json')
@@ -27,9 +27,9 @@ function updateLanes(selectedEvent) {
   const pool = document.getElementById('pool');
   // TODO: add to function
   if (selectedEvent.sport === 'Athletics') {
-    pool.style.backgroundColor = '#A74C3A';
+    pool.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--pool-athletics-color');
   } else {
-    pool.style.backgroundColor = '#039ECC'; // Default blue for swimming
+    pool.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--pool-swimming-color');
   }
   
   pool.innerHTML = ''; // Clear existing lanes
@@ -61,10 +61,18 @@ function updateLanes(selectedEvent) {
   });
 }
 
-// Function to animate a dot in its lane
-function animateDot(dot, poolWidth, totalLaps, totalTime, totalTimeElement, playbackSpeedFactor) {
+// Animate a dot in its lane
+function animateDot(dot, totalLaps, totalTime, totalTimeElement, playbackSpeedFactor) {
+  // Initialise counter
   let lapsCompleted = 0;
-  const lapDistance = poolWidth - 100; // Total distance minus dot's start position
+
+  // Calculate lap distance
+  const poolWidth =  getComputedStyle(document.documentElement).getPropertyValue('--pool-width')
+  const dotSize =  getComputedStyle(document.documentElement).getPropertyValue('--dot-size')
+  const dotLeft = getComputedStyle(document.querySelector('.dot')).getPropertyValue('left')
+  const lapDistance = parseInt(poolWidth) - parseInt(dotLeft) - parseInt(dotSize);
+
+  // Calculate animation time
   const totalClockTime = totalTime / playbackSpeedFactor // animation time
 
   function completeNextLap() {
@@ -96,8 +104,6 @@ function simulateRace(event) {
   updateLanes(event)
 
   const totalLaps = event.laps
-  const pool = document.getElementById('pool');
-  const poolWidth = pool.offsetWidth;
   const dots = document.querySelectorAll('.dot');
 
   // Move each dot
@@ -108,6 +114,6 @@ function simulateRace(event) {
     // const totalTime = 1 + Math.random();
     const totalTime = result.timeSeconds;
     const totalTimeElement = document.getElementById(`total-time-${index + 1}`);
-    animateDot(dot, poolWidth, totalLaps, totalTime, totalTimeElement, playbackSpeedFactor);
+    animateDot(dot, totalLaps, totalTime, totalTimeElement, playbackSpeedFactor);
   })
 }
