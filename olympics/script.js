@@ -70,6 +70,24 @@ function updateLanes(selectedEvent) {
   });
 }
 
+// Format a time for display
+function formatTime(timeInSeconds) {
+  const totalHundredths = Math.round(timeInSeconds * 100); // Convert to hundredths
+  const hours = Math.floor(totalHundredths / 360000); // Total seconds in an hour
+  const minutes = Math.floor((totalHundredths % 360000) / 6000); // Total seconds in a minute
+  const seconds = Math.floor((totalHundredths % 6000) / 100); // Total seconds
+  const hundredths = totalHundredths % 100; // Remaining hundredths
+
+  // Construct the formatted time based on the values of hours and minutes
+  if (hours > 0) {
+      return `${hours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(hundredths).padStart(2, '0')}`;
+  } else if (minutes > 0) {
+      return `${minutes}:${String(seconds).padStart(2, '0')}.${String(hundredths).padStart(2, '0')}`;
+  } else {
+      return `${seconds}.${String(hundredths).padStart(2, '0')}`;
+  }
+}
+
 // Animate a dot in its lane
 function animateDot(dot, totalLaps, totalTime, totalTimeElement, playbackSpeedFactor) {
   // Initialise counter
@@ -87,7 +105,7 @@ function animateDot(dot, totalLaps, totalTime, totalTimeElement, playbackSpeedFa
   function completeNextLap() {
     // Last lap: set time label and exit function
     if (lapsCompleted >= totalLaps) {
-      totalTimeElement.textContent = `${totalTime.toFixed(2)}`;
+      totalTimeElement.textContent = formatTime(totalTime)
       return;
     }
 
