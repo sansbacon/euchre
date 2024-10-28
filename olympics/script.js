@@ -37,6 +37,10 @@ function updateLanes(selectedEvent) {
     pool.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--pool-swimming-color');
   }
   
+  const numberOfLanes = selectedEvent.results.length
+  const laneHeight = (100 / numberOfLanes).toFixed(2); 
+  document.documentElement.style.setProperty('--lane-height', `${laneHeight}%`);
+
   pool.innerHTML = ''; // Clear existing lanes
 
   selectedEvent.results.forEach(result => {
