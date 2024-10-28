@@ -7,6 +7,11 @@ fetch('./events.json')
   .then(data => {
     const events = data.events;
     populateNavbar(events);
+
+    // Load first event
+    // TODO: add to function
+    const firstEvent = document.querySelector('.event-item');
+    firstEvent.click()  
   })
   .catch(error => console.error('Error fetching data:', error));
 
