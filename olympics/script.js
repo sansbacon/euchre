@@ -29,7 +29,15 @@ function populateNavbar(events) {
 
 // Update lanes when an event is clicked
 function updateLanes(selectedEvent) {
+
+  // Retrieve constants
+  const dotSize = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--dot-size'));
+  const paddingHorizontal = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--padding-horizontal'));
+  const laneLabelWidth = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--lane-label-width'));
+
   const pool = document.getElementById('pool');
+
+  // Set arena colour
   // TODO: add to function
   if (selectedEvent.sport === 'Athletics') {
     pool.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--pool-athletics-color');
@@ -61,6 +69,16 @@ function updateLanes(selectedEvent) {
     totalTimeLabel.className = 'total-time';
     totalTimeLabel.id = `total-time-${result.lane}`;
     // totalTimeLabel.textContent = result.timeSeconds.toFixed(2); // Set timeSeconds
+    
+    // Set where the times display
+    // TODO: add to function
+    if (selectedEvent.laps % 2 == 1) {
+      totalTimeLabel.style.left = 'auto';
+      totalTimeLabel.style.right = (dotSize + paddingHorizontal) + 'px';
+    } else {
+      totalTimeLabel.style.left =  (laneLabelWidth + dotSize + 2 * paddingHorizontal) + 'px';
+      totalTimeLabel.style.right = 'auto';
+    }
     
     lane.appendChild(laneLabel);
     lane.appendChild(totalTimeLabel);
