@@ -1,5 +1,5 @@
 // Define constants
-const playbackSpeedFactor = 20
+const playbackSpeedFactor = 50
 
 // Fetch the event data
 fetch('./events.json')
@@ -72,7 +72,7 @@ function updateLanes(selectedEvent) {
     
     // Set where the times display
     // TODO: add to function
-    if (selectedEvent.laps % 2 == 1) {
+    if (selectedEvent.laps % 2 === 1) {
       totalTimeLabel.style.left = 'auto';
       totalTimeLabel.style.right = (dotSize + paddingHorizontal) + 'px';
     } else {
@@ -106,8 +106,56 @@ function formatTime(timeInSeconds) {
   }
 }
 
+function displayMedals(results, totalLaps) {
+  // Sort the results based on timeSeconds to identify the top 3
+  const sortedResults = [...results].sort((a, b) => a.timeSeconds - b.timeSeconds);
+  
+  // Get the top three results
+  const [gold, silver, bronze] = sortedResults;
+  
+  // Add medals based on fastest times
+  results.forEach(result => {
+    const laneIndex = result.lane - 1;
+    const totalTimeLabel = document.getElementById(`total-time-${laneIndex + 1}`);
+
+
+    
+    if (result === gold) {
+      addMedal(totalTimeLabel, 'G', 'gold', totalLaps);
+    } else if (result === silver) {
+      addMedal(totalTimeLabel, 'S', 'silver', totalLaps);
+    } else if (result === bronze) {
+      addMedal(totalTimeLabel, 'B', 'bronze', totalLaps);
+    }
+
+    console.log(totalLaps);
+
+
+  });
+}
+
+function addMedal(labelElement, text, medalClass, totalLaps) {
+  const timeLabelLongest = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--time-label-longest'));
+  const paddingHorizontal = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--padding-horizontal'));
+  const medal = document.createElement('span');
+  medal.textContent = text;
+  medal.classList.add('medal', medalClass);
+
+  if (totalLaps % 2 === 0) {
+    // Even lap: position from the left
+    medal.style.left = paddingHorizontal + 'px';
+    medal.style.right = 'auto'; // Reset right
+  } else {
+    // Odd lap: position from the right
+    medal.style.right = timeLabelLongest + 'px'; 
+    medal.style.left = 'auto'; // Reset left
+  }
+
+  labelElement.appendChild(medal);
+}
+
 // Animate a dot in its lane
-function animateDot(dot, totalLaps, totalTime, totalTimeElement, playbackSpeedFactor) {
+function animateDot(dot, totalLaps, totalTime, totalTimeElement, playbackSpeedFactor, callback) {
   // Initialise counter
   let lapsCompleted = 0;
 
@@ -124,6 +172,9 @@ function animateDot(dot, totalLaps, totalTime, totalTimeElement, playbackSpeedFa
     // Last lap: set time label and exit function
     if (lapsCompleted >= totalLaps) {
       totalTimeElement.textContent = formatTime(totalTime)
+      if (callback) {
+        callback();
+      }
       return;
     }
 
@@ -150,6 +201,7 @@ function simulateRace(event) {
 
   const totalLaps = event.laps
   const dots = document.querySelectorAll('.dot');
+  let completedLanes = 0;
 
   // Move each dot
   dots.forEach((dot, index) => {
@@ -159,6 +211,23 @@ function simulateRace(event) {
     // const totalTime = 1 + Math.random();
     const totalTime = result.timeSeconds;
     const totalTimeElement = document.getElementById(`total-time-${index + 1}`);
-    animateDot(dot, totalLaps, totalTime, totalTimeElement, playbackSpeedFactor);
-  })
+    // animateDot(dot, totalLaps, totalTime, totalTimeElement, playbackSpeedFactor);
+
+    animateDot(dot, totalLaps, totalTime, totalTimeElement, playbackSpeedFactor, () => {
+      completedLanes++;
+
+      if (completedLanes === 3) {
+        displayMedals(event.results, totalLaps);
+      }
+    });
+      
+    //   completedLanes++; // This will only increment after the last lap
+    //   console.log(`Lane ${index + 1} completed. Total completed lanes: ${completedLanes}`);
+    //   if (completedLanes === dots.length) {
+    //     console.log("All lanes completed. Displaying medals.");
+    //     displayMedals(event.results);
+    //   }
+    // });
+  });
+  //displayMedals(event.results)
 }

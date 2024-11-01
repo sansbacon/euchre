@@ -12,6 +12,7 @@
   --pool-height: 400px;
   --pool-text-color: white;
   --pool-width: 800px;
+  --time-label-longest: 80px;
 }
 
 body {
@@ -82,3 +83,21 @@ body {
   color: var(--pool-text-color);
   font-weight: bold;
 }
+
+.medal {
+  /* display: inline-block; */
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  margin-left: 50px;
+}
+
+.gold { background-color: gold; }
+.silver { background-color: silver; }
+.bronze { background-color: #cd7f32; }
