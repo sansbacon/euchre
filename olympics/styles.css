@@ -61,7 +61,8 @@ body {
 }
 
 .lane-label {
-  width: var(--lane-label-width);
+  /* width: var(--lane-label-width); */
+  padding-left: var(--padding-horizontal);
   color: var(--pool-text-color);
   font-weight: bold;
   text-align: center;

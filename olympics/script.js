@@ -27,6 +27,32 @@ function populateNavbar(events) {
   });
 }
 
+function setDynamicLabelWidth() {
+  // Select all lane labels
+  const labels = document.querySelectorAll('.lane-label');
+  const totalTimes = document.querySelectorAll('.total-time');
+  const dotSize = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--dot-size'));
+  const paddingHorizontal = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--padding-horizontal'));
+  
+  
+  // Calculate the max width
+  let maxWidth = 0;
+  labels.forEach(label => {
+    const width = label.offsetWidth;
+    if (width > maxWidth) maxWidth = width;
+  });
+
+  // Set this max width as a CSS variable
+  document.documentElement.style.setProperty('--lane-label-width', `${maxWidth}px`);
+
+  // Update other widths
+  // TODO: deal with odd number of lanes
+  totalTimes.forEach(totalTime => {
+    totalTime.style.left =  `calc(${maxWidth}px + ${dotSize}px + 2 * ${paddingHorizontal}px)`;
+  });
+
+}
+
 // Update lanes when an event is clicked
 function updateLanes(selectedEvent) {
 
@@ -86,6 +112,8 @@ function updateLanes(selectedEvent) {
 
     pool.appendChild(lane);
   });
+
+  setDynamicLabelWidth();
 }
 
 // Format a time for display
