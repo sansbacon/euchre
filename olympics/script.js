@@ -221,6 +221,11 @@ function animateDot(dot, totalLaps, totalTime, totalTimeElement, playbackSpeedFa
   completeNextLap();
 }
 
+function setEventTitle(event) {
+  const eventTitleElement = document.getElementById('event-title');
+  eventTitleElement.textContent = event.event; // Use event name from JSON data
+}
+
 function updateEventInfo(event) {
   const eventInfo = document.getElementById('event-info');
   const lapDistance = event.distance_m / event.laps;
@@ -231,6 +236,7 @@ function updateEventInfo(event) {
 function simulateRace(event) {
 
   updateLanes(event)
+  setEventTitle(event)
   updateEventInfo(event)
 
   const totalLaps = event.laps
