@@ -3,6 +3,7 @@
     {
       "event": "50m Freestyle",
       "sport": "Swimming",
+      "distance_m": 50,
       "laps": 1,
       "results": [
         {
@@ -58,6 +59,7 @@
     {
       "event": "100m Freestyle",
       "sport": "Swimming",
+      "distance_m": 100,
       "laps": 2,
       "results": [
         {
@@ -113,6 +115,7 @@
     {
       "event": "200m Freestyle",
       "sport": "Swimming",
+      "distance_m": 200,
       "laps": 4,
       "results": [
         {
@@ -180,6 +183,7 @@
     {
       "event": "400m Freestyle",
       "sport": "Swimming",
+      "distance_m": 400,
       "laps": 8,
       "results": [
         {
@@ -223,6 +227,7 @@
     {
       "event": "100m",
       "sport": "Athletics",
+      "distance_m": 100,
       "laps": 1,
       "results": [
         {
@@ -272,6 +277,7 @@
     {
       "event": "200m",
       "sport": "Athletics",
+      "distance_m": 200,
       "laps": 1,
       "results": [
         {

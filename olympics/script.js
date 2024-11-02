@@ -221,11 +221,17 @@ function animateDot(dot, totalLaps, totalTime, totalTimeElement, playbackSpeedFa
   completeNextLap();
 }
 
+function updateEventInfo(event) {
+  const eventInfo = document.getElementById('event-info');
+  const lapDistance = event.distance_m / event.laps;
+  eventInfo.textContent = `${lapDistance}m`;
+}
 
 // Simulate the race
 function simulateRace(event) {
 
   updateLanes(event)
+  updateEventInfo(event)
 
   const totalLaps = event.laps
   const dots = document.querySelectorAll('.dot');
