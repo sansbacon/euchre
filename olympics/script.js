@@ -61,21 +61,21 @@ function updateLanes(selectedEvent) {
   const paddingHorizontal = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--padding-horizontal'));
   const laneLabelWidth = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--lane-label-width'));
 
-  const pool = document.getElementById('pool');
+  const arena = document.getElementById('arena');
 
   // Set arena colour
   // TODO: add to function
   if (selectedEvent.sport === 'Athletics') {
-    pool.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--pool-athletics-color');
+    arena.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--arena-athletics-color');
   } else {
-    pool.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--pool-swimming-color');
+    arena.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--arena-swimming-color');
   }
   
   const numberOfLanes = selectedEvent.results.length
   const laneHeight = (100 / numberOfLanes).toFixed(2); 
   document.documentElement.style.setProperty('--lane-height', `${laneHeight}%`);
 
-  pool.innerHTML = ''; // Clear existing lanes
+  arena.innerHTML = ''; // Clear existing lanes
 
   selectedEvent.results.forEach(result => {
     const lane = document.createElement('div');
@@ -110,7 +110,7 @@ function updateLanes(selectedEvent) {
     lane.appendChild(totalTimeLabel);
     lane.appendChild(dot);
 
-    pool.appendChild(lane);
+    arena.appendChild(lane);
   });
 
   setDynamicLabelWidth();
@@ -188,10 +188,10 @@ function animateDot(dot, totalLaps, totalTime, totalTimeElement, playbackSpeedFa
   let lapsCompleted = 0;
 
   // Calculate lap distance
-  const poolWidth =  getComputedStyle(document.documentElement).getPropertyValue('--pool-width')
+  const arenaWidth =  getComputedStyle(document.documentElement).getPropertyValue('--arena-width')
   const dotSize =  getComputedStyle(document.documentElement).getPropertyValue('--dot-size')
   const dotLeft = getComputedStyle(document.querySelector('.dot')).getPropertyValue('left')
-  const lapDistance = parseInt(poolWidth) - parseInt(dotLeft) - parseInt(dotSize);
+  const lapDistance = parseInt(arenaWidth) - parseInt(dotLeft) - parseInt(dotSize);
 
   // Calculate animation time
   const totalClockTime = totalTime / playbackSpeedFactor // animation time
@@ -256,8 +256,18 @@ function simulateRace(event) {
     animateDot(dot, totalLaps, totalTime, totalTimeElement, playbackSpeedFactor, () => {
       completedLanes++;
 
+    //   if (completedLanes == 1) {
+    //     dot.style.backgroundColor = 'gold';
+    //     dot.textContent = 'G';
+    //   }
+    //   if (completedLanes == 2) {
+    //     dot.style.backgroundColor = 'silver';
+    //     dot.textContent = 'S';
+    //   }
       if (completedLanes === 3) {
         displayMedals(event.results, totalLaps);
+        // dot.style.backgroundColor = '#cd7f32';
+        // dot.textContent = 'B';
       }
     });
       
