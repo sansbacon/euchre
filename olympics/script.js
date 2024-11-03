@@ -35,19 +35,14 @@ function clickFirstEvent() {
   firstEventLabel.click()
 }
 
-function setArenaBackgroundColor(event) {
-  arena.style.backgroundColor = 'maroon'; // TODO: replace
-}
-
 function setArenaElement(event) {
   const arena = document.getElementById('arena');
-  setArenaBackgroundColor(event);
+  arena.setAttribute('arena-sport', event.sport);
   arena.innerHTML = ''; // Clear existing lanes
   return arena;
 }
 
 function setLaneElement(result, laneHeightPercent) {
-
   const lane = document.createElement('div');
   lane.className = 'lane';
   lane.id = `lane-${result.lane}`

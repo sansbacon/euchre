@@ -7,8 +7,9 @@
   --nav-panel-text-color: white;
   --nav-panel-width: 200px;
   --padding-horizontal: 20px;
-  --arena-swimming-color: #039ECC;
   --arena-athletics-color: #A74C3A;
+  --arena-swimming-color: #039ECC;
+  --arena-default-color: grey;
   --arena-height: 400px;
   --arena-text-color: white;
   --arena-width: 800px;
@@ -54,7 +55,15 @@ body {
   width: 100%;
   height: var(--arena-height);
   border: none;
-  background-color: var(--arena-color);
+  background-color: var(--arena-default-color);
+}
+
+.arena[arena-sport = "Swimming"] {
+  background-color: var(--arena-swimming-color);
+}
+
+.arena[arena-sport = "Athletics"] {
+  background-color: var(--arena-athletics-color);
 }
 
 .lane {
