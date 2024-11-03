@@ -7,113 +7,144 @@ fetch('./events.json')
   .then(data => {
     const events = data.events;
     populateNavbar(events);
-
-    // Load first event
-    // TODO: add to function
-    const firstEvent = document.querySelector('.event-item');
-    firstEvent.click()  
+    clickFirstEvent();
   })
   .catch(error => console.error('Error fetching data:', error));
 
-// Populate the navbar with unique events
+/** Populates the navbar with the event labels
+ * 
+ * @param {list} events - List of events from the json
+ */
 function populateNavbar(events) {
   const navbar = document.getElementById('navbar');
+
   events.forEach(event => {
     const eventButton = document.createElement('div');
     eventButton.textContent = event.event;
-    eventButton.className = 'event-item';
-    eventButton.onclick = () => simulateRace(event);
+    eventButton.className = 'event-label';
+    eventButton.onclick = () => simulateEvent(event);
     navbar.appendChild(eventButton);
   });
 }
 
-function setDynamicLabelWidth() {
-  // Select all lane labels
-  const labels = document.querySelectorAll('.lane-label');
-  const totalTimes = document.querySelectorAll('.total-time');
-  const dotSize = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--dot-size'));
-  const paddingHorizontal = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--padding-horizontal'));
-  
-  
-  // Calculate the max width
+/**
+ * Loads the first event by clicking its label
+ */
+function clickFirstEvent() {
+  const firstEventLabel = document.querySelector('.event-label');
+  firstEventLabel.click()
+}
+
+function setArenaBackgroundColor(event) {
+  arena.style.backgroundColor = 'maroon'; // TODO: replace
+}
+
+function setArenaElement(event) {
+  const arena = document.getElementById('arena');
+  setArenaBackgroundColor(event);
+  arena.innerHTML = ''; // Clear existing lanes
+  return arena;
+}
+
+function setLaneElement(result, laneHeightPercent) {
+
+  const lane = document.createElement('div');
+  lane.className = 'lane';
+  lane.id = `lane-${result.lane}`
+  lane.style.height = laneHeightPercent + '%';
+  return lane;
+}
+
+function setLaneLabelElement(result) {
+  const laneLabel = document.createElement('div');
+  laneLabel.className = 'lane-label';
+  laneLabel.id = `lane-label-${result.lane}`;
+  laneLabel.textContent = result.athlete;
+  return laneLabel;
+}
+
+
+function setDotElement(result) {
+  const dot = document.createElement('div');
+  dot.className = 'dot';
+  dot.id = `dot-${result.lane}`;
+  return dot
+}
+
+function setTotalTimeLabelElement(result) {
+  const totalTimeLabel = document.createElement('div');
+  totalTimeLabel.className = 'total-time-label';
+  totalTimeLabel.id = `total-time-label-${result.lane}`;
+  totalTimeLabel.textContent = '';  // Initially blank
+  return totalTimeLabel
+}
+
+function calculateMaxLaneLabelWidth() {
+  const labels = document.querySelectorAll('.lane-label'); 
   let maxWidth = 0;
   labels.forEach(label => {
     const width = label.offsetWidth;
     if (width > maxWidth) maxWidth = width;
   });
-
-  // Set this max width as a CSS variable
-  document.documentElement.style.setProperty('--lane-label-width', `${maxWidth}px`);
-
-  // Update other widths
-  // TODO: deal with odd number of lanes
-  totalTimes.forEach(totalTime => {
-    totalTime.style.left =  `calc(${maxWidth}px + ${dotSize}px + 2 * ${paddingHorizontal}px)`;
-  });
-
+  return maxWidth;
 }
 
-// Update lanes when an event is clicked
-function updateLanes(selectedEvent) {
+function eventFinishesOnRight(event) {
+  return (event.laps % 2 === 1);
+}
 
-  // Retrieve constants
-  const dotSize = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--dot-size'));
-  const paddingHorizontal = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--padding-horizontal'));
-  const laneLabelWidth = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--lane-label-width'));
+function setDynamicPositions(event) {
+  const maxLaneLabelWidth = calculateMaxLaneLabelWidth() + 'px';
+  const paddingHorizontal = getComputedStyle(document.documentElement).getPropertyValue('--padding-horizontal');
+  const lanes = document.querySelectorAll('.lane');
 
-  const arena = document.getElementById('arena');
+  lanes.forEach(lane => {
+    // Dot position
+    dot = lane.querySelector('.dot');
+    dot.style.left =  `calc(${maxLaneLabelWidth} + ${paddingHorizontal})`;
+    dotLeft = getComputedStyle(dot).left;
+    dotWidth = getComputedStyle(dot).width;
 
-  // Set arena colour
-  // TODO: add to function
-  if (selectedEvent.sport === 'Athletics') {
-    arena.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--arena-athletics-color');
-  } else {
-    arena.style.backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--arena-swimming-color');
-  }
-  
-  const numberOfLanes = selectedEvent.results.length
-  const laneHeight = (100 / numberOfLanes).toFixed(2); 
-  document.documentElement.style.setProperty('--lane-height', `${laneHeight}%`);
+    // Total time label position
+    totalTimeLabel = lane.querySelector('.total-time-label');
 
-  arena.innerHTML = ''; // Clear existing lanes
-
-  selectedEvent.results.forEach(result => {
-    const lane = document.createElement('div');
-    lane.className = 'lane';
-    lane.id = `lane-${result.lane}`
-    
-    const laneLabel = document.createElement('div');
-    laneLabel.className = 'lane-label';
-    laneLabel.textContent = result.athlete; // Set athlete's name
-    
-    // Dot that moves along the lane
-    const dot = document.createElement('div');
-    dot.className = 'dot';
-    dot.id = `dot-${result.lane}`;
-
-    const totalTimeLabel = document.createElement('div');
-    totalTimeLabel.className = 'total-time';
-    totalTimeLabel.id = `total-time-${result.lane}`;
-    // totalTimeLabel.textContent = result.timeSeconds.toFixed(2); // Set timeSeconds
-    
-    // Set where the times display
-    // TODO: add to function
-    if (selectedEvent.laps % 2 === 1) {
+    if (eventFinishesOnRight(event)) {
       totalTimeLabel.style.left = 'auto';
-      totalTimeLabel.style.right = (dotSize + paddingHorizontal) + 'px';
+      totalTimeLabel.style.right = `calc(${dotWidth} + ${paddingHorizontal})`
     } else {
-      totalTimeLabel.style.left =  (laneLabelWidth + dotSize + 2 * paddingHorizontal) + 'px';
+      totalTimeLabel.style.left =  `calc(${dotLeft} + ${dotWidth} + ${paddingHorizontal})`;
       totalTimeLabel.style.right = 'auto';
     }
-    
-    lane.appendChild(laneLabel);
-    lane.appendChild(totalTimeLabel);
-    lane.appendChild(dot);
 
+  });
+}
+
+function populateArena(event) {
+  
+  // Calculate lane height
+  const numberOfLanes = event.results.length;
+  const laneHeightPercent = (100 / numberOfLanes).toFixed(2); 
+
+  // Set arena element
+  const arena = setArenaElement(event);
+  
+  event.results.forEach(result => {
+    // Set elements within the arena
+    const lane = setLaneElement(result, laneHeightPercent);
+    const laneLabel = setLaneLabelElement(result);
+    const dot = setDotElement(result);
+    const totalTimeLabel = setTotalTimeLabelElement(result)
+
+    // Append to the arena element
+    lane.appendChild(laneLabel);
+    lane.appendChild(dot);
+    lane.appendChild(totalTimeLabel);
     arena.appendChild(lane);
   });
+  
+  // Update positions based on finishing end and longest lane label
+  setDynamicPositions(event);
 
-  setDynamicLabelWidth();
 }
 
 // Format a time for display
@@ -144,7 +175,7 @@ function displayMedals(results, totalLaps) {
   // Add medals based on fastest times
   results.forEach(result => {
     const laneIndex = result.lane - 1;
-    const totalTimeLabel = document.getElementById(`total-time-${laneIndex + 1}`);
+    const totalTimeLabel = document.getElementById(`total-time-label-${laneIndex + 1}`);
 
 
     
@@ -155,8 +186,6 @@ function displayMedals(results, totalLaps) {
     } else if (result === bronze) {
       addMedal(totalTimeLabel, 'B', 'bronze', totalLaps);
     }
-
-    console.log(totalLaps);
 
 
   });
@@ -232,10 +261,18 @@ function updateEventInfo(event) {
   eventInfo.textContent = `${lapDistance}m`;
 }
 
-// Simulate the race
-function simulateRace(event) {
+/** Simulates an event by moving each dot along the arena
+ * 
+ * @param {json} event - single event from the json
+ */
+function simulateEvent(event) {
 
-  updateLanes(event)
+  populateArena(event);
+  // determineMedallists(event);
+  // addEventTitle(event);
+  // addLapMarker(event);
+
+  // updateLanes(event)
   setEventTitle(event)
   updateEventInfo(event)
 
@@ -250,34 +287,15 @@ function simulateRace(event) {
     
     // const totalTime = 1 + Math.random();
     const totalTime = result.timeSeconds;
-    const totalTimeElement = document.getElementById(`total-time-${index + 1}`);
-    // animateDot(dot, totalLaps, totalTime, totalTimeElement, playbackSpeedFactor);
+    const totalTimeElement = document.getElementById(`total-time-label-${index + 1}`);
 
     animateDot(dot, totalLaps, totalTime, totalTimeElement, playbackSpeedFactor, () => {
       completedLanes++;
 
-    //   if (completedLanes == 1) {
-    //     dot.style.backgroundColor = 'gold';
-    //     dot.textContent = 'G';
-    //   }
-    //   if (completedLanes == 2) {
-    //     dot.style.backgroundColor = 'silver';
-    //     dot.textContent = 'S';
-    //   }
       if (completedLanes === 3) {
         displayMedals(event.results, totalLaps);
-        // dot.style.backgroundColor = '#cd7f32';
-        // dot.textContent = 'B';
       }
     });
-      
-    //   completedLanes++; // This will only increment after the last lap
-    //   console.log(`Lane ${index + 1} completed. Total completed lanes: ${completedLanes}`);
-    //   if (completedLanes === dots.length) {
-    //     console.log("All lanes completed. Displaying medals.");
-    //     displayMedals(event.results);
-    //   }
-    // });
+
   });
-  //displayMedals(event.results)
 }
