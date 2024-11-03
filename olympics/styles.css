@@ -7,11 +7,11 @@
   --nav-panel-text-color: white;
   --nav-panel-width: 200px;
   --padding-horizontal: 20px;
-  --pool-swimming-color: #039ECC;
-  --pool-athletics-color: #A74C3A;
-  --pool-height: 400px;
-  --pool-text-color: white;
-  --pool-width: 800px;
+  --arena-swimming-color: #039ECC;
+  --arena-athletics-color: #A74C3A;
+  --arena-height: 400px;
+  --arena-text-color: white;
+  --arena-width: 800px;
   --time-label-longest: 80px;
 }
 
@@ -38,19 +38,19 @@ body {
   cursor: pointer;
 }
 
-.pool-container {
+.arena-container {
   display: flex;
   flex-direction: column;
   align-items: center; /* Center-aligns everything inside */
-  width: var(--pool-width); /* Pool width */
+  width: var(--arena-width); /* arena width */
   margin: 0 auto; /* Center the entire container */
 }
 
-.pool {
+.arena {
   position: relative;
-  width: 100%; /*var(--pool-width);*/
-  height: var(--pool-height);
-  background-color: var(--pool-color);
+  width: 100%; /*var(--arena-width);*/
+  height: var(--arena-height);
+  background-color: var(--arena-color);
   /* border: 2px solid #005a99; */
   display: flex;
   flex-direction: column;
@@ -71,7 +71,7 @@ body {
 .lane-label {
   /* width: var(--lane-label-width); */
   padding-left: var(--padding-horizontal);
-  color: var(--pool-text-color);
+  color: var(--arena-text-color);
   font-weight: bold;
   text-align: center;
 }
@@ -90,7 +90,7 @@ body {
 .total-time {
   position: absolute;
   left: calc(var(--lane-label-width) + var(--dot-size) + 2 * var(--padding-horizontal));
-  color: var(--pool-text-color);
+  color: var(--arena-text-color);
   font-weight: bold;
 }
 
@@ -117,8 +117,8 @@ body {
   font-size: 18px;
   text-align: right;
   padding-top: 10px;
-  width: 100%; /* Match the pool width */
-  max-width: var(--pool-width);
+  width: 100%; /* Match the arena width */
+  max-width: var(--arena-width);
   margin: 0 auto;
 }
 
