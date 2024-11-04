@@ -116,7 +116,7 @@ body {
 .silver { background-color: silver; }
 .bronze { background-color: #cd7f32; }
 
-.event-info {
+.lap-marker {
   color: grey;
   font-size: 18px;
   text-align: right;

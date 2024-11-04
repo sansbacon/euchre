@@ -75,7 +75,7 @@ function setTotalTimeLabelElement(result) {
 }
 
 function calculateMaxLaneLabelWidth() {
-  const labels = document.querySelectorAll('.lane-label'); 
+  const labels = document.querySelectorAll('.lane-label');
   let maxWidth = 0;
   labels.forEach(label => {
     const width = label.offsetWidth;
@@ -96,7 +96,7 @@ function setDynamicPositions(event) {
   lanes.forEach(lane => {
     // Dot position
     dot = lane.querySelector('.dot');
-    dot.style.left =  `calc(${maxLaneLabelWidth} + ${paddingHorizontal})`;
+    dot.style.left = `calc(${maxLaneLabelWidth} + ${paddingHorizontal})`;
     dotLeft = getComputedStyle(dot).left;
     dotWidth = getComputedStyle(dot).width;
 
@@ -105,9 +105,9 @@ function setDynamicPositions(event) {
 
     if (eventFinishesOnRight(event)) {
       totalTimeLabel.style.left = 'auto';
-      totalTimeLabel.style.right = `calc(${dotWidth} + ${paddingHorizontal})`
+      totalTimeLabel.style.right = `calc(${dotWidth} + 2 * ${paddingHorizontal})`
     } else {
-      totalTimeLabel.style.left =  `calc(${dotLeft} + ${dotWidth} + ${paddingHorizontal})`;
+      totalTimeLabel.style.left = `calc(${dotLeft} + ${dotWidth} + ${paddingHorizontal})`;
       totalTimeLabel.style.right = 'auto';
     }
 
@@ -115,14 +115,14 @@ function setDynamicPositions(event) {
 }
 
 function populateArena(event) {
-  
+
   // Calculate lane height
   const numberOfLanes = event.results.length;
-  const laneHeightPercent = (100 / numberOfLanes).toFixed(2); 
+  const laneHeightPercent = (100 / numberOfLanes).toFixed(2);
 
   // Set arena element
   const arena = setArenaElement(event);
-  
+
   event.results.forEach(result => {
     // Set elements within the arena
     const lane = setLaneElement(result, laneHeightPercent);
@@ -136,44 +136,36 @@ function populateArena(event) {
     lane.appendChild(totalTimeLabel);
     arena.appendChild(lane);
   });
-  
+
   // Update positions based on finishing end and longest lane label
   setDynamicPositions(event);
 
 }
 
-// Format a time for display
-function formatTime(timeInSeconds) {
-  const totalHundredths = Math.round(timeInSeconds * 100); // Convert to hundredths
-  const hours = Math.floor(totalHundredths / 360000); // Total seconds in an hour
-  const minutes = Math.floor((totalHundredths % 360000) / 6000); // Total seconds in a minute
-  const seconds = Math.floor((totalHundredths % 6000) / 100); // Total seconds
-  const hundredths = totalHundredths % 100; // Remaining hundredths
-
-  // Construct the formatted time based on the values of hours and minutes
-  if (hours > 0) {
-      return `${hours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(hundredths).padStart(2, '0')}`;
-  } else if (minutes > 0) {
-      return `${minutes}:${String(seconds).padStart(2, '0')}.${String(hundredths).padStart(2, '0')}`;
-  } else {
-      return `${seconds}.${String(hundredths).padStart(2, '0')}`;
-  }
+function setEventTitle(event) {
+  const eventTitleElement = document.getElementById('event-title');
+  eventTitleElement.textContent = event.event;
 }
+
+function setLapMarker(event) {
+  const lapMarker = document.getElementById('lap-marker');
+  const lapDistance = event.distance_m / event.laps;
+  lapMarker.textContent = `${lapDistance}m`;
+}
+
 
 function displayMedals(results, totalLaps) {
   // Sort the results based on timeSeconds to identify the top 3
   const sortedResults = [...results].sort((a, b) => a.timeSeconds - b.timeSeconds);
-  
+
   // Get the top three results
   const [gold, silver, bronze] = sortedResults;
-  
+
   // Add medals based on fastest times
   results.forEach(result => {
     const laneIndex = result.lane - 1;
     const totalTimeLabel = document.getElementById(`total-time-label-${laneIndex + 1}`);
 
-
-    
     if (result === gold) {
       addMedal(totalTimeLabel, 'G', 'gold', totalLaps);
     } else if (result === silver) {
@@ -199,31 +191,62 @@ function addMedal(labelElement, text, medalClass, totalLaps) {
     medal.style.right = 'auto'; // Reset right
   } else {
     // Odd lap: position from the right
-    medal.style.right = timeLabelLongest + 'px'; 
+    medal.style.right = timeLabelLongest + 'px';
     medal.style.left = 'auto'; // Reset left
   }
 
   labelElement.appendChild(medal);
 }
 
-// Animate a dot in its lane
-function animateDot(dot, totalLaps, totalTime, totalTimeElement, playbackSpeedFactor, callback) {
+function calculateLapDistance(dot) {
+  const arenaWidth =  getComputedStyle(document.getElementById('arena')).width;
+  const dotSize =  getComputedStyle(dot).width;
+  const dotLeft = getComputedStyle(dot).left;
+  const paddingHorizontal = getComputedStyle(document.documentElement).getPropertyValue('--padding-horizontal');
+  const lapDistance = parseInt(arenaWidth) - parseInt(dotLeft) - parseInt(dotSize) - parseInt(paddingHorizontal);
+  return lapDistance;
+
+}
+
+// Format a time for display
+function formatTime(timeInSeconds) {
+  const totalHundredths = Math.round(timeInSeconds * 100); // Convert to hundredths
+  const hours = Math.floor(totalHundredths / 360000); // Total seconds in an hour
+  const minutes = Math.floor((totalHundredths % 360000) / 6000); // Total seconds in a minute
+  const seconds = Math.floor((totalHundredths % 6000) / 100); // Total seconds
+  const hundredths = totalHundredths % 100; // Remaining hundredths
+
+  // Construct the formatted time based on the values of hours and minutes
+  if (hours > 0) {
+    return `${hours}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(hundredths).padStart(2, '0')}`;
+  } else if (minutes > 0) {
+    return `${minutes}:${String(seconds).padStart(2, '0')}.${String(hundredths).padStart(2, '0')}`;
+  } else {
+    return `${seconds}.${String(hundredths).padStart(2, '0')}`;
+  }
+}
+
+function animateDot(result, totalLaps, playbackSpeedFactor, callback) {
   // Initialise counter
-  let lapsCompleted = 0;
+  let completedLaps = 0;
+
+  // Get objects from document
+  const laneNumber = result.lane;
+  const dot = document.getElementById(`dot-${laneNumber}`);
+  const totalTimeLabel = document.getElementById(`total-time-label-${laneNumber}`);
+
+  // Calculate real time and clock time
+  const totalTime = result.timeSeconds;
+  const totalClockTime = totalTime / playbackSpeedFactor;
+  const lapClockTime = totalClockTime / totalLaps;
 
   // Calculate lap distance
-  const arenaWidth =  getComputedStyle(document.documentElement).getPropertyValue('--arena-width')
-  const dotSize =  getComputedStyle(document.documentElement).getPropertyValue('--dot-size')
-  const dotLeft = getComputedStyle(document.querySelector('.dot')).getPropertyValue('left')
-  const lapDistance = parseInt(arenaWidth) - parseInt(dotLeft) - parseInt(dotSize);
-
-  // Calculate animation time
-  const totalClockTime = totalTime / playbackSpeedFactor // animation time
+  const lapDistance = calculateLapDistance(dot);
 
   function completeNextLap() {
     // Last lap: set time label and exit function
-    if (lapsCompleted >= totalLaps) {
-      totalTimeElement.textContent = formatTime(totalTime)
+    if (completedLaps >= totalLaps) {
+      totalTimeLabel.textContent = formatTime(totalTime)
       if (callback) {
         callback();
       }
@@ -231,30 +254,31 @@ function animateDot(dot, totalLaps, totalTime, totalTimeElement, playbackSpeedFa
     }
 
     // Determine the position based on lap
-    const newPosition = lapsCompleted % 2 === 0 ? lapDistance : 0;
-    dot.style.transitionDuration = `${totalClockTime / totalLaps}s`;
+    const newPosition = completedLaps % 2 === 0 ? lapDistance : 0;
+    dot.style.transitionDuration = `${lapClockTime}s`;
     dot.style.transform = `translateX(${newPosition}px)`;
 
     // Move the dot and increment laps count
     setTimeout(() => {
-      lapsCompleted++;
+      completedLaps++;
       completeNextLap(); // Continue to the next lap
-    }, (totalClockTime / totalLaps) * 1000);
+    }, lapClockTime * 1000);
   }
 
   completeNextLap();
+
 }
 
-function setEventTitle(event) {
-  const eventTitleElement = document.getElementById('event-title');
-  eventTitleElement.textContent = event.event; // Use event name from JSON data
+function animateAllDots(event) {
+  const totalLaps = event.laps;
+  let completedLanes = 0;
+  event.results.forEach(result => {
+    animateDot(result, totalLaps, playbackSpeedFactor, () => {
+      completedLanes++;
+    });
+  });
 }
 
-function updateEventInfo(event) {
-  const eventInfo = document.getElementById('event-info');
-  const lapDistance = event.distance_m / event.laps;
-  eventInfo.textContent = `${lapDistance}m`;
-}
 
 /** Simulates an event by moving each dot along the arena
  * 
@@ -264,33 +288,8 @@ function simulateEvent(event) {
 
   populateArena(event);
   // determineMedallists(event);
-  // addEventTitle(event);
-  // addLapMarker(event);
+  setEventTitle(event);
+  setLapMarker(event);
+  animateAllDots(event);
 
-  // updateLanes(event)
-  setEventTitle(event)
-  updateEventInfo(event)
-
-  const totalLaps = event.laps
-  const dots = document.querySelectorAll('.dot');
-  let completedLanes = 0;
-
-  // Move each dot
-  dots.forEach((dot, index) => {
-    
-    const result = event.results[index]
-    
-    // const totalTime = 1 + Math.random();
-    const totalTime = result.timeSeconds;
-    const totalTimeElement = document.getElementById(`total-time-label-${index + 1}`);
-
-    animateDot(dot, totalLaps, totalTime, totalTimeElement, playbackSpeedFactor, () => {
-      completedLanes++;
-
-      if (completedLanes === 3) {
-        displayMedals(event.results, totalLaps);
-      }
-    });
-
-  });
 }
