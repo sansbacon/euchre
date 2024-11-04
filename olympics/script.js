@@ -153,6 +153,33 @@ function setLapMarker(event) {
   lapMarker.textContent = `${lapDistance}m`;
 }
 
+function determinePlacings(results) {
+    // Sort the results by timeSeconds in ascending order
+    console.log(results[0].lane);
+    results.sort((a, b) => a.timeSeconds - b.timeSeconds);
+    console.log(results[0].lane);
+
+    // Initialize placing and a counter for ties
+    let placing = 1;
+    let tieCount = 0;
+
+    for (let i = 0; i < results.length; i++) {
+        if (i > 0 && results[i].timeSeconds === results[i - 1].timeSeconds) {
+            // If tied with the previous time, assign the same placing
+            results[i].placing = placing;
+            tieCount++; // Increase the tie count
+        } else {
+            // If not tied, update placing, taking into account previous ties
+            placing += tieCount;
+            results[i].placing = placing;
+            tieCount = 1; // Reset tie count for next sequence
+        }
+    }
+
+    // Sort the results by lane again
+    results.sort((a, b) => a.lane - b.lane);
+    return results;
+}
 
 function displayMedals(results, totalLaps) {
   // Sort the results based on timeSeconds to identify the top 3
@@ -246,7 +273,8 @@ function animateDot(result, totalLaps, playbackSpeedFactor, callback) {
   function completeNextLap() {
     // Last lap: set time label and exit function
     if (completedLaps >= totalLaps) {
-      totalTimeLabel.textContent = formatTime(totalTime)
+      //totalTimeLabel.textContent = formatTime(totalTime)
+      totalTimeLabel.textContent = result.lane + ': ' + result.placing;
       if (callback) {
         callback();
       }
@@ -275,6 +303,9 @@ function animateAllDots(event) {
   event.results.forEach(result => {
     animateDot(result, totalLaps, playbackSpeedFactor, () => {
       completedLanes++;
+      if (completedLanes === 3) {
+        displayMedals(event.results, totalLaps);
+      }
     });
   });
 }
@@ -287,7 +318,7 @@ function animateAllDots(event) {
 function simulateEvent(event) {
 
   populateArena(event);
-  // determineMedallists(event);
+  determinePlacings(event.results);
   setEventTitle(event);
   setLapMarker(event);
   animateAllDots(event);
