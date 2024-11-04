@@ -273,8 +273,7 @@ function animateDot(result, totalLaps, playbackSpeedFactor, callback) {
   function completeNextLap() {
     // Last lap: set time label and exit function
     if (completedLaps >= totalLaps) {
-      //totalTimeLabel.textContent = formatTime(totalTime)
-      totalTimeLabel.textContent = result.lane + ': ' + result.placing;
+      totalTimeLabel.textContent = formatTime(totalTime);
       if (callback) {
         callback();
       }
