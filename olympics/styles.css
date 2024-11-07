@@ -13,7 +13,10 @@
   --arena-height: 400px;
   --arena-text-color: white;
   --arena-width: 800px;
-  --time-label-longest: 80px;
+  --time-label-longest: 65px;
+  --medal-1-color: gold;
+  --medal-2-color: silver;
+  --medal-3-color: #cd7f32;
 }
 
 body {
@@ -99,7 +102,6 @@ body {
 }
 
 .medal {
-  /* display: inline-block; */
   position: absolute;
   width: 20px;
   height: 20px;
@@ -109,12 +111,19 @@ body {
   font-size: 14px;
   text-align: center;
   line-height: 20px;
-  margin-left: 20px;
 }
 
-.gold { background-color: gold; }
-.silver { background-color: silver; }
-.bronze { background-color: #cd7f32; }
+.medal[medal-placing = "1"] {
+  background-color: var(--medal-1-color);
+}
+
+.medal[medal-placing = "2"] {
+  background-color: var(--medal-2-color);
+}
+
+.medal[medal-placing = "3"] {
+  background-color: var(--medal-3-color);
+}
 
 .lap-marker {
   color: grey;
