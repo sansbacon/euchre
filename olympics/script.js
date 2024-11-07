@@ -18,7 +18,7 @@ function populateNavbar(events) {
   events.forEach(event => {
     const eventButton = document.createElement('div');
     eventButton.textContent = event.event;
-    eventButton.className = 'event-label';
+    eventButton.className = 'nav-item';
     eventButton.onclick = () => simulateEvent(event);
     navbar.appendChild(eventButton);
   });
@@ -28,7 +28,7 @@ function populateNavbar(events) {
  * Loads the first event by clicking its label
  */
 function clickFirstEvent() {
-  const firstEventLabel = document.querySelector('.event-label');
+  const firstEventLabel = document.querySelector('.nav-item');
   firstEventLabel.click()
 }
 
@@ -242,7 +242,7 @@ function addMedalIfWon(totalTimeLabel, placing, totalLaps) {
   };
 
   // Determine whether the athlete wins a medal
-  const isMedalWinner = placingAbbrevs.hasOwnProperty(placing)
+  const isMedalWinner = placingAbbrevs.hasOwnProperty(placing);
 
   // Get the longest time label, which defines where to place the medal
   const timeLabelLongest = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--time-label-longest'));
@@ -376,7 +376,7 @@ function animateAllDots(event, playbackSpeedFactor) {
  */
 function simulateEvent(event) {
   // Set the playback speed factor
-  const playbackSpeedFactor = 50
+  const playbackSpeedFactor = 50;
 
   // Simulate the event
   determinePlacings(event.results);

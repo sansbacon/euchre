@@ -3,9 +3,10 @@
   --dot-size: 20px;
   --lane-height: 12.5%;
   --lane-label-width: 150px;
-  --nav-panel-color: #0077BE;
-  --nav-panel-text-color: white;
-  --nav-panel-width: 200px;
+  --page-background-color: white;
+  --nav-panel-color: #f2f2f2;
+  --nav-panel-text-color: #black;
+  --nav-panel-width: 150px;
   --padding-horizontal: 20px;
   --arena-athletics-color: #A74C3A;
   --arena-swimming-color: #2BAED0;
@@ -25,7 +26,8 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background-color: #e0f7fa;
+  background-color: var(--page-background-color);
+  font-family: "Arial";
 }
 
 .nav-panel {
@@ -34,6 +36,7 @@ body {
   background-color: var(--nav-panel-color);
   color: var(--nav-panel-text-color);
   padding: var(--padding-horizontal);
+  padding-top: 40px;
   overflow-y: auto;
 }
 
