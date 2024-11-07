@@ -124,9 +124,11 @@ function eventFinishesOnRight(totalLaps) {
  * @param {object} event - Dictionary containing event details 
  */
 function setDynamicPositions(event) {
+  // Get document elements
   const maxLaneLabelWidth = calculateMaxLaneLabelWidth() + 'px';
   const paddingHorizontal = getComputedStyle(document.documentElement).getPropertyValue('--padding-horizontal');
   const lanes = document.querySelectorAll('.lane');
+  const totalLaps = event.laps;
 
   lanes.forEach(lane => {
     // Dot position
@@ -138,7 +140,7 @@ function setDynamicPositions(event) {
     // Total time label position
     totalTimeLabel = lane.querySelector('.total-time-label');
 
-    if (eventFinishesOnRight(event.laps)) {
+    if (eventFinishesOnRight(totalLaps)) {
       totalTimeLabel.style.left = 'auto';
       totalTimeLabel.style.right = `calc(${dotWidth} + 2 * ${paddingHorizontal})`
     } else {
@@ -232,20 +234,27 @@ function determinePlacings(results) {
 }
 
 function addMedalIfWon(totalTimeLabel, placing, totalLaps) {
-
-  const timeLabelLongest = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--time-label-longest'));
-  const placingMap = {
+  // Define the medal abbrevations for each placing
+  const placingAbbrevs = {
     1: 'G',
     2: 'S',
     3: 'B'
   };
+
+  // Determine whether the athlete wins a medal
+  const isMedalWinner = placingAbbrevs.hasOwnProperty(placing)
+
+  // Get the longest time label, which defines where to place the medal
+  const timeLabelLongest = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--time-label-longest'));
   
-  if (placingMap.hasOwnProperty(placing)) {
+  if (isMedalWinner) {
+    // Create the medal
     const medal = document.createElement('span');
     medal.classList.add('medal');
-    medal.textContent = placingMap[placing];
+    medal.textContent = placingAbbrevs[placing];
     medal.setAttribute('medal-placing', placing);
 
+    // Set the medal's position
     if (eventFinishesOnRight(totalLaps)) {
       medal.style.right = timeLabelLongest + 'px';
       medal.style.left = 'auto'; // Reset left
@@ -258,14 +267,21 @@ function addMedalIfWon(totalTimeLabel, placing, totalLaps) {
   }
 }
 
+/**
+ * Calculates the distance of one lap based on the arena size, dot size, and padding
+ * @param {HTMLDivElement} dot - Dot element 
+ * @returns {number} Distance of one lap
+ */
 function calculateLapDistance(dot) {
+  // Get document sizes
   const arenaWidth =  getComputedStyle(document.getElementById('arena')).width;
   const dotSize =  getComputedStyle(dot).width;
   const dotLeft = getComputedStyle(dot).left;
   const paddingHorizontal = getComputedStyle(document.documentElement).getPropertyValue('--padding-horizontal');
+
+  // Calculate lap distance
   const lapDistance = parseInt(arenaWidth) - parseInt(dotLeft) - parseInt(dotSize) - parseInt(paddingHorizontal);
   return lapDistance;
-
 }
 
 /**
@@ -290,6 +306,12 @@ function formatTime(timeInSeconds) {
   }
 }
 
+/**
+ * Animates a dot along its lane for the whole event
+ * @param {object} result - Dictionary with details of the lane's result
+ * @param {number} totalLaps - Total number of laps in the race
+ * @param {number} playbackSpeedFactor - Playback speed factor. 1 is real time; higher values are faster. 
+ */
 function animateDot(result, totalLaps, playbackSpeedFactor) {
   // Initialise counter
   let completedLaps = 0;
@@ -312,7 +334,9 @@ function animateDot(result, totalLaps, playbackSpeedFactor) {
     if (completedLaps >= totalLaps) {
       // Set time label
       totalTimeLabel.textContent = formatTime(totalTime);
-      addMedalIfWon(totalTimeLabel, result.placing, totalLaps)
+
+      // Add a medal (if applicable)
+      addMedalIfWon(totalTimeLabel, result.placing, totalLaps);
       return;
     }
 
@@ -329,27 +353,35 @@ function animateDot(result, totalLaps, playbackSpeedFactor) {
   }
 
   completeNextLap();
-
 }
 
+/**
+ * Animates all dots along their lanes for the whole event
+ * @param {object} event - Dictionary containing event details 
+ * @param {number} playbackSpeedFactor - Playback speed factor. 1 is real time; higher values are faster. 
+ */
 function animateAllDots(event, playbackSpeedFactor) {
+  // Total number of laps
   const totalLaps = event.laps;
+
+  // Animate each dot
   event.results.forEach(result => {
     animateDot(result, totalLaps, playbackSpeedFactor);
   });
 }
-
 
 /**
  * Simulates an event by moving each dot along the arena
  * @param {object} event - Dictionary containing event details 
  */
 function simulateEvent(event) {
+  // Set the playback speed factor
   const playbackSpeedFactor = 50
+
+  // Simulate the event
   determinePlacings(event.results);
   populateArena(event);
   setEventTitle(event);
   setLapMarker(event);
   animateAllDots(event, playbackSpeedFactor);
-
 }
