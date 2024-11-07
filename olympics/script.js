@@ -8,9 +8,9 @@ fetch('./events.json')
   })
   .catch(error => console.error('Error fetching data:', error));
 
-/** Populates the navbar with the event labels
- * 
- * @param {list} events - List of events from the json
+/**
+ * Populates the navbar with the event labels
+ * @param {list} events - List of events in json format
  */
 function populateNavbar(events) {
   const navbar = document.getElementById('navbar');
@@ -32,6 +32,11 @@ function clickFirstEvent() {
   firstEventLabel.click()
 }
 
+/**
+ * Initializes the arena element
+ * @param {list} events - List of events in json format
+ * @returns 
+ */
 function setArenaElement(event) {
   const arena = document.getElementById('arena');
   arena.setAttribute('arena-sport', event.sport);
@@ -39,6 +44,12 @@ function setArenaElement(event) {
   return arena;
 }
 
+/**
+ * Initializes the lane element
+ * @param {object} result - Dictionary with details of the lane's result
+ * @param {number} laneHeightPercent - Percentage of the arena taken up by the lane
+ * @returns {HTMLDivElement} Lane element
+ */
 function setLaneElement(result, laneHeightPercent) {
   const lane = document.createElement('div');
   lane.className = 'lane';
@@ -47,6 +58,11 @@ function setLaneElement(result, laneHeightPercent) {
   return lane;
 }
 
+/**
+ * Initializes the lane label element
+ * @param {object} result - Dictionary with details of the lane's result
+ * @returns {HTMLDivElement} Lane label element
+ */
 function setLaneLabelElement(result) {
   const laneLabel = document.createElement('div');
   laneLabel.className = 'lane-label';
@@ -55,7 +71,11 @@ function setLaneLabelElement(result) {
   return laneLabel;
 }
 
-
+/**
+ * Initializes the dot element
+ * @param {object} result - Dictionary with details of the lane's result
+ * @returns {HTMLDivElement} Dot element
+ */
 function setDotElement(result) {
   const dot = document.createElement('div');
   dot.className = 'dot';
@@ -63,6 +83,11 @@ function setDotElement(result) {
   return dot
 }
 
+/**
+ * Initializes the total time label element
+ * @param {object} result - Dictionary with details of the lane's result
+ * @returns {HTMLDivElement} Total time label element
+ */
 function setTotalTimeLabelElement(result) {
   const totalTimeLabel = document.createElement('div');
   totalTimeLabel.className = 'total-time-label';
@@ -71,6 +96,10 @@ function setTotalTimeLabelElement(result) {
   return totalTimeLabel
 }
 
+/**
+ * Calculates the maximum lane label width in the document
+ * @returns {number} Maximum lane label width in the document
+ */
 function calculateMaxLaneLabelWidth() {
   const labels = document.querySelectorAll('.lane-label');
   let maxWidth = 0;
@@ -81,10 +110,19 @@ function calculateMaxLaneLabelWidth() {
   return maxWidth;
 }
 
+/**
+ * Indicates whether an event finishes on the right-hand side of the arena
+ * @param {number} totalLaps 
+ * @returns {boolean} True if the event finishes on the right-hand side of the arena; false otherwise
+ */
 function eventFinishesOnRight(totalLaps) {
   return (totalLaps % 2 === 1);
 }
 
+/**
+ * Sets dynamic positions of objects in document based on the maximum lane label width
+ * @param {object} event - Dictionary containing event details 
+ */
 function setDynamicPositions(event) {
   const maxLaneLabelWidth = calculateMaxLaneLabelWidth() + 'px';
   const paddingHorizontal = getComputedStyle(document.documentElement).getPropertyValue('--padding-horizontal');
@@ -111,6 +149,10 @@ function setDynamicPositions(event) {
   });
 }
 
+/**
+ * Populates the arena when an event is first loaded
+ * @param {object} event - Dictionary containing event details 
+ */
 function populateArena(event) {
 
   // Calculate lane height
@@ -139,17 +181,30 @@ function populateArena(event) {
 
 }
 
+/**
+ * Sets the event title
+ * @param {object} event - Dictionary containing event details 
+ */
 function setEventTitle(event) {
   const eventTitleElement = document.getElementById('event-title');
   eventTitleElement.textContent = event.event;
 }
 
+/**
+ * Sets the lap length annotation below the arena
+ * @param {object} event - Dictionary containing event details 
+ */
 function setLapMarker(event) {
   const lapMarker = document.getElementById('lap-marker');
   const lapDistance = event.distance_m / event.laps;
   lapMarker.textContent = `${lapDistance}m`;
 }
 
+/**
+ * Adds a placing attribute to each result based on their finishing time
+ * @param {list} results - List of each lane's results
+ * @returns 
+ */
 function determinePlacings(results) {
     // Sort the results by timeSeconds in ascending order
     results.sort((a, b) => a.timeSeconds - b.timeSeconds);
@@ -177,10 +232,8 @@ function determinePlacings(results) {
 }
 
 function addMedalIfWon(totalTimeLabel, placing, totalLaps) {
-  const timeLabelLongest = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--time-label-longest'));
-  const paddingHorizontal = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--padding-horizontal'));
- 
 
+  const timeLabelLongest = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--time-label-longest'));
   const placingMap = {
     1: 'G',
     2: 'S',
@@ -215,7 +268,11 @@ function calculateLapDistance(dot) {
 
 }
 
-// Format a time for display
+/**
+ * Formats a time in h:mm:ss.xx format
+ * @param {number} timeInSeconds - the time in seconds
+ * @returns {string} - Formatted time in h:mm:ss.xx format
+ */
 function formatTime(timeInSeconds) {
   const totalHundredths = Math.round(timeInSeconds * 100); // Convert to hundredths
   const hours = Math.floor(totalHundredths / 360000); // Total seconds in an hour
@@ -283,9 +340,9 @@ function animateAllDots(event, playbackSpeedFactor) {
 }
 
 
-/** Simulates an event by moving each dot along the arena
- * 
- * @param {json} event - single event from the json
+/**
+ * Simulates an event by moving each dot along the arena
+ * @param {object} event - Dictionary containing event details 
  */
 function simulateEvent(event) {
   const playbackSpeedFactor = 50
