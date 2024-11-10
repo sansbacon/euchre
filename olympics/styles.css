@@ -6,15 +6,15 @@
   --page-background-color: white;
   --nav-panel-color: #f2f2f2;
   --nav-panel-text-color: #black;
-  --nav-panel-width: 150px;
+  --nav-panel-width: 250px;
   --padding-horizontal: 20px;
   --arena-athletics-color: #A74C3A;
   --arena-swimming-color: #2BAED0;
   --arena-default-color: grey;
   --arena-height: 400px;
   --arena-text-color: white;
-  --arena-width: 800px;
-  --time-label-longest: 65px;
+  --arena-width: 900px;
+  --time-label-longest: 80px;
   --medal-1-color: #d4af37;
   --medal-2-color: #838996;
   --medal-3-color: #A97142;

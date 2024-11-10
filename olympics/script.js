@@ -67,7 +67,7 @@ function setLaneLabelElement(result) {
   const laneLabel = document.createElement('div');
   laneLabel.className = 'lane-label';
   laneLabel.id = `lane-label-${result.lane}`;
-  laneLabel.textContent = result.athlete;
+  laneLabel.textContent = result.athlete + ' (' + result.country + ')';
   return laneLabel;
 }
 
