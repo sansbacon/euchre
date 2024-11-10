@@ -1484,7 +1484,7 @@
                     "lane": 4,
                     "athlete": "Alexandra Walsh",
                     "country": "USA",
-                    "timeSeconds": null
+                    "timeSeconds": 1e6
                 },
                 {
                     "lane": 5,
@@ -1508,7 +1508,7 @@
                     "lane": 8,
                     "athlete": "Ella Ramsay",
                     "country": "AUS",
-                    "timeSeconds": null
+                    "timeSeconds": 1e6
                 }
             ]
         },
@@ -2022,7 +2022,7 @@
                     "lane": 1,
                     "athlete": "Yann Schrub",
                     "country": "FRA",
-                    "timeSeconds": null
+                    "timeSeconds": 1e6
                 },
                 {
                     "lane": 2,
@@ -2034,7 +2034,7 @@
                     "lane": 3,
                     "athlete": "C\u00e9lestin Ndikumana",
                     "country": "BDI",
-                    "timeSeconds": null
+                    "timeSeconds": 1e6
                 },
                 {
                     "lane": 4,
@@ -2070,7 +2070,7 @@
                     "lane": 9,
                     "athlete": "Rodrigue Kwizera",
                     "country": "BDI",
-                    "timeSeconds": null
+                    "timeSeconds": 1e6
                 },
                 {
                     "lane": 10,
@@ -2290,7 +2290,7 @@
                     "lane": 9,
                     "athlete": "Roshawn Clarke",
                     "country": "JAM",
-                    "timeSeconds": null
+                    "timeSeconds": 1e6
                 }
             ]
         },
@@ -2394,7 +2394,7 @@
                     "lane": 16,
                     "athlete": "Lamecha Girma",
                     "country": "ETH",
-                    "timeSeconds": null
+                    "timeSeconds": 1e6
                 }
             ]
         },
@@ -2858,7 +2858,7 @@
                     "lane": 8,
                     "athlete": "Alessia Zarbo",
                     "country": "FRA",
-                    "timeSeconds": null
+                    "timeSeconds": 1e6
                 },
                 {
                     "lane": 9,
@@ -2930,7 +2930,7 @@
                     "lane": 20,
                     "athlete": "Rahel Daniel",
                     "country": "ERI",
-                    "timeSeconds": null
+                    "timeSeconds": 1e6
                 },
                 {
                     "lane": 21,
@@ -3016,7 +3016,7 @@
                     "lane": 9,
                     "athlete": "Ackera Nugent",
                     "country": "JAM",
-                    "timeSeconds": null
+                    "timeSeconds": 1e6
                 }
             ]
         },
