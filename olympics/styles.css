@@ -1,19 +1,21 @@
 :root {
-  --dot-color: black;
+  /* --dot-color: #404040; */
+  --dot-color: #f2f2f2;
   --dot-size: 20px;
   --lane-height: 12.5%;
   --lane-label-width: 150px;
   --page-background-color: white;
   --nav-panel-color: #f2f2f2;
-  --nav-panel-text-color: #black;
-  --nav-panel-width: 250px;
+  --nav-panel-hover-color: #e0e0e0;
+  --nav-panel-text-color: black;
+  --nav-panel-width: 300px;
   --padding-horizontal: 20px;
   --arena-athletics-color: #A74C3A;
   --arena-swimming-color: #2BAED0;
   --arena-default-color: grey;
   --arena-height: 400px;
   --arena-text-color: white;
-  --arena-width: 900px;
+  --arena-width: 1000px;
   --time-label-longest: 80px;
   --medal-1-color: #d4af37;
   --medal-2-color: #838996;
@@ -35,14 +37,35 @@ body {
   height: 100vh;
   background-color: var(--nav-panel-color);
   color: var(--nav-panel-text-color);
-  padding: var(--padding-horizontal);
+  /* padding: var(--padding-horizontal); */
   padding-top: 40px;
   overflow-y: auto;
 }
 
 .nav-item {
-  margin: 10px 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: var(--padding-horizontal);
+  padding-right: var(--padding-horizontal);
   cursor: pointer;
+}
+
+.nav-item:hover {
+  background-color: var(--nav-panel-hover-color);
+}
+
+.nav-heading {
+  font-size: 1.25em;
+  font-weight: bold; 
+  margin: 0;
+  padding-top: var(--padding-horizontal);
+  padding-bottom: 10px;
+  padding-left: var(--padding-horizontal);
+  padding-right: var(--padding-horizontal);
+}
+
+.nav-heading:first-child {
+  padding-top: 0; /* Remove top padding for the first heading */
 }
 
 .arena-container {
@@ -96,6 +119,8 @@ body {
   transition: transform 1s linear;
   border-radius: 50%; /* circle */
   background-color: var(--dot-color);
+  border: 0.5px solid white;
+  box-shadow: 0px 2px 6px 3px rgba(0, 0, 0, 0.3);
 }
 
 .total-time-label {

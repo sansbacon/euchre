@@ -14,8 +14,22 @@ fetch('./events.json')
  */
 function populateNavbar(events) {
   const navbar = document.getElementById('navbar');
+  let lastSport = ''; // initialize
 
   events.forEach(event => {
+    // Get the event's sport
+    const eventSport = event.sport;
+
+    // Add a sport subheading if it is different to the previous value
+    if (eventSport != lastSport) {
+      const sportHeading = document.createElement('div');
+      sportHeading.className = 'nav-heading';
+      sportHeading.textContent = eventSport;
+      navbar.appendChild(sportHeading);
+      lastSport = eventSport; // update
+    }
+
+    // Add the event button
     const eventButton = document.createElement('div');
     eventButton.textContent = event.event;
     eventButton.className = 'nav-item';
