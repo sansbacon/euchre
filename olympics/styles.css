@@ -1,8 +1,7 @@
 :root {
-  /* --dot-color: #404040; */
   --dot-color: #f2f2f2;
   --dot-size: 20px;
-  --lane-height: 12.5%;
+  --lane-min-height: 30px;
   --lane-label-width: 150px;
   --page-background-color: white;
   --nav-panel-color: #f2f2f2;
@@ -13,7 +12,7 @@
   --arena-athletics-color: #A74C3A;
   --arena-swimming-color: #2BAED0;
   --arena-default-color: grey;
-  --arena-height: 400px;
+  --arena-default-height: 400px;
   --arena-text-color: white;
   --arena-width: 1000px;
   --time-label-longest: 80px;
@@ -37,7 +36,6 @@ body {
   height: 100vh;
   background-color: var(--nav-panel-color);
   color: var(--nav-panel-text-color);
-  /* padding: var(--padding-horizontal); */
   padding-top: 40px;
   overflow-y: auto;
 }
@@ -72,7 +70,10 @@ body {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow-y: auto;
+  max-height: 100vh;
   width: var(--arena-width);
 }
 
@@ -82,7 +83,7 @@ body {
   flex-direction: column;
   overflow: hidden;
   width: 100%;
-  height: var(--arena-height);
+  height: var(--arena-default-height);
   border: none;
   background-color: var(--arena-default-color);
 }
@@ -168,6 +169,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: var(--padding-horizontal);
+  margin-top: var(--padding-horizontal);
   width: 100%;
 }

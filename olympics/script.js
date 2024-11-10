@@ -51,9 +51,10 @@ function clickFirstEvent() {
  * @param {list} events - List of events in json format
  * @returns 
  */
-function setArenaElement(event) {
+function setArenaElement(event, arenaHeight) {
   const arena = document.getElementById('arena');
   arena.setAttribute('arena-sport', event.sport);
+  arena.style.height = `${arenaHeight}px`;
   arena.innerHTML = ''; // Clear existing lanes
   return arena;
 }
@@ -171,12 +172,15 @@ function setDynamicPositions(event) {
  */
 function populateArena(event) {
 
-  // Calculate lane height
+  // Calculate lane height and arena height
   const numberOfLanes = event.results.length;
   const laneHeightPercent = (100 / numberOfLanes).toFixed(2);
+  const defaultArenaHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--arena-default-height'));
+  const minLaneHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--lane-min-height'));
+  const arenaHeight = Math.max(numberOfLanes * minLaneHeight, defaultArenaHeight);
 
   // Set arena element
-  const arena = setArenaElement(event);
+  const arena = setArenaElement(event, arenaHeight);
 
   event.results.forEach(result => {
     // Set elements within the arena
