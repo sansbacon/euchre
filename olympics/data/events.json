@@ -53,6 +53,12 @@
                     "athlete": "Josh Liendo",
                     "country": "CAN",
                     "timeSeconds": 21.58
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 64.0
                 }
             ]
         },
@@ -109,6 +115,18 @@
                     "athlete": "Josha Salchow",
                     "country": "GER",
                     "timeSeconds": 47.8
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 89.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 149.43
                 }
             ]
         },
@@ -165,6 +183,18 @@
                     "athlete": "Katsuhiro Matsumoto",
                     "country": "JPN",
                     "timeSeconds": 106.25999999999999
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 207.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 301.14
                 }
             ]
         },
@@ -221,6 +251,12 @@
                     "athlete": "Oliver Klemet",
                     "country": "GER",
                     "timeSeconds": 226.59
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 617.4
                 }
             ]
         },
@@ -277,6 +313,12 @@
                     "athlete": "David Aubry",
                     "country": "FRA",
                     "timeSeconds": 463.59000000000003
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 1244.57
                 }
             ]
         },
@@ -333,6 +375,18 @@
                     "athlete": "D\u00e1vid Betlehem",
                     "country": "HUN",
                     "timeSeconds": 880.91
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 1860.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 2273.22
                 }
             ]
         },
@@ -389,6 +443,18 @@
                     "athlete": "Hugo Gonz\u00e1lez",
                     "country": "ESP",
                     "timeSeconds": 52.73
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 103.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 167.79
                 }
             ]
         },
@@ -445,6 +511,18 @@
                     "athlete": "Hugo Gonz\u00e1lez",
                     "country": "ESP",
                     "timeSeconds": 115.47
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 216.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 350.01
                 }
             ]
         },
@@ -501,6 +579,18 @@
                     "athlete": "Melvin Imoudu",
                     "country": "GER",
                     "timeSeconds": 59.11
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 120.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 178.0
                 }
             ]
         },
@@ -557,6 +647,18 @@
                     "athlete": "Joshua Yong",
                     "country": "AUS",
                     "timeSeconds": 131.44
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 250.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 378.0
                 }
             ]
         },
@@ -613,6 +715,18 @@
                     "athlete": "Naoki Mizunuma",
                     "country": "JPN",
                     "timeSeconds": 51.11
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 127.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 158.53
                 }
             ]
         },
@@ -669,6 +783,12 @@
                     "athlete": "Martin Espernberger",
                     "country": "AUT",
                     "timeSeconds": 114.17
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 328.03
                 }
             ]
         },
@@ -725,6 +845,18 @@
                     "athlete": "Finlay Knox",
                     "country": "CAN",
                     "timeSeconds": 117.25999999999999
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 219.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 331.74
                 }
             ]
         },
@@ -781,6 +913,18 @@
                     "athlete": "Cedric B\u00fcssing",
                     "country": "GER",
                     "timeSeconds": 257.16
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 464.85
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 698.59
                 }
             ]
         },
@@ -837,6 +981,12 @@
                     "athlete": "Ne\u017ea Klan\u010dar",
                     "country": "AIN",
                     "timeSeconds": 24.35
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 64.0
                 }
             ]
         },
@@ -893,6 +1043,18 @@
                     "athlete": "Gretchen Walsh",
                     "country": "USA",
                     "timeSeconds": 53.04
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 89.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 149.43
                 }
             ]
         },
@@ -949,6 +1111,18 @@
                     "athlete": "Mary-Sophie Harvey",
                     "country": "CAN",
                     "timeSeconds": 115.28999999999999
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 207.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 301.14
                 }
             ]
         },
@@ -960,7 +1134,7 @@
             "results": [
                 {
                     "lane": 1,
-                    "athlete": "Maria Fernullda Costa",
+                    "athlete": "Maria Fernanda Costa",
                     "country": "BRA",
                     "timeSeconds": 243.53
                 },
@@ -1005,6 +1179,12 @@
                     "athlete": "Isabel Marie Gose",
                     "country": "GER",
                     "timeSeconds": 242.14
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 617.4
                 }
             ]
         },
@@ -1061,6 +1241,12 @@
                     "athlete": "Anastasiya Kirpichnikova",
                     "country": "FRA",
                     "timeSeconds": 502.8
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 1244.57
                 }
             ]
         },
@@ -1117,6 +1303,18 @@
                     "athlete": "Leonie M\u00e4rtens",
                     "country": "GER",
                     "timeSeconds": 972.57
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 1860.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 2273.22
                 }
             ]
         },
@@ -1173,6 +1371,18 @@
                     "athlete": "Emma Terebo",
                     "country": "FRA",
                     "timeSeconds": 59.4
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 103.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 167.79
                 }
             ]
         },
@@ -1229,6 +1439,18 @@
                     "athlete": "Anastasiya Shkurdai",
                     "country": "GBR",
                     "timeSeconds": 130.23
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 216.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 350.01
                 }
             ]
         },
@@ -1285,6 +1507,18 @@
                     "athlete": "Eneli Jefimova",
                     "country": "EST",
                     "timeSeconds": 66.5
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 120.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 178.0
                 }
             ]
         },
@@ -1341,6 +1575,18 @@
                     "athlete": "Satomi Suzuki",
                     "country": "JPN",
                     "timeSeconds": 142.54
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 250.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 378.0
                 }
             ]
         },
@@ -1397,6 +1643,18 @@
                     "athlete": "Louise Hansson",
                     "country": "SWE",
                     "timeSeconds": 57.34
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 127.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 158.53
                 }
             ]
         },
@@ -1453,6 +1711,12 @@
                     "athlete": "Laura Stephens",
                     "country": "GBR",
                     "timeSeconds": 128.82
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 328.03
                 }
             ]
         },
@@ -1484,7 +1748,7 @@
                     "lane": 4,
                     "athlete": "Alexandra Walsh",
                     "country": "USA",
-                    "timeSeconds": 1e6
+                    "timeSeconds": 1000000.0
                 },
                 {
                     "lane": 5,
@@ -1508,7 +1772,19 @@
                     "lane": 8,
                     "athlete": "Ella Ramsay",
                     "country": "AUS",
-                    "timeSeconds": 1e6
+                    "timeSeconds": 1000000.0
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 219.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 331.74
                 }
             ]
         },
@@ -1565,6 +1841,18 @@
                     "athlete": "Katie Shanahan",
                     "country": "GBR",
                     "timeSeconds": 280.17
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 464.85
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 698.59
                 }
             ]
         },
@@ -1621,6 +1909,18 @@
                     "athlete": "Marcell Jacobs",
                     "country": "ITA",
                     "timeSeconds": 9.85
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 18.57
+                },
+                {
+                    "lane": 11,
+                    "athlete": "Mark",
+                    "country": "AUS",
+                    "timeSeconds": 15.23
                 }
             ]
         },
@@ -1677,6 +1977,12 @@
                     "athlete": "Joseph Fahnbulleh",
                     "country": "LBR",
                     "timeSeconds": 20.15
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 38.45
                 }
             ]
         },
@@ -1733,6 +2039,18 @@
                     "athlete": "Jereem Richards",
                     "country": "TTO",
                     "timeSeconds": 43.78
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 99.0
+                },
+                {
+                    "lane": 11,
+                    "athlete": "Mark",
+                    "country": "AUS",
+                    "timeSeconds": 80.78
                 }
             ]
         },
@@ -1789,6 +2107,12 @@
                     "athlete": "Marco Arop",
                     "country": "CAN",
                     "timeSeconds": 101.2
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 204.0
                 }
             ]
         },
@@ -1869,6 +2193,12 @@
                     "athlete": "Neil Gourley",
                     "country": "GBR",
                     "timeSeconds": 210.88
+                },
+                {
+                    "lane": 13,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 377.0
                 }
             ]
         },
@@ -2009,6 +2339,12 @@
                     "athlete": "Yann Schrub",
                     "country": "FRA",
                     "timeSeconds": 800.63
+                },
+                {
+                    "lane": 23,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 1301.0
                 }
             ]
         },
@@ -2022,7 +2358,7 @@
                     "lane": 1,
                     "athlete": "Yann Schrub",
                     "country": "FRA",
-                    "timeSeconds": 1e6
+                    "timeSeconds": 1000000.0
                 },
                 {
                     "lane": 2,
@@ -2034,7 +2370,7 @@
                     "lane": 3,
                     "athlete": "C\u00e9lestin Ndikumana",
                     "country": "BDI",
-                    "timeSeconds": 1e6
+                    "timeSeconds": 1000000.0
                 },
                 {
                     "lane": 4,
@@ -2070,7 +2406,7 @@
                     "lane": 9,
                     "athlete": "Rodrigue Kwizera",
                     "country": "BDI",
-                    "timeSeconds": 1e6
+                    "timeSeconds": 1000000.0
                 },
                 {
                     "lane": 10,
@@ -2179,6 +2515,12 @@
                     "athlete": "Nico Young",
                     "country": "USA",
                     "timeSeconds": 1618.11
+                },
+                {
+                    "lane": 28,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 2955.0
                 }
             ]
         },
@@ -2290,7 +2632,7 @@
                     "lane": 9,
                     "athlete": "Roshawn Clarke",
                     "country": "JAM",
-                    "timeSeconds": 1e6
+                    "timeSeconds": 1000000.0
                 }
             ]
         },
@@ -2394,7 +2736,7 @@
                     "lane": 16,
                     "athlete": "Lamecha Girma",
                     "country": "ETH",
-                    "timeSeconds": 1e6
+                    "timeSeconds": 1000000.0
                 }
             ]
         },
@@ -2451,6 +2793,18 @@
                     "athlete": "Twanisha Terry",
                     "country": "USA",
                     "timeSeconds": 10.97
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 18.57
+                },
+                {
+                    "lane": 11,
+                    "athlete": "Mark",
+                    "country": "AUS",
+                    "timeSeconds": 15.23
                 }
             ]
         },
@@ -2507,6 +2861,12 @@
                     "athlete": "Favour Ofili",
                     "country": "NGR",
                     "timeSeconds": 22.24
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 38.45
                 }
             ]
         },
@@ -2563,6 +2923,18 @@
                     "athlete": "Alexis Holmes",
                     "country": "USA",
                     "timeSeconds": 49.77
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 99.0
+                },
+                {
+                    "lane": 11,
+                    "athlete": "Mark",
+                    "country": "AUS",
+                    "timeSeconds": 80.78
                 }
             ]
         },
@@ -2619,6 +2991,12 @@
                     "athlete": "Tsige Duguma",
                     "country": "ETH",
                     "timeSeconds": 117.15
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 204.0
                 }
             ]
         },
@@ -2699,6 +3077,12 @@
                     "athlete": "Laura Muir",
                     "country": "GBR",
                     "timeSeconds": 233.37
+                },
+                {
+                    "lane": 13,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 377.0
                 }
             ]
         },
@@ -2803,6 +3187,12 @@
                     "athlete": "Nadia Battocletti",
                     "country": "ITA",
                     "timeSeconds": 871.64
+                },
+                {
+                    "lane": 17,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 1301.0
                 }
             ]
         },
@@ -2858,7 +3248,7 @@
                     "lane": 8,
                     "athlete": "Alessia Zarbo",
                     "country": "FRA",
-                    "timeSeconds": 1e6
+                    "timeSeconds": 1000000.0
                 },
                 {
                     "lane": 9,
@@ -2930,7 +3320,7 @@
                     "lane": 20,
                     "athlete": "Rahel Daniel",
                     "country": "ERI",
-                    "timeSeconds": 1e6
+                    "timeSeconds": 1000000.0
                 },
                 {
                     "lane": 21,
@@ -2961,6 +3351,12 @@
                     "athlete": "Diane van Es",
                     "country": "NED",
                     "timeSeconds": 1885.51
+                },
+                {
+                    "lane": 26,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 2955.0
                 }
             ]
         },
@@ -3016,7 +3412,7 @@
                     "lane": 9,
                     "athlete": "Ackera Nugent",
                     "country": "JAM",
-                    "timeSeconds": 1e6
+                    "timeSeconds": 1000000.0
                 }
             ]
         },

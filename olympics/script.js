@@ -1,5 +1,5 @@
 // Fetch the event data
-fetch('./events.json')
+fetch('./data/events.json')
   .then(response => response.json())
   .then(data => {
     const events = data.events;
