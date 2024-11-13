@@ -34,22 +34,27 @@
 body {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  /* align-items: center; */
   height: 100vh;
   margin: 0;
+  margin-top: var(--padding-horizontal);
   background-color: var(--page-background-color);
   font-family: var(--default-font);
 }
 
 .nav-panel {
   width: var(--nav-panel-width);
-  height: 100vh;
+  height: 90%;
+  margin-left: var(--padding-horizontal);
   background-color: var(--nav-panel-color);
   color: var(--nav-panel-text-color);
   font-family: var(--nav-panel-body-font);
-  padding-top: 40px;
+  padding-top: 20px;
   overflow-y: auto;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2); 
+  border-radius: 15px;
 }
+
 
 .nav-item {
   padding-top: 5px;
