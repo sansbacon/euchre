@@ -1,12 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno Ace&display=swap');
+
 :root {
   --dot-color: #f2f2f2;
   --dot-size: 20px;
+  --event-title-font: "Bruno Ace";
   --lane-min-height: 30px;
   --lane-label-width: 150px;
+  --lanel-label-font: "Roboto Mono";
+  --lap-marker-font: "Roboto";
   --page-background-color: white;
   --nav-panel-color: #f2f2f2;
   --nav-panel-hover-color: #e0e0e0;
   --nav-panel-text-color: black;
+  --nav-panel-body-font: "Roboto";
+  --nav-panel-heading-font: "Bruno Ace";
   --nav-panel-width: 300px;
   --padding-horizontal: 20px;
   --arena-athletics-color: #A74C3A;
@@ -15,7 +24,8 @@
   --arena-default-height: 400px;
   --arena-text-color: white;
   --arena-width: 1000px;
-  --time-label-longest: 80px;
+  --time-label-longest: 100px;
+  --time-label-font: "Roboto Mono";
   --medal-1-color: #d4af37;
   --medal-2-color: #838996;
   --medal-3-color: #A97142;
@@ -28,7 +38,7 @@ body {
   height: 100vh;
   margin: 0;
   background-color: var(--page-background-color);
-  font-family: "Arial";
+  font-family: var(--default-font);
 }
 
 .nav-panel {
@@ -36,6 +46,7 @@ body {
   height: 100vh;
   background-color: var(--nav-panel-color);
   color: var(--nav-panel-text-color);
+  font-family: var(--nav-panel-body-font);
   padding-top: 40px;
   overflow-y: auto;
 }
@@ -54,7 +65,9 @@ body {
 
 .nav-heading {
   font-size: 1.25em;
-  font-weight: bold; 
+  /* font-weight: bold;  */
+  font-family: var(--nav-panel-heading-font);
+  text-transform: uppercase;
   margin: 0;
   padding-top: var(--padding-horizontal);
   padding-bottom: 10px;
@@ -110,6 +123,7 @@ body {
   padding-left: var(--padding-horizontal);
   color: var(--arena-text-color);
   font-weight: bold;
+  font-family: var(--lanel-label-font);
   text-align: center;
 }
 
@@ -127,6 +141,7 @@ body {
   position: absolute;
   color: var(--arena-text-color);
   font-weight: bold;
+  font-family: var(--time-label-font);
 }
 
 .medal {
@@ -158,6 +173,7 @@ body {
 .lap-marker {
   color: grey;
   font-size: 18px;
+  font-family: var(--lap-marker-font);
   text-align: right;
   padding-top: 10px;
   width: 100%; /* Match the arena width */
@@ -167,7 +183,8 @@ body {
 
 #event-title {
   font-size: 24px;
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-family: var(--event-title-font);
   text-align: center;
   margin-bottom: var(--padding-horizontal);
   margin-top: var(--padding-horizontal);

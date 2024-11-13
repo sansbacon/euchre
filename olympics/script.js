@@ -217,7 +217,7 @@ function setEventTitle(event) {
 function setLapMarker(event) {
   const lapMarker = document.getElementById('lap-marker');
   const lapDistance = event.distance_m / event.laps;
-  lapMarker.textContent = `${lapDistance}m`;
+  lapMarker.textContent = `${lapDistance.toLocaleString()}m`;
 }
 
 /**
