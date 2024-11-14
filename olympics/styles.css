@@ -26,6 +26,7 @@
   --arena-width: 1000px;
   --time-label-longest: 100px;
   --time-label-font: "Roboto Mono";
+  --title-bar-color: #607d8b;
   --medal-1-color: #d4af37;
   --medal-2-color: #838996;
   --medal-3-color: #A97142;
@@ -34,18 +35,16 @@
 body {
   display: flex;
   justify-content: flex-start;
-  /* align-items: center; */
   height: 100vh;
   margin: 0;
-  /* margin-top: var(--padding-horizontal); */
-  margin-top: 150px;
+  margin-top: 120px;
   background-color: var(--page-background-color);
   font-family: var(--default-font);
 }
 
 .nav-panel {
   width: var(--nav-panel-width);
-  height: 70%;
+  height: 75%;
   margin-left: var(--padding-horizontal);
   background-color: var(--nav-panel-color);
   color: var(--nav-panel-text-color);
@@ -71,7 +70,6 @@ body {
 
 .nav-heading {
   font-size: 1.25em;
-  /* font-weight: bold;  */
   font-family: var(--nav-panel-heading-font);
   text-transform: uppercase;
   margin: 0;
@@ -188,26 +186,22 @@ body {
 }
 
 #event-title {
-  font-size: 24px;
-  /* font-weight: bold; */
+  font-size: 1.5em;
   font-family: var(--event-title-font);
   text-align: center;
   margin-bottom: var(--padding-horizontal);
-  /* margin-top: var(--padding-horizontal); */
   width: 100%;
 }
 
-/* Title Bar Styling */
 .title-bar {
   width: 100vw; /* Full width of the viewport */
-  /* background: linear-gradient(90deg, #2BAED0, #A74C3A); */
-  background: #607D8B;
+  background: var(--title-bar-color);
   color: white;
-  font-family: "Bruno Ace", sans-serif;
-  font-size: 20px;
+  font-family: var(--event-title-font);
+  font-size: 1em;
   text-align: center;
-  padding: 20px;
-  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   letter-spacing: 1px;
   text-transform: uppercase;
   position: fixed; /* Fixed position at the top */
@@ -219,5 +213,4 @@ body {
 .title-bar h1 {
   margin: 0;
   padding: 0;
-  font-weight: 700;
 }
