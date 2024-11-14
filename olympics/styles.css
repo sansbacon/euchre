@@ -37,14 +37,15 @@ body {
   /* align-items: center; */
   height: 100vh;
   margin: 0;
-  margin-top: var(--padding-horizontal);
+  /* margin-top: var(--padding-horizontal); */
+  margin-top: 150px;
   background-color: var(--page-background-color);
   font-family: var(--default-font);
 }
 
 .nav-panel {
   width: var(--nav-panel-width);
-  height: 90%;
+  height: 70%;
   margin-left: var(--padding-horizontal);
   background-color: var(--nav-panel-color);
   color: var(--nav-panel-text-color);
@@ -192,6 +193,31 @@ body {
   font-family: var(--event-title-font);
   text-align: center;
   margin-bottom: var(--padding-horizontal);
-  margin-top: var(--padding-horizontal);
+  /* margin-top: var(--padding-horizontal); */
   width: 100%;
+}
+
+/* Title Bar Styling */
+.title-bar {
+  width: 100vw; /* Full width of the viewport */
+  /* background: linear-gradient(90deg, #2BAED0, #A74C3A); */
+  background: #607D8B;
+  color: white;
+  font-family: "Bruno Ace", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: fixed; /* Fixed position at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* High z-index to keep it above other elements */
+}
+
+.title-bar h1 {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
 }
