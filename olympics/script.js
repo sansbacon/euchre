@@ -6,7 +6,17 @@ fetch('./data/events.json')
     populateNavbar(events);
     clickFirstEvent();
   })
-  .catch(error => console.error('Error fetching data:', error));
+  .catch(error => {
+    console.error('Error fetching data:', error);
+    document.getElementById('arena').textContent = 'Failed to load event data. Please try again later.';
+ });
+
+ // Precomputed styles
+const style = getComputedStyle(document.documentElement);
+const defaultArenaHeight = parseInt(style.getPropertyValue('--arena-default-height'));
+const minLaneHeight = parseInt(style.getPropertyValue('--lane-min-height'));
+const paddingHorizontal = style.getPropertyValue('--padding-horizontal');
+const timeLabelLongest = parseFloat(style.getPropertyValue('--time-label-longest'));
 
 /**
  * Populates the navbar with the event labels
@@ -141,7 +151,6 @@ function eventFinishesOnRight(totalLaps) {
 function setDynamicPositions(event) {
   // Get document elements
   const maxLaneLabelWidth = calculateMaxLaneLabelWidth() + 'px';
-  const paddingHorizontal = getComputedStyle(document.documentElement).getPropertyValue('--padding-horizontal');
   const lanes = document.querySelectorAll('.lane');
   const totalLaps = event.laps;
 
@@ -175,8 +184,6 @@ function populateArena(event) {
   // Calculate lane height and arena height
   const numberOfLanes = event.results.length;
   const laneHeightPercent = (100 / numberOfLanes).toFixed(2);
-  const defaultArenaHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--arena-default-height'));
-  const minLaneHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--lane-min-height'));
   const arenaHeight = Math.max(numberOfLanes * minLaneHeight, defaultArenaHeight);
 
   // Set arena element
@@ -262,9 +269,6 @@ function addMedalIfWon(totalTimeLabel, placing, totalLaps) {
   // Determine whether the athlete wins a medal
   const isMedalWinner = placingAbbrevs.hasOwnProperty(placing);
 
-  // Get the longest time label, which defines where to place the medal
-  const timeLabelLongest = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--time-label-longest'));
-  
   if (isMedalWinner) {
     // Create the medal
     const medal = document.createElement('span');
@@ -295,7 +299,6 @@ function calculateLapDistance(dot) {
   const arenaWidth =  getComputedStyle(document.getElementById('arena')).width;
   const dotSize =  getComputedStyle(dot).width;
   const dotLeft = getComputedStyle(dot).left;
-  const paddingHorizontal = getComputedStyle(document.documentElement).getPropertyValue('--padding-horizontal');
 
   // Calculate lap distance
   const lapDistance = parseInt(arenaWidth) - parseInt(dotLeft) - parseInt(dotSize) - parseInt(paddingHorizontal);
