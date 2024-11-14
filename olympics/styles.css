@@ -117,7 +117,7 @@ body {
 .lane {
   position: relative;
   width: 100%;
-  height: var(--lane-height);
+  height: var(--lane-height, var(--lane-min-height)); /* Default to min height */
   display: flex;
   align-items: center;
   border-top: 1px solid white;
