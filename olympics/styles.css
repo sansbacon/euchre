@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno Ace&display=swap');
+
+:root {
+  --dot-color: #f2f2f2;
+  --dot-size: 20px;
+  --event-title-font: "Bruno Ace";
+  --lane-min-height: 30px;
+  --lane-label-width: 150px;
+  --lanel-label-font: "Roboto Mono";
+  --lap-marker-font: "Roboto";
+  --page-background-color: white;
+  --nav-panel-color: #f2f2f2;
+  --nav-panel-hover-color: #e0e0e0;
+  --nav-panel-text-color: black;
+  --nav-panel-body-font: "Roboto";
+  --nav-panel-heading-font: "Bruno Ace";
+  --nav-panel-width: 300px;
+  --padding-horizontal: 20px;
+  --arena-athletics-color: #A74C3A;
+  --arena-swimming-color: #2BAED0;
+  --arena-default-color: grey;
+  --arena-default-height: 400px;
+  --arena-text-color: white;
+  --arena-width: 1000px;
+  --time-label-longest: 100px;
+  --time-label-font: "Roboto Mono";
+  --title-bar-color: #607d8b;
+  --medal-1-color: #d4af37;
+  --medal-2-color: #838996;
+  --medal-3-color: #A97142;
+}
+
+body {
+  display: flex;
+  justify-content: flex-start;
+  height: 100vh;
+  margin: 0;
+  margin-top: 120px;
+  background-color: var(--page-background-color);
+  font-family: var(--default-font);
+}
+
+.nav-panel {
+  width: var(--nav-panel-width);
+  height: 75%;
+  margin-left: var(--padding-horizontal);
+  background-color: var(--nav-panel-color);
+  color: var(--nav-panel-text-color);
+  font-family: var(--nav-panel-body-font);
+  padding-top: 20px;
+  overflow-y: auto;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2); 
+  border-radius: 15px;
+}
+
+
+.nav-item {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: var(--padding-horizontal);
+  padding-right: var(--padding-horizontal);
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background-color: var(--nav-panel-hover-color);
+}
+
+.nav-heading {
+  font-size: 1.25em;
+  font-family: var(--nav-panel-heading-font);
+  text-transform: uppercase;
+  margin: 0;
+  padding-top: var(--padding-horizontal);
+  padding-bottom: 10px;
+  padding-left: var(--padding-horizontal);
+  padding-right: var(--padding-horizontal);
+}
+
+.nav-heading:first-child {
+  padding-top: 0; /* Remove top padding for the first heading */
+}
+
+.arena-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow-y: auto;
+  max-height: 100vh;
+  width: var(--arena-width);
+}
+
+.arena {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  height: var(--arena-default-height);
+  border: none;
+  background-color: var(--arena-default-color);
+}
+
+.arena[arena-sport = "Swimming"] {
+  background-color: var(--arena-swimming-color);
+}
+
+.arena[arena-sport = "Athletics"] {
+  background-color: var(--arena-athletics-color);
+}
+
+.lane {
+  position: relative;
+  width: 100%;
+  height: var(--lane-height, var(--lane-min-height)); /* Default to min height */
+  display: flex;
+  align-items: center;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.lane-label {
+  padding-left: var(--padding-horizontal);
+  color: var(--arena-text-color);
+  font-weight: bold;
+  font-family: var(--lanel-label-font);
+  text-align: center;
+}
+
+.dot {
+  position: absolute;
+  width: var(--dot-size);
+  height: var(--dot-size);
+  transition: transform 1s linear;
+  border-radius: 50%; /* circle */
+  background-color: var(--dot-color);
+  box-shadow: 0px 2px 6px 3px rgba(0, 0, 0, 0.3);
+}
+
+.total-time-label {
+  position: absolute;
+  color: var(--arena-text-color);
+  font-weight: bold;
+  font-family: var(--time-label-font);
+}
+
+.medal {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  border: 0.5px solid white;
+  box-shadow: 0px 2px 6px 3px rgba(0, 0, 0, 0.3);
+}
+
+.medal[medal-placing = "1"] {
+  background-color: var(--medal-1-color);
+}
+
+.medal[medal-placing = "2"] {
+  background-color: var(--medal-2-color);
+}
+
+.medal[medal-placing = "3"] {
+  background-color: var(--medal-3-color);
+}
+
+.lap-marker {
+  color: grey;
+  font-size: 18px;
+  font-family: var(--lap-marker-font);
+  text-align: right;
+  padding-top: 10px;
+  width: 100%; /* Match the arena width */
+  max-width: var(--arena-width);
+  margin: 0 auto;
+}
+
+#event-title {
+  font-size: 1.5em;
+  font-family: var(--event-title-font);
+  text-align: center;
+  margin-bottom: var(--padding-horizontal);
+  width: 100%;
+}
+
+.title-bar {
+  width: 100vw; /* Full width of the viewport */
+  background: var(--title-bar-color);
+  color: white;
+  font-family: var(--event-title-font);
+  font-size: 1em;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: fixed; /* Fixed position at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* High z-index to keep it above other elements */
+}
+
+.title-bar h1 {
+  margin: 0;
+  padding: 0;
+}

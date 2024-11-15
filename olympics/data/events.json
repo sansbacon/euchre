@@ -1,0 +1,3574 @@
+{
+    "events": [
+        {
+            "event": "Men's 50m Freestyle",
+            "sport": "Swimming",
+            "distance_m": 50,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Florent Manaudou",
+                    "country": "FRA",
+                    "timeSeconds": 21.56
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Caeleb Dressel",
+                    "country": "USA",
+                    "timeSeconds": 21.61
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Leonardo Deplano",
+                    "country": "ITA",
+                    "timeSeconds": 21.62
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Ben Proud",
+                    "country": "GBR",
+                    "timeSeconds": 21.3
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Cameron McEvoy",
+                    "country": "AUS",
+                    "timeSeconds": 21.25
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Jordan Crooks",
+                    "country": "CAY",
+                    "timeSeconds": 21.64
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Kristian Gkolomeev",
+                    "country": "GRE",
+                    "timeSeconds": 21.59
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Josh Liendo",
+                    "country": "CAN",
+                    "timeSeconds": 21.58
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 64.0
+                }
+            ]
+        },
+        {
+            "event": "Men's 100m Freestyle",
+            "sport": "Swimming",
+            "distance_m": 100,
+            "laps": 2,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Chris Guiliano",
+                    "country": "USA",
+                    "timeSeconds": 47.98
+                },
+                {
+                    "lane": 2,
+                    "athlete": "David Popovici",
+                    "country": "ROU",
+                    "timeSeconds": 47.49
+                },
+                {
+                    "lane": 3,
+                    "athlete": "N\u00e1ndor N\u00e9meth",
+                    "country": "HUN",
+                    "timeSeconds": 47.5
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Pan Zhanle",
+                    "country": "CHN",
+                    "timeSeconds": 46.4
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Kyle Chalmers",
+                    "country": "AUS",
+                    "timeSeconds": 47.48
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Maxime Grousset",
+                    "country": "FRA",
+                    "timeSeconds": 47.71
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Jack Alexy",
+                    "country": "USA",
+                    "timeSeconds": 47.96
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Josha Salchow",
+                    "country": "GER",
+                    "timeSeconds": 47.8
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 89.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 149.43
+                }
+            ]
+        },
+        {
+            "event": "Men's 200m Freestyle",
+            "sport": "Swimming",
+            "distance_m": 200,
+            "laps": 4,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Matthew Richards",
+                    "country": "GBR",
+                    "timeSeconds": 104.74000000000001
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Maximillian Giuliani",
+                    "country": "AUS",
+                    "timeSeconds": 105.57
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Luke Hobson",
+                    "country": "USA",
+                    "timeSeconds": 104.78999999999999
+                },
+                {
+                    "lane": 4,
+                    "athlete": "David Popovici",
+                    "country": "ROU",
+                    "timeSeconds": 104.72
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Duncan Scott",
+                    "country": "GBR",
+                    "timeSeconds": 104.87
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Lukas M\u00e4rtens",
+                    "country": "GER",
+                    "timeSeconds": 105.46000000000001
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Danas Rapšys",
+                    "country": "LTU",
+                    "timeSeconds": 105.46000000000001
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Katsuhiro Matsumoto",
+                    "country": "JPN",
+                    "timeSeconds": 106.25999999999999
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 207.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 301.14
+                }
+            ]
+        },
+        {
+            "event": "Men's 400m Freestyle",
+            "sport": "Swimming",
+            "distance_m": 400,
+            "laps": 8,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Kim Woo-min",
+                    "country": "KOR",
+                    "timeSeconds": 222.5
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Samuel Short",
+                    "country": "AUS",
+                    "timeSeconds": 222.64
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Fei Liwei",
+                    "country": "CHN",
+                    "timeSeconds": 224.24
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Lukas M\u00e4rtens",
+                    "country": "GER",
+                    "timeSeconds": 221.78
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Guilherme Costa",
+                    "country": "BRA",
+                    "timeSeconds": 222.76
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Elijah Winnington",
+                    "country": "AUS",
+                    "timeSeconds": 222.21
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Aaron Shackell",
+                    "country": "USA",
+                    "timeSeconds": 227.0
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Oliver Klemet",
+                    "country": "GER",
+                    "timeSeconds": 226.59
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 617.4
+                }
+            ]
+        },
+        {
+            "event": "Men's 800m Freestyle",
+            "sport": "Swimming",
+            "distance_m": 800,
+            "laps": 16,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Luca De Tullio",
+                    "country": "ITA",
+                    "timeSeconds": 466.15999999999997
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Robert Finke",
+                    "country": "USA",
+                    "timeSeconds": 458.75
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Gregorio Paltrinieri",
+                    "country": "ITA",
+                    "timeSeconds": 459.38
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Daniel Wiffen",
+                    "country": "IRL",
+                    "timeSeconds": 458.19
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Ahmed Jaouadi",
+                    "country": "TUN",
+                    "timeSeconds": 462.83
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Elijah Winnington",
+                    "country": "AUS",
+                    "timeSeconds": 468.36
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Sven Schwarz",
+                    "country": "GER",
+                    "timeSeconds": 463.59000000000003
+                },
+                {
+                    "lane": 8,
+                    "athlete": "David Aubry",
+                    "country": "FRA",
+                    "timeSeconds": 463.59000000000003
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 1244.57
+                }
+            ]
+        },
+        {
+            "event": "Men's 1500m Freestyle",
+            "sport": "Swimming",
+            "distance_m": 1500,
+            "laps": 30,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Damien Joly",
+                    "country": "FRA",
+                    "timeSeconds": 892.61
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Kuzey Tun\u00e7elli",
+                    "country": "TUR",
+                    "timeSeconds": 881.22
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Ahmed Jaouadi",
+                    "country": "TUN",
+                    "timeSeconds": 883.35
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Daniel Wiffen",
+                    "country": "IRL",
+                    "timeSeconds": 879.63
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Gregorio Paltrinieri",
+                    "country": "ITA",
+                    "timeSeconds": 874.55
+                },
+                {
+                    "lane": 6,
+                    "athlete": "David Aubry",
+                    "country": "FRA",
+                    "timeSeconds": 884.66
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Bobby Finke",
+                    "country": "USA",
+                    "timeSeconds": 870.67
+                },
+                {
+                    "lane": 8,
+                    "athlete": "D\u00e1vid Betlehem",
+                    "country": "HUN",
+                    "timeSeconds": 880.91
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 1860.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 2273.22
+                }
+            ]
+        },
+        {
+            "event": "Men's 100m Backstroke",
+            "sport": "Swimming",
+            "distance_m": 100,
+            "laps": 2,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Oliver Morgan",
+                    "country": "GBR",
+                    "timeSeconds": 52.84
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Ryan Murphy",
+                    "country": "USA",
+                    "timeSeconds": 52.39
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Yohann Ndoye-Brouard",
+                    "country": "FRA",
+                    "timeSeconds": 52.77
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Xu Jiayu",
+                    "country": "CHN",
+                    "timeSeconds": 52.32
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Thomas Ceccon",
+                    "country": "ITA",
+                    "timeSeconds": 52.0
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Pieter Coetze",
+                    "country": "RSA",
+                    "timeSeconds": 52.58
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Apostolos Christou",
+                    "country": "GRE",
+                    "timeSeconds": 52.41
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Hugo Gonz\u00e1lez",
+                    "country": "ESP",
+                    "timeSeconds": 52.73
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 103.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 167.79
+                }
+            ]
+        },
+        {
+            "event": "Men's 200m Backstroke",
+            "sport": "Swimming",
+            "distance_m": 200,
+            "laps": 4,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Mewen Tomac",
+                    "country": "FRA",
+                    "timeSeconds": 115.38
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Apostolos Christou",
+                    "country": "GRE",
+                    "timeSeconds": 114.82
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Pieter Coetze",
+                    "country": "RSA",
+                    "timeSeconds": 115.6
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Hubert Kos",
+                    "country": "HUN",
+                    "timeSeconds": 114.25999999999999
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Roman Mityukov",
+                    "country": "SUI",
+                    "timeSeconds": 114.85
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Lukas M\u00e4rtens",
+                    "country": "GER",
+                    "timeSeconds": 115.97
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Keaton Jones",
+                    "country": "USA",
+                    "timeSeconds": 115.39
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Hugo Gonz\u00e1lez",
+                    "country": "ESP",
+                    "timeSeconds": 115.47
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 216.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 350.01
+                }
+            ]
+        },
+        {
+            "event": "Men's 100m Breaststroke",
+            "sport": "Swimming",
+            "distance_m": 100,
+            "laps": 2,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Lucas Matzerath",
+                    "country": "GER",
+                    "timeSeconds": 59.3
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Caspar Corbeau",
+                    "country": "NED",
+                    "timeSeconds": 59.98
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Arno Kamminga",
+                    "country": "NED",
+                    "timeSeconds": 59.32
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Adam Peaty",
+                    "country": "GBR",
+                    "timeSeconds": 59.05
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Qin Haiyang",
+                    "country": "CHN",
+                    "timeSeconds": 59.5
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Nic Fink",
+                    "country": "USA",
+                    "timeSeconds": 59.05
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Nicol\u00f2 Martinenghi",
+                    "country": "ITA",
+                    "timeSeconds": 59.03
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Melvin Imoudu",
+                    "country": "GER",
+                    "timeSeconds": 59.11
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 120.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 178.0
+                }
+            ]
+        },
+        {
+            "event": "Men's 200m Breaststroke",
+            "sport": "Swimming",
+            "distance_m": 200,
+            "laps": 4,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Yu Hanaguruma",
+                    "country": "JPN",
+                    "timeSeconds": 128.79
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Ippei Watanabe",
+                    "country": "JPN",
+                    "timeSeconds": 128.83
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Dong Zhihao",
+                    "country": "CHN",
+                    "timeSeconds": 128.46
+                },
+                {
+                    "lane": 4,
+                    "athlete": "L\u00e9on Marchand",
+                    "country": "FRA",
+                    "timeSeconds": 125.85
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Zac Stubblety-Cook",
+                    "country": "AUS",
+                    "timeSeconds": 126.79
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Caspar Corbeau",
+                    "country": "NED",
+                    "timeSeconds": 127.9
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Josh Matheny",
+                    "country": "USA",
+                    "timeSeconds": 129.52
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Joshua Yong",
+                    "country": "AUS",
+                    "timeSeconds": 131.44
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 250.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 378.0
+                }
+            ]
+        },
+        {
+            "event": "Men's 100m Butterfly",
+            "sport": "Swimming",
+            "distance_m": 100,
+            "laps": 2,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Matthew Temple",
+                    "country": "AUS",
+                    "timeSeconds": 51.1
+                },
+                {
+                    "lane": 2,
+                    "athlete": "No\u00e8 Ponti",
+                    "country": "SUI",
+                    "timeSeconds": 50.55
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Josh Liendo",
+                    "country": "CAN",
+                    "timeSeconds": 49.99
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Kristof Milak",
+                    "country": "HUN",
+                    "timeSeconds": 49.9
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Maxime Grousset",
+                    "country": "FRA",
+                    "timeSeconds": 50.75
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Nyls Korstanje",
+                    "country": "NED",
+                    "timeSeconds": 50.83
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Ilya Kharun",
+                    "country": "CAN",
+                    "timeSeconds": 50.45
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Naoki Mizunuma",
+                    "country": "JPN",
+                    "timeSeconds": 51.11
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 127.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 158.53
+                }
+            ]
+        },
+        {
+            "event": "Men's 200m Butterfly",
+            "sport": "Swimming",
+            "distance_m": 200,
+            "laps": 4,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Alberto Razzetti",
+                    "country": "ITA",
+                    "timeSeconds": 114.85
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Kregor Zirk",
+                    "country": "EST",
+                    "timeSeconds": 114.55
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Ilya Kharun",
+                    "country": "CAN",
+                    "timeSeconds": 112.8
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Kristof Milak",
+                    "country": "HUN",
+                    "timeSeconds": 111.75
+                },
+                {
+                    "lane": 5,
+                    "athlete": "L\u00e9on Marchand",
+                    "country": "FRA",
+                    "timeSeconds": 111.21000000000001
+                },
+                {
+                    "lane": 6,
+                    "athlete": "No\u00e8 Ponti",
+                    "country": "SUI",
+                    "timeSeconds": 114.14
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Krzysztof Chmielewski",
+                    "country": "POL",
+                    "timeSeconds": 113.9
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Martin Espernberger",
+                    "country": "AUT",
+                    "timeSeconds": 114.17
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 328.03
+                }
+            ]
+        },
+        {
+            "event": "Men's 200m Individual Medley",
+            "sport": "Swimming",
+            "distance_m": 200,
+            "laps": 4,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Alberto Razzetti",
+                    "country": "ITA",
+                    "timeSeconds": 116.82
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Daiya Seto",
+                    "country": "JPN",
+                    "timeSeconds": 117.21000000000001
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Duncan Scott",
+                    "country": "GBR",
+                    "timeSeconds": 115.31
+                },
+                {
+                    "lane": 4,
+                    "athlete": "L\u00e9on Marchand",
+                    "country": "FRA",
+                    "timeSeconds": 114.06
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Carson Foster",
+                    "country": "USA",
+                    "timeSeconds": 116.1
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Wang Shun",
+                    "country": "CHN",
+                    "timeSeconds": 116.0
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Tom Dean",
+                    "country": "GBR",
+                    "timeSeconds": 116.46000000000001
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Finlay Knox",
+                    "country": "CAN",
+                    "timeSeconds": 117.25999999999999
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 219.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 331.74
+                }
+            ]
+        },
+        {
+            "event": "Men's 400m Individual Medley",
+            "sport": "Swimming",
+            "distance_m": 400,
+            "laps": 8,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Lewis Clareburt",
+                    "country": "NZL",
+                    "timeSeconds": 250.44
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Tomoyuki Matsushita",
+                    "country": "JPN",
+                    "timeSeconds": 248.62
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Daiya Seto",
+                    "country": "JPN",
+                    "timeSeconds": 251.78
+                },
+                {
+                    "lane": 4,
+                    "athlete": "L\u00e9on Marchand",
+                    "country": "FRA",
+                    "timeSeconds": 242.95
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Max Litchfield",
+                    "country": "GBR",
+                    "timeSeconds": 248.85
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Carson Foster",
+                    "country": "USA",
+                    "timeSeconds": 248.66
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Alberto Razzetti",
+                    "country": "ITA",
+                    "timeSeconds": 249.38
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Cedric B\u00fcssing",
+                    "country": "GER",
+                    "timeSeconds": 257.16
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 464.85
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 698.59
+                }
+            ]
+        },
+        {
+            "event": "Women's 50m Freestyle",
+            "sport": "Swimming",
+            "distance_m": 50,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Wu Qingfeng",
+                    "country": "CHN",
+                    "timeSeconds": 24.37
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Shayna Jack",
+                    "country": "AUS",
+                    "timeSeconds": 24.39
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Katarzyna Wasick",
+                    "country": "POL",
+                    "timeSeconds": 24.33
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Sarah Sj\u00f6str\u00f6m",
+                    "country": "SWE",
+                    "timeSeconds": 23.71
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Gretchen Walsh",
+                    "country": "USA",
+                    "timeSeconds": 24.21
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Zhang Yufei",
+                    "country": "CHN",
+                    "timeSeconds": 24.2
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Meg Harris",
+                    "country": "AUS",
+                    "timeSeconds": 23.97
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Ne\u017ea Klan\u010dar",
+                    "country": "AIN",
+                    "timeSeconds": 24.35
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 64.0
+                }
+            ]
+        },
+        {
+            "event": "Women's 100m Freestyle",
+            "sport": "Swimming",
+            "distance_m": 100,
+            "laps": 2,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Torri Huske",
+                    "country": "USA",
+                    "timeSeconds": 52.29
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Marrit Steenbergen",
+                    "country": "NED",
+                    "timeSeconds": 52.83
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Mollie O'Callaghan",
+                    "country": "AUS",
+                    "timeSeconds": 52.34
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Siobh\u00e1n Haughey",
+                    "country": "HKG",
+                    "timeSeconds": 52.33
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Shayna Jack",
+                    "country": "AUS",
+                    "timeSeconds": 52.72
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Yang Junxuan",
+                    "country": "CHN",
+                    "timeSeconds": 52.82
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Sarah Sj\u00f6str\u00f6m",
+                    "country": "SWE",
+                    "timeSeconds": 52.16
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Gretchen Walsh",
+                    "country": "USA",
+                    "timeSeconds": 53.04
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 89.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 149.43
+                }
+            ]
+        },
+        {
+            "event": "Women's 200m Freestyle",
+            "sport": "Swimming",
+            "distance_m": 200,
+            "laps": 4,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Erika Fairweather",
+                    "country": "NZL",
+                    "timeSeconds": 115.59
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Yang Junxuan",
+                    "country": "CHN",
+                    "timeSeconds": 115.38
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Claire Weinstein",
+                    "country": "USA",
+                    "timeSeconds": 116.6
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Ariarne Titmus",
+                    "country": "AUS",
+                    "timeSeconds": 113.81
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Mollie O'Callaghan",
+                    "country": "AUS",
+                    "timeSeconds": 113.27000000000001
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Siobh\u00e1n Haughey",
+                    "country": "HKG",
+                    "timeSeconds": 114.55
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Barbora Seemanov\u00e1",
+                    "country": "CZE",
+                    "timeSeconds": 115.47
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Mary-Sophie Harvey",
+                    "country": "CAN",
+                    "timeSeconds": 115.28999999999999
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 207.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 301.14
+                }
+            ]
+        },
+        {
+            "event": "Women's 400m Freestyle",
+            "sport": "Swimming",
+            "distance_m": 400,
+            "laps": 8,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Maria Fernanda Costa",
+                    "country": "BRA",
+                    "timeSeconds": 243.53
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Jamie Perkins",
+                    "country": "AUS",
+                    "timeSeconds": 244.96
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Erika Fairweather",
+                    "country": "NZL",
+                    "timeSeconds": 241.12
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Katie Ledecky",
+                    "country": "USA",
+                    "timeSeconds": 240.86
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Ariarne Titmus",
+                    "country": "AUS",
+                    "timeSeconds": 237.49
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Summer McIntosh",
+                    "country": "CAN",
+                    "timeSeconds": 238.37
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Paige Madden",
+                    "country": "USA",
+                    "timeSeconds": 242.26
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Isabel Marie Gose",
+                    "country": "GER",
+                    "timeSeconds": 242.14
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 617.4
+                }
+            ]
+        },
+        {
+            "event": "Women's 800m Freestyle",
+            "sport": "Swimming",
+            "distance_m": 800,
+            "laps": 16,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Erika Fairweather",
+                    "country": "NZL",
+                    "timeSeconds": 503.27
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Isabel Marie Gose",
+                    "country": "GER",
+                    "timeSeconds": 497.82
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Ariarne Titmus",
+                    "country": "AUS",
+                    "timeSeconds": 492.29
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Katie Ledecky",
+                    "country": "USA",
+                    "timeSeconds": 491.04
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Paige Madden",
+                    "country": "USA",
+                    "timeSeconds": 493.0
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Lani Pallister",
+                    "country": "AUS",
+                    "timeSeconds": 501.09
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Simona Quadarella",
+                    "country": "ITA",
+                    "timeSeconds": 494.55
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Anastasiya Kirpichnikova",
+                    "country": "FRA",
+                    "timeSeconds": 502.8
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 1244.57
+                }
+            ]
+        },
+        {
+            "event": "Women's 1500m Freestyle",
+            "sport": "Swimming",
+            "distance_m": 1500,
+            "laps": 30,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Beatriz Dizotti",
+                    "country": "BRA",
+                    "timeSeconds": 962.86
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Moesha Johnson",
+                    "country": "AUS",
+                    "timeSeconds": 962.7
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Anastasiya Kirpichnikova",
+                    "country": "FRA",
+                    "timeSeconds": 940.35
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Katie Ledecky",
+                    "country": "USA",
+                    "timeSeconds": 930.02
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Simona Quadarella",
+                    "country": "ITA",
+                    "timeSeconds": 944.05
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Isabel Gose",
+                    "country": "GER",
+                    "timeSeconds": 941.16
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Li Bingjie",
+                    "country": "CHN",
+                    "timeSeconds": 961.03
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Leonie M\u00e4rtens",
+                    "country": "GER",
+                    "timeSeconds": 972.57
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 1860.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 2273.22
+                }
+            ]
+        },
+        {
+            "event": "Women's 100m Backstroke",
+            "sport": "Swimming",
+            "distance_m": 100,
+            "laps": 2,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "B\u00e9ryl Gastaldello",
+                    "country": "FRA",
+                    "timeSeconds": 59.8
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Kylie Masse",
+                    "country": "CAN",
+                    "timeSeconds": 58.29
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Katharine Berkoff",
+                    "country": "USA",
+                    "timeSeconds": 57.98
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Regan Smith",
+                    "country": "USA",
+                    "timeSeconds": 57.66
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Kaylee McKeown",
+                    "country": "AUS",
+                    "timeSeconds": 57.33
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Iona Anderson",
+                    "country": "AUS",
+                    "timeSeconds": 58.98
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Ingrid Wilm",
+                    "country": "CAN",
+                    "timeSeconds": 59.25
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Emma Terebo",
+                    "country": "FRA",
+                    "timeSeconds": 59.4
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 103.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 167.79
+                }
+            ]
+        },
+        {
+            "event": "Women's 200m Backstroke",
+            "sport": "Swimming",
+            "distance_m": 200,
+            "laps": 4,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Katie Shanahan",
+                    "country": "GBR",
+                    "timeSeconds": 127.53
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Kylie Masse",
+                    "country": "CAN",
+                    "timeSeconds": 125.57
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Honey Osrin",
+                    "country": "GBR",
+                    "timeSeconds": 128.16
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Phoebe Bacon",
+                    "country": "USA",
+                    "timeSeconds": 125.61
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Kaylee McKeown",
+                    "country": "AUS",
+                    "timeSeconds": 123.73
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Peng Xuwei",
+                    "country": "CHN",
+                    "timeSeconds": 127.96
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Regan Smith",
+                    "country": "USA",
+                    "timeSeconds": 124.26
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Anastasiya Shkurdai",
+                    "country": "GBR",
+                    "timeSeconds": 130.23
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 216.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 350.01
+                }
+            ]
+        },
+        {
+            "event": "Women's 100m Breaststroke",
+            "sport": "Swimming",
+            "distance_m": 100,
+            "laps": 2,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Benedetta Pilato",
+                    "country": "ITA",
+                    "timeSeconds": 65.6
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Alina Zmushka",
+                    "country": "EST",
+                    "timeSeconds": 66.54
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Lilly King",
+                    "country": "USA",
+                    "timeSeconds": 65.6
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Tatjana Smith",
+                    "country": "RSA",
+                    "timeSeconds": 65.28
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Mona McSharry",
+                    "country": "IRL",
+                    "timeSeconds": 65.59
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Tang Qianting",
+                    "country": "CHN",
+                    "timeSeconds": 65.54
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Angharad Evans",
+                    "country": "GBR",
+                    "timeSeconds": 65.85
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Eneli Jefimova",
+                    "country": "EST",
+                    "timeSeconds": 66.5
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 120.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 178.0
+                }
+            ]
+        },
+        {
+            "event": "Women's 200m Breaststroke",
+            "sport": "Swimming",
+            "distance_m": 200,
+            "laps": 4,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Kotryna Teterevkova",
+                    "country": "LTU",
+                    "timeSeconds": 143.75
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Ye Shiwen",
+                    "country": "CHN",
+                    "timeSeconds": 144.31
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Tes Schouten",
+                    "country": "NED",
+                    "timeSeconds": 141.05
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Kate Douglass",
+                    "country": "USA",
+                    "timeSeconds": 139.24
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Tatjana Smith",
+                    "country": "RSA",
+                    "timeSeconds": 139.6
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Kaylene Corbett",
+                    "country": "RSA",
+                    "timeSeconds": 144.46
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Lilly King",
+                    "country": "USA",
+                    "timeSeconds": 145.91
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Satomi Suzuki",
+                    "country": "JPN",
+                    "timeSeconds": 142.54
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 250.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 378.0
+                }
+            ]
+        },
+        {
+            "event": "Women's 100m Butterfly",
+            "sport": "Swimming",
+            "distance_m": 100,
+            "laps": 2,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Mizuki Hirai",
+                    "country": "JPN",
+                    "timeSeconds": 57.19
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Maggie Mac Neil",
+                    "country": "CAN",
+                    "timeSeconds": 56.44
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Zhang Yufei",
+                    "country": "CHN",
+                    "timeSeconds": 56.21
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Gretchen Walsh",
+                    "country": "USA",
+                    "timeSeconds": 55.63
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Torri Huske",
+                    "country": "USA",
+                    "timeSeconds": 55.59
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Angelina K\u00f6hler",
+                    "country": "GER",
+                    "timeSeconds": 56.42
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Emma McKeon",
+                    "country": "AUS",
+                    "timeSeconds": 56.93
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Louise Hansson",
+                    "country": "SWE",
+                    "timeSeconds": 57.34
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 127.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 158.53
+                }
+            ]
+        },
+        {
+            "event": "Women's 200m Butterfly",
+            "sport": "Swimming",
+            "distance_m": 200,
+            "laps": 4,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Abbey Connor",
+                    "country": "AUS",
+                    "timeSeconds": 128.15
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Alex Shackell",
+                    "country": "USA",
+                    "timeSeconds": 127.73
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Zhang Yufei",
+                    "country": "CHN",
+                    "timeSeconds": 125.09
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Summer McIntosh",
+                    "country": "CAN",
+                    "timeSeconds": 123.03
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Regan Smith",
+                    "country": "USA",
+                    "timeSeconds": 123.84
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Elizabeth Dekkers",
+                    "country": "AUS",
+                    "timeSeconds": 127.11
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Helena Rosendahl Bach",
+                    "country": "DEN",
+                    "timeSeconds": 127.11
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Laura Stephens",
+                    "country": "GBR",
+                    "timeSeconds": 128.82
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 328.03
+                }
+            ]
+        },
+        {
+            "event": "Women's 200m Individual Medley",
+            "sport": "Swimming",
+            "distance_m": 200,
+            "laps": 4,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Kaylee McKeown",
+                    "country": "AUS",
+                    "timeSeconds": 128.08
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Sydney Pickrem",
+                    "country": "CAN",
+                    "timeSeconds": 129.74
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Kate Douglass",
+                    "country": "USA",
+                    "timeSeconds": 126.92
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Alexandra Walsh",
+                    "country": "USA",
+                    "timeSeconds": 1000000.0
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Summer McIntosh",
+                    "country": "CAN",
+                    "timeSeconds": 126.56
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Abbie Wood",
+                    "country": "GBR",
+                    "timeSeconds": 129.51
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Yu Yiting",
+                    "country": "CHN",
+                    "timeSeconds": 128.49
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Ella Ramsay",
+                    "country": "AUS",
+                    "timeSeconds": 1000000.0
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 219.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 331.74
+                }
+            ]
+        },
+        {
+            "event": "Women's 400m Individual Medley",
+            "sport": "Swimming",
+            "distance_m": 400,
+            "laps": 8,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Ellen Walshe",
+                    "country": "IRL",
+                    "timeSeconds": 280.7
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Mio Narita",
+                    "country": "JPN",
+                    "timeSeconds": 278.83
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Summer McIntosh",
+                    "country": "CAN",
+                    "timeSeconds": 267.71
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Emma Weyant",
+                    "country": "USA",
+                    "timeSeconds": 274.93
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Katie Grimes",
+                    "country": "USA",
+                    "timeSeconds": 273.4
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Freya Colbert",
+                    "country": "GBR",
+                    "timeSeconds": 275.67
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Ella Ramsay",
+                    "country": "AUS",
+                    "timeSeconds": 278.01
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Katie Shanahan",
+                    "country": "GBR",
+                    "timeSeconds": 280.17
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Kate",
+                    "country": "AUS",
+                    "timeSeconds": 464.85
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 698.59
+                }
+            ]
+        },
+        {
+            "event": "Men's 100m",
+            "sport": "Athletics",
+            "distance_m": 100,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 2,
+                    "athlete": "Kenny Bednarek",
+                    "country": "USA",
+                    "timeSeconds": 9.88
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Fred Kerley",
+                    "country": "USA",
+                    "timeSeconds": 9.81
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Kishane Thompson",
+                    "country": "JAM",
+                    "timeSeconds": 9.789
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Akani Simbine",
+                    "country": "RSA",
+                    "timeSeconds": 9.82
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Oblique Seville",
+                    "country": "JAM",
+                    "timeSeconds": 9.91
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Noah Lyles",
+                    "country": "USA",
+                    "timeSeconds": 9.784
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Letsile Tebogo",
+                    "country": "BOT",
+                    "timeSeconds": 9.86
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Marcell Jacobs",
+                    "country": "ITA",
+                    "timeSeconds": 9.85
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 18.57
+                },
+                {
+                    "lane": 11,
+                    "athlete": "Mark",
+                    "country": "AUS",
+                    "timeSeconds": 15.23
+                }
+            ]
+        },
+        {
+            "event": "Men's 200m",
+            "sport": "Athletics",
+            "distance_m": 200,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 2,
+                    "athlete": "Tapiwanashe Makarawu",
+                    "country": "ZIM",
+                    "timeSeconds": 20.1
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Makanakaishe Charamba",
+                    "country": "ZIM",
+                    "timeSeconds": 20.53
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Alexander Ogando",
+                    "country": "DOM",
+                    "timeSeconds": 20.02
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Noah Lyles",
+                    "country": "USA",
+                    "timeSeconds": 19.7
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Erriyon Knighton",
+                    "country": "USA",
+                    "timeSeconds": 19.99
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Letsile Tebogo",
+                    "country": "BOT",
+                    "timeSeconds": 19.46
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Kenneth Bednarek",
+                    "country": "USA",
+                    "timeSeconds": 19.62
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Joseph Fahnbulleh",
+                    "country": "LBR",
+                    "timeSeconds": 20.15
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 38.45
+                }
+            ]
+        },
+        {
+            "event": "Men's 400m",
+            "sport": "Athletics",
+            "distance_m": 400,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 2,
+                    "athlete": "Christopher Bailey",
+                    "country": "USA",
+                    "timeSeconds": 44.58
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Samuel Ogazi",
+                    "country": "NGR",
+                    "timeSeconds": 44.73
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Michael Norman",
+                    "country": "USA",
+                    "timeSeconds": 45.62
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Kirani James",
+                    "country": "GRN",
+                    "timeSeconds": 43.87
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Matthew Hudson-Smith",
+                    "country": "GBR",
+                    "timeSeconds": 43.44
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Muzala Samukonga",
+                    "country": "ZAM",
+                    "timeSeconds": 43.74
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Quincy Hall",
+                    "country": "USA",
+                    "timeSeconds": 43.4
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Jereem Richards",
+                    "country": "TTO",
+                    "timeSeconds": 43.78
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 99.0
+                },
+                {
+                    "lane": 11,
+                    "athlete": "Mark",
+                    "country": "AUS",
+                    "timeSeconds": 80.78
+                }
+            ]
+        },
+        {
+            "event": "Men's 800m",
+            "sport": "Athletics",
+            "distance_m": 800,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 2,
+                    "athlete": "Max Burgin",
+                    "country": "GBR",
+                    "timeSeconds": 103.84
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Tshepiso Masalela",
+                    "country": "BOT",
+                    "timeSeconds": 102.82
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Bryce Hoppel",
+                    "country": "USA",
+                    "timeSeconds": 101.67
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Djamel Sedjati",
+                    "country": "ALG",
+                    "timeSeconds": 101.5
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Mohamed Attaoui",
+                    "country": "ESP",
+                    "timeSeconds": 102.08
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Gabriel Tual",
+                    "country": "FRA",
+                    "timeSeconds": 102.14
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Emmanuel Wanyonyi",
+                    "country": "KEN",
+                    "timeSeconds": 101.19
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Marco Arop",
+                    "country": "CAN",
+                    "timeSeconds": 101.2
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 204.0
+                }
+            ]
+        },
+        {
+            "event": "Men's 1500m",
+            "sport": "Athletics",
+            "distance_m": 1500,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Pietro Arese",
+                    "country": "ITA",
+                    "timeSeconds": 210.74
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Brian Komen",
+                    "country": "KEN",
+                    "timeSeconds": 215.59
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Narve Gilje Nord\u00e5s",
+                    "country": "NOR",
+                    "timeSeconds": 210.46
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Hobbs Kessler",
+                    "country": "USA",
+                    "timeSeconds": 209.45
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Timothy Cheruiyot",
+                    "country": "KEN",
+                    "timeSeconds": 211.35
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Yared Nuguse",
+                    "country": "USA",
+                    "timeSeconds": 207.8
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Josh Kerr",
+                    "country": "GBR",
+                    "timeSeconds": 207.79
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Cole Hocker",
+                    "country": "USA",
+                    "timeSeconds": 207.65
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Niels Laros",
+                    "country": "NED",
+                    "timeSeconds": 209.54
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Jakob Ingebrigtsen",
+                    "country": "NOR",
+                    "timeSeconds": 208.24
+                },
+                {
+                    "lane": 11,
+                    "athlete": "Stefan Nillessen",
+                    "country": "NED",
+                    "timeSeconds": 210.75
+                },
+                {
+                    "lane": 12,
+                    "athlete": "Neil Gourley",
+                    "country": "GBR",
+                    "timeSeconds": 210.88
+                },
+                {
+                    "lane": 13,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 377.0
+                }
+            ]
+        },
+        {
+            "event": "Men's 5000m",
+            "sport": "Athletics",
+            "distance_m": 5000,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Addisu Yihune",
+                    "country": "ETH",
+                    "timeSeconds": 802.33
+                },
+                {
+                    "lane": 2,
+                    "athlete": "George Mills",
+                    "country": "GBR",
+                    "timeSeconds": 812.32
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Stewart McSweyn",
+                    "country": "AUS",
+                    "timeSeconds": 811.38
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Grant Fisher",
+                    "country": "USA",
+                    "timeSeconds": 795.13
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Hugo Hay",
+                    "country": "FRA",
+                    "timeSeconds": 806.71
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Thierry Ndikumwenayo",
+                    "country": "ESP",
+                    "timeSeconds": 804.07
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Biniam Mehary",
+                    "country": "ETH",
+                    "timeSeconds": 795.99
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Graham Blanks",
+                    "country": "USA",
+                    "timeSeconds": 798.67
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Hagos Gebrhiwet",
+                    "country": "ETH",
+                    "timeSeconds": 795.32
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Thomas Fafard",
+                    "country": "CAN",
+                    "timeSeconds": 829.69
+                },
+                {
+                    "lane": 11,
+                    "athlete": "Isaac Kimeli",
+                    "country": "BEL",
+                    "timeSeconds": 798.1
+                },
+                {
+                    "lane": 12,
+                    "athlete": "Edwin Kurgat",
+                    "country": "KEN",
+                    "timeSeconds": 797.18
+                },
+                {
+                    "lane": 13,
+                    "athlete": "John Heymans",
+                    "country": "BEL",
+                    "timeSeconds": 799.25
+                },
+                {
+                    "lane": 14,
+                    "athlete": "Mike Foppen",
+                    "country": "NED",
+                    "timeSeconds": 801.56
+                },
+                {
+                    "lane": 15,
+                    "athlete": "Oscar Chelimo",
+                    "country": "UGA",
+                    "timeSeconds": 811.56
+                },
+                {
+                    "lane": 16,
+                    "athlete": "Jacob Krop",
+                    "country": "KEN",
+                    "timeSeconds": 798.68
+                },
+                {
+                    "lane": 17,
+                    "athlete": "Jakob Ingebrigtsen",
+                    "country": "NOR",
+                    "timeSeconds": 793.66
+                },
+                {
+                    "lane": 18,
+                    "athlete": "Dominic Lobalu",
+                    "country": "EOR",
+                    "timeSeconds": 795.27
+                },
+                {
+                    "lane": 19,
+                    "athlete": "Dawit Seare",
+                    "country": "ERI",
+                    "timeSeconds": 811.5
+                },
+                {
+                    "lane": 20,
+                    "athlete": "Narve Gilje Nord\u00e5s",
+                    "country": "NOR",
+                    "timeSeconds": 811.34
+                },
+                {
+                    "lane": 21,
+                    "athlete": "Ronald Kwemoi",
+                    "country": "KEN",
+                    "timeSeconds": 795.04
+                },
+                {
+                    "lane": 22,
+                    "athlete": "Yann Schrub",
+                    "country": "FRA",
+                    "timeSeconds": 800.63
+                },
+                {
+                    "lane": 23,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 1301.0
+                }
+            ]
+        },
+        {
+            "event": "Men's 10,000m",
+            "sport": "Athletics",
+            "distance_m": 10000,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Yann Schrub",
+                    "country": "FRA",
+                    "timeSeconds": 1000000.0
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Benard Kibet",
+                    "country": "KEN",
+                    "timeSeconds": 1603.98
+                },
+                {
+                    "lane": 3,
+                    "athlete": "C\u00e9lestin Ndikumana",
+                    "country": "BDI",
+                    "timeSeconds": 1000000.0
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Tomoki Ota",
+                    "country": "JPN",
+                    "timeSeconds": 1752.48
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Jacob Kiplimo",
+                    "country": "UGA",
+                    "timeSeconds": 1606.39
+                },
+                {
+                    "lane": 6,
+                    "athlete": "William Kincaid",
+                    "country": "USA",
+                    "timeSeconds": 1649.4
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Martin Magengo Kiprotich",
+                    "country": "UGA",
+                    "timeSeconds": 1700.72
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Thierry Ndikumwenayo",
+                    "country": "ESP",
+                    "timeSeconds": 1609.49
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Rodrigue Kwizera",
+                    "country": "BDI",
+                    "timeSeconds": 1000000.0
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Mohammed Ahmed",
+                    "country": "CAN",
+                    "timeSeconds": 1603.79
+                },
+                {
+                    "lane": 11,
+                    "athlete": "Yves Nimubona",
+                    "country": "RWA",
+                    "timeSeconds": 1674.12
+                },
+                {
+                    "lane": 12,
+                    "athlete": "Selemon Barega",
+                    "country": "ETH",
+                    "timeSeconds": 1604.48
+                },
+                {
+                    "lane": 13,
+                    "athlete": "Adriaan Wildschutt",
+                    "country": "RSA",
+                    "timeSeconds": 1610.64
+                },
+                {
+                    "lane": 14,
+                    "athlete": "Birhanu Balew",
+                    "country": "BRN",
+                    "timeSeconds": 1650.94
+                },
+                {
+                    "lane": 15,
+                    "athlete": "Abdessamad Oukhelfen",
+                    "country": "ESP",
+                    "timeSeconds": 1701.9
+                },
+                {
+                    "lane": 16,
+                    "athlete": "Joshua Cheptegei",
+                    "country": "UGA",
+                    "timeSeconds": 1603.14
+                },
+                {
+                    "lane": 17,
+                    "athlete": "Jun Kasai",
+                    "country": "JPN",
+                    "timeSeconds": 1673.18
+                },
+                {
+                    "lane": 18,
+                    "athlete": "Nicholas Kipkorir",
+                    "country": "KEN",
+                    "timeSeconds": 1643.97
+                },
+                {
+                    "lane": 19,
+                    "athlete": "Grant Fisher",
+                    "country": "USA",
+                    "timeSeconds": 1603.46
+                },
+                {
+                    "lane": 20,
+                    "athlete": "Merhawi Mebrahtu",
+                    "country": "ERI",
+                    "timeSeconds": 1644.25
+                },
+                {
+                    "lane": 21,
+                    "athlete": "Daniel Mateiko",
+                    "country": "KEN",
+                    "timeSeconds": 1610.83
+                },
+                {
+                    "lane": 22,
+                    "athlete": "Berihu Aregawi",
+                    "country": "ETH",
+                    "timeSeconds": 1603.44
+                },
+                {
+                    "lane": 23,
+                    "athlete": "Isaac Kimeli",
+                    "country": "BEL",
+                    "timeSeconds": 1671.52
+                },
+                {
+                    "lane": 24,
+                    "athlete": "Jimmy Gressier",
+                    "country": "FRA",
+                    "timeSeconds": 1618.67
+                },
+                {
+                    "lane": 25,
+                    "athlete": "Yomif Kejelcha",
+                    "country": "ETH",
+                    "timeSeconds": 1604.02
+                },
+                {
+                    "lane": 26,
+                    "athlete": "Jamal Abdelmaji Eisa Mohammed",
+                    "country": "EOR",
+                    "timeSeconds": 1655.92
+                },
+                {
+                    "lane": 27,
+                    "athlete": "Nico Young",
+                    "country": "USA",
+                    "timeSeconds": 1618.11
+                },
+                {
+                    "lane": 28,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 2955.0
+                }
+            ]
+        },
+        {
+            "event": "Men's 110m Hurdles",
+            "sport": "Athletics",
+            "distance_m": 110,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 2,
+                    "athlete": "Hansle Parchment",
+                    "country": "JAM",
+                    "timeSeconds": 13.39
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Enrique Llopis",
+                    "country": "ESP",
+                    "timeSeconds": 13.2
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Daniel Roberts",
+                    "country": "USA",
+                    "timeSeconds": 13.085
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Rasheed Broadbell",
+                    "country": "JAM",
+                    "timeSeconds": 13.088
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Grant Holloway",
+                    "country": "USA",
+                    "timeSeconds": 12.99
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Orlando Bennett",
+                    "country": "JAM",
+                    "timeSeconds": 13.34
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Freddie Crittenden",
+                    "country": "USA",
+                    "timeSeconds": 13.32
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Rachid Muratake",
+                    "country": "JPN",
+                    "timeSeconds": 13.21
+                }
+            ]
+        },
+        {
+            "event": "Men's 400m Hurdles",
+            "sport": "Athletics",
+            "distance_m": 400,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 2,
+                    "athlete": "Abderrahman Samba",
+                    "country": "QAT",
+                    "timeSeconds": 47.98
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Alison dos Santos",
+                    "country": "BRA",
+                    "timeSeconds": 47.26
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Rasmus M\u00e4gi",
+                    "country": "EST",
+                    "timeSeconds": 52.53
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Cl\u00e9ment Ducos",
+                    "country": "FRA",
+                    "timeSeconds": 47.76
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Kyron McMaster",
+                    "country": "IVB",
+                    "timeSeconds": 47.79
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Karsten Warholm",
+                    "country": "NOR",
+                    "timeSeconds": 47.06
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Rai Benjamin",
+                    "country": "USA",
+                    "timeSeconds": 46.46
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Roshawn Clarke",
+                    "country": "JAM",
+                    "timeSeconds": 1000000.0
+                }
+            ]
+        },
+        {
+            "event": "Men's 3000m Steeplechase",
+            "sport": "Athletics",
+            "distance_m": 3000,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Avinash Sable",
+                    "country": "IND",
+                    "timeSeconds": 494.18
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Ahmed Jaziri",
+                    "country": "TUN",
+                    "timeSeconds": 488.02
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Leonard Chemutai",
+                    "country": "UGA",
+                    "timeSeconds": 500.03
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Jean-Simon Desgagn\u00e9s",
+                    "country": "CAN",
+                    "timeSeconds": 499.31
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Mohamed Amin Jhinaoui",
+                    "country": "TUN",
+                    "timeSeconds": 487.73
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Amos Serem",
+                    "country": "KEN",
+                    "timeSeconds": 499.74
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Daniel Arce",
+                    "country": "ESP",
+                    "timeSeconds": 493.8
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Samuel Firewu",
+                    "country": "ETH",
+                    "timeSeconds": 488.87
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Abraham Kibiwot",
+                    "country": "KEN",
+                    "timeSeconds": 486.47
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Kenneth Rooks",
+                    "country": "USA",
+                    "timeSeconds": 486.41
+                },
+                {
+                    "lane": 11,
+                    "athlete": "Mohamed Tindouft",
+                    "country": "MAR",
+                    "timeSeconds": 494.82
+                },
+                {
+                    "lane": 12,
+                    "athlete": "Getnet Wale",
+                    "country": "ETH",
+                    "timeSeconds": 492.33
+                },
+                {
+                    "lane": 13,
+                    "athlete": "Ryuji Mira",
+                    "country": "JPN",
+                    "timeSeconds": 491.72
+                },
+                {
+                    "lane": 14,
+                    "athlete": "Simon Koech",
+                    "country": "KEN",
+                    "timeSeconds": 489.87
+                },
+                {
+                    "lane": 15,
+                    "athlete": "Soufiane El Bakkali",
+                    "country": "MAR",
+                    "timeSeconds": 486.05
+                },
+                {
+                    "lane": 16,
+                    "athlete": "Lamecha Girma",
+                    "country": "ETH",
+                    "timeSeconds": 1000000.0
+                }
+            ]
+        },
+        {
+            "event": "Women's 100m",
+            "sport": "Athletics",
+            "distance_m": 100,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 2,
+                    "athlete": "Mujinga Kambundji",
+                    "country": "SUI",
+                    "timeSeconds": 10.99
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Marie Jos\u00e9e Ta Lou-Smith",
+                    "country": "CIV",
+                    "timeSeconds": 13.84
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Tia Clayton",
+                    "country": "JAM",
+                    "timeSeconds": 11.04
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Melissa Jefferson",
+                    "country": "USA",
+                    "timeSeconds": 10.92
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Julien Alfred",
+                    "country": "LCA",
+                    "timeSeconds": 10.72
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Sha'Carri Richardson",
+                    "country": "USA",
+                    "timeSeconds": 10.87
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Daryll Neita",
+                    "country": "GBR",
+                    "timeSeconds": 10.96
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Twanisha Terry",
+                    "country": "USA",
+                    "timeSeconds": 10.97
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 18.57
+                },
+                {
+                    "lane": 11,
+                    "athlete": "Mark",
+                    "country": "AUS",
+                    "timeSeconds": 15.23
+                }
+            ]
+        },
+        {
+            "event": "Women's 200m",
+            "sport": "Athletics",
+            "distance_m": 200,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 2,
+                    "athlete": "McKenzie Long",
+                    "country": "USA",
+                    "timeSeconds": 22.42
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Jessika Gbai",
+                    "country": "CIV",
+                    "timeSeconds": 22.7
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Dina Asher-Smith",
+                    "country": "GBR",
+                    "timeSeconds": 22.22
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Daryll Neita",
+                    "country": "GBR",
+                    "timeSeconds": 22.23
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Brittany Brown",
+                    "country": "USA",
+                    "timeSeconds": 22.2
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Gabrielle Thomas",
+                    "country": "USA",
+                    "timeSeconds": 21.83
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Julien Alfred",
+                    "country": "LCA",
+                    "timeSeconds": 22.08
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Favour Ofili",
+                    "country": "NGR",
+                    "timeSeconds": 22.24
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 38.45
+                }
+            ]
+        },
+        {
+            "event": "Women's 400m",
+            "sport": "Athletics",
+            "distance_m": 400,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 2,
+                    "athlete": "Sada Williams",
+                    "country": "BAR",
+                    "timeSeconds": 49.83
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Henriette J\u00e6ger",
+                    "country": "NOR",
+                    "timeSeconds": 49.96
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Rhasidat Adeleke",
+                    "country": "IRL",
+                    "timeSeconds": 49.28
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Amber Anning",
+                    "country": "GBR",
+                    "timeSeconds": 49.29
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Marileidy Paulino",
+                    "country": "DOM",
+                    "timeSeconds": 48.17
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Natalia Kaczmarek",
+                    "country": "POL",
+                    "timeSeconds": 48.98
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Salwa Eid Naser",
+                    "country": "BRN",
+                    "timeSeconds": 48.53
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Alexis Holmes",
+                    "country": "USA",
+                    "timeSeconds": 49.77
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 99.0
+                },
+                {
+                    "lane": 11,
+                    "athlete": "Mark",
+                    "country": "AUS",
+                    "timeSeconds": 80.78
+                }
+            ]
+        },
+        {
+            "event": "Women's 800m",
+            "sport": "Athletics",
+            "distance_m": 800,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 2,
+                    "athlete": "Juliette Whittaker",
+                    "country": "USA",
+                    "timeSeconds": 118.5
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Worknesh Mesele",
+                    "country": "ETH",
+                    "timeSeconds": 118.28
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Shafiqua Maloney",
+                    "country": "VIN",
+                    "timeSeconds": 117.66
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Keely Hodgkinson",
+                    "country": "GBR",
+                    "timeSeconds": 116.72
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Prudence Sekgodiso",
+                    "country": "RSA",
+                    "timeSeconds": 118.78999999999999
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Mary Moraa",
+                    "country": "KEN",
+                    "timeSeconds": 117.42
+                },
+                {
+                    "lane": 8,
+                    "athlete": "R\u00e9nelle Lamote",
+                    "country": "FRA",
+                    "timeSeconds": 118.19
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Tsige Duguma",
+                    "country": "ETH",
+                    "timeSeconds": 117.15
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 204.0
+                }
+            ]
+        },
+        {
+            "event": "Women's 1500m",
+            "sport": "Athletics",
+            "distance_m": 1500,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Klaudia Kazimierska",
+                    "country": "POL",
+                    "timeSeconds": 240.12
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Diribe Welteji",
+                    "country": "ETH",
+                    "timeSeconds": 232.75
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Nikki Hiltz",
+                    "country": "USA",
+                    "timeSeconds": 236.38
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Gudaf Tsegay",
+                    "country": "ETH",
+                    "timeSeconds": 241.27
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Georgia Bell",
+                    "country": "GBR",
+                    "timeSeconds": 232.61
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Faith Kipyegon",
+                    "country": "KEN",
+                    "timeSeconds": 231.29
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Jessica Hull",
+                    "country": "AUS",
+                    "timeSeconds": 232.56
+                },
+                {
+                    "lane": 8,
+                    "athlete": "\u00c1gueda Marqu\u00e9s",
+                    "country": "ESP",
+                    "timeSeconds": 240.31
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Elle Purrier St. Pierre",
+                    "country": "USA",
+                    "timeSeconds": 237.52
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Agathe Guillemot",
+                    "country": "FRA",
+                    "timeSeconds": 239.07999999999998
+                },
+                {
+                    "lane": 11,
+                    "athlete": "Susan Ejore",
+                    "country": "KEN",
+                    "timeSeconds": 236.07
+                },
+                {
+                    "lane": 12,
+                    "athlete": "Laura Muir",
+                    "country": "GBR",
+                    "timeSeconds": 233.37
+                },
+                {
+                    "lane": 13,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 377.0
+                }
+            ]
+        },
+        {
+            "event": "Women's 5000m",
+            "sport": "Athletics",
+            "distance_m": 5000,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Faith Kipyegon",
+                    "country": "KEN",
+                    "timeSeconds": 869.6
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Rose Davies",
+                    "country": "AUS",
+                    "timeSeconds": 889.67
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Karoline Bjerkeli Gr\u00f8vdal",
+                    "country": "NOR",
+                    "timeSeconds": 883.21
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Francine Niyomukunzi",
+                    "country": "BDI",
+                    "timeSeconds": 922.4
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Joselyn Brea",
+                    "country": "VEN",
+                    "timeSeconds": 917.04
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Medina Eisa",
+                    "country": "ETH",
+                    "timeSeconds": 875.43
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Elise Cranny",
+                    "country": "USA",
+                    "timeSeconds": 888.06
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Sifan Hassan",
+                    "country": "NED",
+                    "timeSeconds": 870.61
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Whittni Morgan",
+                    "country": "USA",
+                    "timeSeconds": 893.57
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Margaret Kipkemboi",
+                    "country": "KEN",
+                    "timeSeconds": 872.23
+                },
+                {
+                    "lane": 11,
+                    "athlete": "Beatrice Chebet",
+                    "country": "KEN",
+                    "timeSeconds": 868.56
+                },
+                {
+                    "lane": 12,
+                    "athlete": "Ejgayehu Taye",
+                    "country": "ETH",
+                    "timeSeconds": 872.98
+                },
+                {
+                    "lane": 13,
+                    "athlete": "Gudaf Tsegay",
+                    "country": "ETH",
+                    "timeSeconds": 885.21
+                },
+                {
+                    "lane": 14,
+                    "athlete": "Karissa Schweizer",
+                    "country": "USA",
+                    "timeSeconds": 885.57
+                },
+                {
+                    "lane": 15,
+                    "athlete": "Nathalie Blomqvist",
+                    "country": "FIN",
+                    "timeSeconds": 893.1
+                },
+                {
+                    "lane": 16,
+                    "athlete": "Nadia Battocletti",
+                    "country": "ITA",
+                    "timeSeconds": 871.64
+                },
+                {
+                    "lane": 17,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 1301.0
+                }
+            ]
+        },
+        {
+            "event": "Women's 10,000m",
+            "sport": "Athletics",
+            "distance_m": 10000,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Annet Chemengich Chelangat",
+                    "country": "UGA",
+                    "timeSeconds": 1910.41
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Megan Keith",
+                    "country": "GBR",
+                    "timeSeconds": 1999.92
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Weini Kelati",
+                    "country": "USA",
+                    "timeSeconds": 1849.98
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Daisy Jepkemei",
+                    "country": "KAZ",
+                    "timeSeconds": 1886.55
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Sarah Chelangat",
+                    "country": "UGA",
+                    "timeSeconds": 1862.37
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Yuka Takashima",
+                    "country": "JPN",
+                    "timeSeconds": 1912.07
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Klara Lukan",
+                    "country": "SLO",
+                    "timeSeconds": 1905.15
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Alessia Zarbo",
+                    "country": "FRA",
+                    "timeSeconds": 1000000.0
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Tsigie Gebreselama",
+                    "country": "ETH",
+                    "timeSeconds": 1854.57
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Margaret Kipkemboi",
+                    "country": "KEN",
+                    "timeSeconds": 1844.58
+                },
+                {
+                    "lane": 11,
+                    "athlete": "Nadia Battocletti",
+                    "country": "ITA",
+                    "timeSeconds": 1843.35
+                },
+                {
+                    "lane": 12,
+                    "athlete": "Karissa Schweizer",
+                    "country": "USA",
+                    "timeSeconds": 1851.99
+                },
+                {
+                    "lane": 13,
+                    "athlete": "Gudaf Tsegay",
+                    "country": "ETH",
+                    "timeSeconds": 1845.21
+                },
+                {
+                    "lane": 14,
+                    "athlete": "Rino Goshima",
+                    "country": "JPN",
+                    "timeSeconds": 1889.48
+                },
+                {
+                    "lane": 15,
+                    "athlete": "Parker Valby",
+                    "country": "USA",
+                    "timeSeconds": 1859.28
+                },
+                {
+                    "lane": 16,
+                    "athlete": "Fotyen Tesfay",
+                    "country": "ETH",
+                    "timeSeconds": 1846.93
+                },
+                {
+                    "lane": 17,
+                    "athlete": "Lilian Kasait Rengeruk",
+                    "country": "KEN",
+                    "timeSeconds": 1845.04
+                },
+                {
+                    "lane": 18,
+                    "athlete": "Sifan Hassan",
+                    "country": "NED",
+                    "timeSeconds": 1844.12
+                },
+                {
+                    "lane": 19,
+                    "athlete": "Eilish McColgan",
+                    "country": "GBR",
+                    "timeSeconds": 1880.51
+                },
+                {
+                    "lane": 20,
+                    "athlete": "Rahel Daniel",
+                    "country": "ERI",
+                    "timeSeconds": 1000000.0
+                },
+                {
+                    "lane": 21,
+                    "athlete": "Francine Niyomukunzi",
+                    "country": "BDI",
+                    "timeSeconds": 1877.02
+                },
+                {
+                    "lane": 22,
+                    "athlete": "Lauren Ryan",
+                    "country": "AUS",
+                    "timeSeconds": 1873.25
+                },
+                {
+                    "lane": 23,
+                    "athlete": "Haruka Kokai",
+                    "country": "JPN",
+                    "timeSeconds": 1904.03
+                },
+                {
+                    "lane": 24,
+                    "athlete": "Beatrice Chebet",
+                    "country": "KEN",
+                    "timeSeconds": 1843.25
+                },
+                {
+                    "lane": 25,
+                    "athlete": "Diane van Es",
+                    "country": "NED",
+                    "timeSeconds": 1885.51
+                },
+                {
+                    "lane": 26,
+                    "athlete": "Luke",
+                    "country": "AUS",
+                    "timeSeconds": 2955.0
+                }
+            ]
+        },
+        {
+            "event": "Women's 100m Hurdles",
+            "sport": "Athletics",
+            "distance_m": 100,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 2,
+                    "athlete": "Cyr\u00e9na Samba-Mayela",
+                    "country": "FRA",
+                    "timeSeconds": 12.34
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Nadine Visser",
+                    "country": "NED",
+                    "timeSeconds": 12.425
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Grace Stark",
+                    "country": "USA",
+                    "timeSeconds": 12.428
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Masai Russell",
+                    "country": "USA",
+                    "timeSeconds": 12.33
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Alaysha Johnson",
+                    "country": "USA",
+                    "timeSeconds": 12.93
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Jasmine Camacho-Quinn",
+                    "country": "PUR",
+                    "timeSeconds": 12.36
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Devynne Charlton",
+                    "country": "BAH",
+                    "timeSeconds": 12.56
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Ackera Nugent",
+                    "country": "JAM",
+                    "timeSeconds": 1000000.0
+                }
+            ]
+        },
+        {
+            "event": "Women's 400m Hurdles",
+            "sport": "Athletics",
+            "distance_m": 400,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 2,
+                    "athlete": "Shiann Salmon",
+                    "country": "JAM",
+                    "timeSeconds": 53.29
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Savannah Sutherland",
+                    "country": "CAN",
+                    "timeSeconds": 53.88
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Louise Maraval",
+                    "country": "FRA",
+                    "timeSeconds": 54.53
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Sydney McLaughlin-Levrone",
+                    "country": "USA",
+                    "timeSeconds": 50.37
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Femke Bol",
+                    "country": "NED",
+                    "timeSeconds": 52.15
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Anna Cockrell",
+                    "country": "USA",
+                    "timeSeconds": 51.87
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Rushell Clayton",
+                    "country": "JAM",
+                    "timeSeconds": 52.68
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Jasmine Jones",
+                    "country": "USA",
+                    "timeSeconds": 52.29
+                }
+            ]
+        },
+        {
+            "event": "Women's 3000m Steeplechase",
+            "sport": "Athletics",
+            "distance_m": 3000,
+            "laps": 1,
+            "results": [
+                {
+                    "lane": 1,
+                    "athlete": "Winfred Yavi",
+                    "country": "BRN",
+                    "timeSeconds": 532.76
+                },
+                {
+                    "lane": 2,
+                    "athlete": "Courtney Wayment",
+                    "country": "USA",
+                    "timeSeconds": 553.6
+                },
+                {
+                    "lane": 3,
+                    "athlete": "Elizabeth Bird",
+                    "country": "GBR",
+                    "timeSeconds": 544.35
+                },
+                {
+                    "lane": 4,
+                    "athlete": "Sembo Almayew",
+                    "country": "ETH",
+                    "timeSeconds": 540.83
+                },
+                {
+                    "lane": 5,
+                    "athlete": "Faith Cherotich",
+                    "country": "KEN",
+                    "timeSeconds": 535.15
+                },
+                {
+                    "lane": 6,
+                    "athlete": "Lea Meyer",
+                    "country": "GER",
+                    "timeSeconds": 549.59
+                },
+                {
+                    "lane": 7,
+                    "athlete": "Norah Jeruto",
+                    "country": "KAZ",
+                    "timeSeconds": 548.97
+                },
+                {
+                    "lane": 8,
+                    "athlete": "Peruth Chemutai",
+                    "country": "UGA",
+                    "timeSeconds": 533.34
+                },
+                {
+                    "lane": 9,
+                    "athlete": "Irene S\u00e1nchez-Escribano",
+                    "country": "ESP",
+                    "timeSeconds": 550.43
+                },
+                {
+                    "lane": 10,
+                    "athlete": "Beatrice Chepkoech",
+                    "country": "KEN",
+                    "timeSeconds": 544.24
+                },
+                {
+                    "lane": 11,
+                    "athlete": "Alicja Konieczek",
+                    "country": "POL",
+                    "timeSeconds": 561.31
+                },
+                {
+                    "lane": 12,
+                    "athlete": "Alice Finot",
+                    "country": "FRA",
+                    "timeSeconds": 538.67
+                },
+                {
+                    "lane": 13,
+                    "athlete": "Gesa Felicitas Krause",
+                    "country": "GER",
+                    "timeSeconds": 566.96
+                },
+                {
+                    "lane": 14,
+                    "athlete": "Lomi Muleta",
+                    "country": "ETH",
+                    "timeSeconds": 546.07
+                },
+                {
+                    "lane": 15,
+                    "athlete": "Valerie Constien",
+                    "country": "USA",
+                    "timeSeconds": 574.08
+                }
+            ]
+        }
+    ]
+}
