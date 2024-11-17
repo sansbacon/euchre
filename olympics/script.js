@@ -23,7 +23,7 @@ const timeLabelLongest = parseFloat(style.getPropertyValue('--time-label-longest
  * @param {list} events - List of events in json format
  */
 function populateNavbar(events) {
-  const navbar = document.getElementById('navbar');
+  const navbar = document.getElementById('nav-panel');
   let lastSport = ''; // initialize
 
   events.forEach(event => {

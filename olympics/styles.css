@@ -42,7 +42,7 @@ body {
   font-family: var(--default-font);
 }
 
-.nav-panel {
+#nav-panel {
   width: var(--nav-panel-width);
   height: 75%;
   margin-left: var(--padding-horizontal);
@@ -54,7 +54,6 @@ body {
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2); 
   border-radius: 15px;
 }
-
 
 .nav-item {
   padding-top: 5px;
@@ -83,7 +82,7 @@ body {
   padding-top: 0; /* Remove top padding for the first heading */
 }
 
-.arena-container {
+#arena-container {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -94,7 +93,7 @@ body {
   width: var(--arena-width);
 }
 
-.arena {
+#arena {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -105,11 +104,11 @@ body {
   background-color: var(--arena-default-color);
 }
 
-.arena[arena-sport = "Swimming"] {
+#arena[arena-sport = "Swimming"] {
   background-color: var(--arena-swimming-color);
 }
 
-.arena[arena-sport = "Athletics"] {
+#arena[arena-sport = "Athletics"] {
   background-color: var(--arena-athletics-color);
 }
 
@@ -174,7 +173,7 @@ body {
   background-color: var(--medal-3-color);
 }
 
-.lap-marker {
+#lap-marker {
   color: grey;
   font-size: 18px;
   font-family: var(--lap-marker-font);
@@ -193,7 +192,7 @@ body {
   width: 100%;
 }
 
-.title-bar {
+#title-bar {
   width: 100vw; /* Full width of the viewport */
   background: var(--title-bar-color);
   color: white;
@@ -210,7 +209,7 @@ body {
   z-index: 1000; /* High z-index to keep it above other elements */
 }
 
-.title-bar h1 {
+#title-bar h1 {
   margin: 0;
   padding: 0;
 }
