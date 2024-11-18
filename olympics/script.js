@@ -11,12 +11,18 @@ fetch('./data/events.json')
     document.getElementById('arena').textContent = 'Failed to load event data. Please try again later.';
  });
 
- // Precomputed styles
+// Precomputed styles
+const mediaQuery = window.matchMedia("screen and (max-width: 768px)");
+const isMobile = mediaQuery.matches;
 const style = getComputedStyle(document.documentElement);
 const defaultArenaHeight = parseInt(style.getPropertyValue('--arena-default-height'));
-const minLaneHeight = parseInt(style.getPropertyValue('--lane-min-height'));
 const paddingHorizontal = style.getPropertyValue('--padding-horizontal');
-const timeLabelLongest = parseFloat(style.getPropertyValue('--time-label-longest'));
+const timeLabelLongest = parseInt(style.getPropertyValue('--time-label-longest'));
+const minLaneHeight = parseInt(
+  isMobile
+  ? style.getPropertyValue('--lane-min-height-mobile')
+  : style.getPropertyValue('--lane-min-height-desktop')
+)
 
 /**
  * Populates the navbar with the event labels
@@ -153,25 +159,47 @@ function setDynamicPositions(event) {
   const maxLaneLabelWidth = calculateMaxLaneLabelWidth() + 'px';
   const lanes = document.querySelectorAll('.lane');
   const totalLaps = event.laps;
+  const finishOnRight = eventFinishesOnRight(totalLaps);
 
   lanes.forEach(lane => {
     // Dot position
     dot = lane.querySelector('.dot');
-    dot.style.left = `calc(${maxLaneLabelWidth} + ${paddingHorizontal})`;
+    if (isMobile) {
+      // Mobile
+      dot.style.left = paddingHorizontal;
+    } else {
+      // Desktop
+      dot.style.left = `calc(${maxLaneLabelWidth} + ${paddingHorizontal})`;
+    }
     dotLeft = getComputedStyle(dot).left;
     dotWidth = getComputedStyle(dot).width;
 
     // Total time label position
     totalTimeLabel = lane.querySelector('.total-time-label');
 
-    if (eventFinishesOnRight(totalLaps)) {
-      totalTimeLabel.style.left = 'auto';
-      totalTimeLabel.style.right = `calc(${dotWidth} + 2 * ${paddingHorizontal})`
+    if (isMobile) {
+      // Mobile
+      if (finishOnRight) {
+        // Mobile, finishes on right
+        totalTimeLabel.style.left = paddingHorizontal;
+        totalTimeLabel.style.right = 'auto';
+      } else {
+        // Mobile, finishes on left
+        totalTimeLabel.style.left = `calc(${dotWidth} + 2 * ${paddingHorizontal})`;
+        totalTimeLabel.style.right = 'auto';
+      }
     } else {
-      totalTimeLabel.style.left = `calc(${dotLeft} + ${dotWidth} + ${paddingHorizontal})`;
-      totalTimeLabel.style.right = 'auto';
+      // Desktop
+      if (finishOnRight) {
+        // Desktop, finishes on right
+        totalTimeLabel.style.left = 'auto';
+        totalTimeLabel.style.right = `calc(${dotWidth} + 2 * ${paddingHorizontal})`;
+      } else {
+        // Desktop, finishes on left
+        totalTimeLabel.style.left = `calc(${dotLeft} + ${dotWidth} + ${paddingHorizontal})`;
+        totalTimeLabel.style.right = 'auto';
+      }
     }
-
   });
 }
 
@@ -268,6 +296,7 @@ function addMedalIfWon(totalTimeLabel, placing, totalLaps) {
 
   // Determine whether the athlete wins a medal
   const isMedalWinner = placingAbbrevs.hasOwnProperty(placing);
+  const finishOnRight = eventFinishesOnRight(totalLaps);
 
   if (isMedalWinner) {
     // Create the medal
@@ -277,10 +306,16 @@ function addMedalIfWon(totalTimeLabel, placing, totalLaps) {
     medal.setAttribute('medal-placing', placing);
 
     // Set the medal's position
-    if (eventFinishesOnRight(totalLaps)) {
+    if (isMobile) {
+      // Mobile
+      medal.style.left = timeLabelLongest + 'px';
+      medal.style.right = 'auto'; // Reset right
+    } else if (finishOnRight) {
+      // Desktop, finish on right
       medal.style.right = timeLabelLongest + 'px';
       medal.style.left = 'auto'; // Reset left
     } else {
+      // Desktop, finish on left
       medal.style.left = timeLabelLongest + 'px';
       medal.style.right = 'auto'; // Reset right
     }
@@ -397,7 +432,7 @@ function animateAllDots(event, playbackSpeedFactor) {
  */
 function simulateEvent(event) {
   // Set the playback speed factor
-  const playbackSpeedFactor = 20;
+  const playbackSpeedFactor = 200;
 
   // Simulate the event
   determinePlacings(event.results);

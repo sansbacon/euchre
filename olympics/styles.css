@@ -6,9 +6,9 @@
   --dot-color: #f2f2f2;
   --dot-size: 20px;
   --event-title-font: "Bruno Ace";
-  --lane-min-height: 30px;
+  --lane-min-height-desktop: 30px;
   --lane-label-width: 150px;
-  --lanel-label-font: "Roboto Mono";
+  --lane-label-font: "Roboto Mono";
   --lap-marker-font: "Roboto";
   --page-background-color: white;
   --nav-panel-color: #f2f2f2;
@@ -30,6 +30,13 @@
   --medal-1-color: #d4af37;
   --medal-2-color: #838996;
   --medal-3-color: #A97142;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --lane-min-height-mobile: 60px;
+    --lane-row-2-margin: 30px;
+  }
 }
 
 body {
@@ -122,12 +129,18 @@ body {
   border-bottom: 1px solid white;
 }
 
+@media screen and (max-width: 768px) {
+  .lane {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .lane-label {
   padding-left: var(--padding-horizontal);
   color: var(--arena-text-color);
   font-weight: bold;
-  font-family: var(--lanel-label-font);
-  text-align: center;
+  font-family: var(--lane-label-font);
 }
 
 .dot {
@@ -140,11 +153,23 @@ body {
   box-shadow: 0px 2px 6px 3px rgba(0, 0, 0, 0.3);
 }
 
+@media screen and (max-width: 768px) {
+  .dot {
+    margin-top: var(--lane-row-2-margin);
+  }
+}
+
 .total-time-label {
   position: absolute;
   color: var(--arena-text-color);
   font-weight: bold;
   font-family: var(--time-label-font);
+}
+
+@media screen and (max-width: 768px) {
+  .total-time-label {
+    margin-top: var(--lane-row-2-margin);
+  }
 }
 
 .medal {
