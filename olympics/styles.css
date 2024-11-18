@@ -6,6 +6,7 @@
   --dot-color: #f2f2f2;
   --dot-size: 20px;
   --event-title-font: "Bruno Ace";
+  --event-title-font-size: 1.5em;
   --lane-min-height-desktop: 30px;
   --lane-label-width: 150px;
   --lane-label-font: "Roboto Mono";
@@ -27,6 +28,7 @@
   --time-label-longest: 100px;
   --time-label-font: "Roboto Mono";
   --title-bar-color: #607d8b;
+  --title-font-size: 1em;
   --medal-1-color: #d4af37;
   --medal-2-color: #838996;
   --medal-3-color: #A97142;
@@ -34,8 +36,10 @@
 
 @media screen and (max-width: 768px) {
   :root {
+    --event-title-font-size: 1.3em;
     --lane-min-height-mobile: 60px;
     --lane-row-2-margin: 30px;
+    --title-font-size: 0.6em;
   }
 }
 
@@ -210,7 +214,7 @@ body {
 }
 
 #event-title {
-  font-size: 1.5em;
+  font-size: var(--event-title-font-size);
   font-family: var(--event-title-font);
   text-align: center;
   margin-bottom: var(--padding-horizontal);
@@ -222,7 +226,7 @@ body {
   background: var(--title-bar-color);
   color: white;
   font-family: var(--event-title-font);
-  font-size: 1em;
+  font-size: var(--title-font-size);
   text-align: center;
   padding: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
