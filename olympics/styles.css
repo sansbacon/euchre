@@ -3,6 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno Ace&display=swap');
 
 :root {
+  --arena-athletics-color: #A74C3A;
+  --arena-swimming-color: #2BAED0;
+  --arena-default-color: grey;
+  --arena-default-height: 400px;
+  --arena-text-color: white;
+  --arena-font-size: 1em;
+  --arena-width: 1000px;
   --body-margin-top: 120px;
   --dot-color: #f2f2f2;
   --dot-size: 20px;
@@ -12,6 +19,11 @@
   --lane-label-width: 150px;
   --lane-label-font: "Roboto Mono";
   --lap-marker-font: "Roboto";
+  --medal-font-size: 1em;
+  --medal-size: 20px;
+  --medal-1-color: #d4af37;
+  --medal-2-color: #838996;
+  --medal-3-color: #A97142;
   --nav-panel-color: #f2f2f2;
   --nav-panel-hover-color: #e0e0e0;
   --nav-panel-text-color: black;
@@ -20,27 +32,19 @@
   --nav-panel-width: 300px;
   --padding-horizontal: 20px;
   --page-background-color: white;
-  --arena-athletics-color: #A74C3A;
-  --arena-swimming-color: #2BAED0;
-  --arena-default-color: grey;
-  --arena-default-height: 400px;
-  --arena-text-color: white;
-  --arena-width: 1000px;
   --time-label-longest: 100px;
   --time-label-font: "Roboto Mono";
   --title-bar-color: #607d8b;
   --title-font-size: 1em;
-  --medal-1-color: #d4af37;
-  --medal-2-color: #838996;
-  --medal-3-color: #A97142;
 }
 
 @media screen and (max-width: 768px) {
   :root {
+    --arena-font-size: 0.8em;
     --body-margin-top: 60px;
-    --event-title-font-size: 1.3em;
-    --lane-min-height-mobile: 60px;
-    --lane-row-2-margin: 30px;
+    --dot-size: 1em;
+    --lane-row-2-margin: 1.4em;
+    --lane-min-height-mobile: calc(var(--lane-row-2-margin) + var(--dot-size));
     --title-font-size: 0.6em;
   }
 }
@@ -167,6 +171,7 @@ body {
   color: var(--arena-text-color);
   font-weight: bold;
   font-family: var(--lane-label-font);
+  font-size: var(--arena-font-size);
 }
 
 .dot {
@@ -190,22 +195,23 @@ body {
   color: var(--arena-text-color);
   font-weight: bold;
   font-family: var(--time-label-font);
+  font-size: var(--arena-font-size);
 }
 
 @media screen and (max-width: 768px) {
   .total-time-label {
-    margin-top: var(--lane-row-2-margin);
+    margin-top: calc(var(--lane-row-2-margin) + var(--dot-size) - var(--arena-font-size));
   }
 }
 
 .medal {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: var(--medal-size);
+  height: var(--medal-size);
   border-radius: 50%;
   color: white;
   font-weight: bold;
-  font-size: 14px;
+  font-size: var(--medal-font-size);
   text-align: center;
   line-height: 20px;
   border: 0.5px solid white;
