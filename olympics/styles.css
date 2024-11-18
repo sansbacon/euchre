@@ -104,21 +104,17 @@ body {
 #nav-selector {
   display: none;
   margin: 0;
-  padding: var(--padding-horizontal);
-  width: 100%;
+  margin: var(--padding-horizontal);
   text-align: center;
+  font-family: var(--nav-panel-body-font);
+  font-size: 1em;
+  
 }
 
 @media screen and (max-width: 768px) {
   #nav-selector {
     display: inline;
   }
-}
-
-#event-selector {
-  font-family: var(--nav-panel-body-font);
-  font-size: 1em;
-  
 }
 
 #arena-container {
@@ -245,6 +241,12 @@ body {
   text-align: center;
   margin-bottom: var(--padding-horizontal);
   width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  #event-title {
+    display: none;
+  }
 }
 
 #title-bar {

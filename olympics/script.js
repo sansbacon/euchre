@@ -25,11 +25,12 @@ const minLaneHeight = parseInt(
 )
 
 /**
- * Populates the navbar with the event labels
+ * Populates the navigation menus with the event labels
  * @param {list} events - List of events in json format
  */
 function populateNavbar(events) {
-  const navbar = document.getElementById('nav-panel');
+  const navPanel = document.getElementById('nav-panel');
+  const navSelector = document.getElementById('nav-selector');
   let lastSport = ''; // initialize
 
   events.forEach(event => {
@@ -38,19 +39,38 @@ function populateNavbar(events) {
 
     // Add a sport subheading if it is different to the previous value
     if (eventSport != lastSport) {
+      // Navigation panel
       const sportHeading = document.createElement('div');
       sportHeading.className = 'nav-heading';
       sportHeading.textContent = eventSport;
-      navbar.appendChild(sportHeading);
-      lastSport = eventSport; // update
+      navPanel.appendChild(sportHeading);
+
+      // Navigation selector
+      const sportOptGroup = document.createElement('optgroup');
+      sportOptGroup.label = eventSport;
+      navSelector.appendChild(sportOptGroup);
+
+      // Update the latest sport
+      lastSport = eventSport;
     }
 
     // Add the event button
+    // Navigation panel
     const eventButton = document.createElement('div');
     eventButton.textContent = event.event;
     eventButton.className = 'nav-item';
     eventButton.onclick = () => simulateEvent(event);
-    navbar.appendChild(eventButton);
+    navPanel.appendChild(eventButton);
+
+    // Navigation selector
+    const selectOption = document.createElement('option');
+    selectOption.value = event.event;
+    selectOption.textContent = event.event;
+    selectOption.className = 'select.item';
+    selectOption.onclick = () => simulateEvent(event);
+    navSelector.append(selectOption);
+    
+
   });
 }
 
