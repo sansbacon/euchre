@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno Ace&display=swap');
 
 :root {
+  --body-margin-top: 120px;
   --dot-color: #f2f2f2;
   --dot-size: 20px;
   --event-title-font: "Bruno Ace";
@@ -11,7 +12,6 @@
   --lane-label-width: 150px;
   --lane-label-font: "Roboto Mono";
   --lap-marker-font: "Roboto";
-  --page-background-color: white;
   --nav-panel-color: #f2f2f2;
   --nav-panel-hover-color: #e0e0e0;
   --nav-panel-text-color: black;
@@ -19,6 +19,7 @@
   --nav-panel-heading-font: "Bruno Ace";
   --nav-panel-width: 300px;
   --padding-horizontal: 20px;
+  --page-background-color: white;
   --arena-athletics-color: #A74C3A;
   --arena-swimming-color: #2BAED0;
   --arena-default-color: grey;
@@ -36,6 +37,7 @@
 
 @media screen and (max-width: 768px) {
   :root {
+    --body-margin-top: 60px;
     --event-title-font-size: 1.3em;
     --lane-min-height-mobile: 60px;
     --lane-row-2-margin: 30px;
@@ -45,10 +47,10 @@
 
 body {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
   height: 100vh;
   margin: 0;
-  margin-top: 120px;
+  margin-top: var(--body-margin-top);
   background-color: var(--page-background-color);
   font-family: var(--default-font);
 }
@@ -64,6 +66,12 @@ body {
   overflow-y: auto;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2); 
   border-radius: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  #nav-panel {
+    display: none;
+  }
 }
 
 .nav-item {
@@ -93,12 +101,30 @@ body {
   padding-top: 0; /* Remove top padding for the first heading */
 }
 
+#nav-selector {
+  display: none;
+  margin: 0;
+  padding: var(--padding-horizontal);
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  #nav-selector {
+    display: inline;
+  }
+}
+
+#event-selector {
+  font-family: var(--nav-panel-body-font);
+  font-size: 1em;
+  
+}
+
 #arena-container {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
   overflow-y: auto;
   max-height: 100vh;
   width: var(--arena-width);
