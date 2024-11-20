@@ -36,17 +36,19 @@
   --time-label-font: "Roboto Mono";
   --title-bar-color: #607d8b;
   --title-font-size: 1em;
+  --title-padding: 15px;
 }
 
 @media screen and (max-width: 768px) {
   :root {
     --arena-font-size: 0.8em;
-    --body-margin-top: 60px;
+    --body-margin-top: 40px;
     --dot-size: 16px;
     --lane-label-margin-top: 5px;
     --lane-row-2-margin: 25px;
     --lane-min-height-mobile: 55px; /* calc(--dot-size + --lane-row-2-margin) */
     --title-font-size: 0.6em;
+    --title-padding: 5px;
   }
 }
 
@@ -269,7 +271,7 @@ body {
   font-family: var(--event-title-font);
   font-size: var(--title-font-size);
   text-align: center;
-  padding: 15px;
+  padding: var(--title-padding);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   letter-spacing: 1px;
   text-transform: uppercase;
