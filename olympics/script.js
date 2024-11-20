@@ -452,7 +452,7 @@ function animateAllDots(event, playbackSpeedFactor) {
  */
 function simulateEvent(event) {
   // Set the playback speed factor
-  const playbackSpeedFactor = 200;
+  const playbackSpeedFactor = 20;
 
   // Simulate the event
   determinePlacings(event.results);
