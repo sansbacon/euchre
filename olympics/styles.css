@@ -9,7 +9,7 @@
   --arena-default-height: 400px;
   --arena-text-color: white;
   --arena-font-size: 1em;
-  --arena-width: 1000px;
+  --arena-width: 70vw;
   --body-margin-top: 120px;
   --dot-color: #f2f2f2;
   --dot-size: 20px;
@@ -29,7 +29,7 @@
   --nav-panel-text-color: black;
   --nav-panel-body-font: "Roboto";
   --nav-panel-heading-font: "Bruno Ace";
-  --nav-panel-width: 300px;
+  --nav-panel-width: 20vw;
   --padding-horizontal: 20px;
   --page-background-color: white;
   --time-label-longest: 100px;
@@ -42,11 +42,20 @@
 @media screen and (max-width: 768px) {
   :root {
     --arena-font-size: 0.8em;
+    --arena-width: 90vw;
     --body-margin-top: 40px;
     --dot-size: 16px;
     --lane-label-margin-top: 5px;
     --lane-row-2-margin: 25px;
-    --lane-min-height-mobile: 55px; /* calc(--dot-size + --lane-row-2-margin) */
+    --lane-min-height-mobile: 55px;
+    --title-font-size: 0.6em;
+    --title-padding: 5px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --body-margin-top: 60px;
     --title-font-size: 0.6em;
     --title-padding: 5px;
   }
@@ -137,7 +146,7 @@ body {
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: scroll;
   width: 100%;
   height: var(--arena-default-height);
   border: none;
