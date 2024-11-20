@@ -42,9 +42,10 @@
   :root {
     --arena-font-size: 0.8em;
     --body-margin-top: 60px;
-    --dot-size: 1em;
-    --lane-row-2-margin: 1.4em;
-    --lane-min-height-mobile: calc(var(--lane-row-2-margin) + var(--dot-size));
+    --dot-size: 16px;
+    --lane-label-margin-top: 5px;
+    --lane-row-2-margin: 25px;
+    --lane-min-height-mobile: 55px; /* calc(--dot-size + --lane-row-2-margin) */
     --title-font-size: 0.6em;
   }
 }
@@ -174,6 +175,12 @@ body {
   font-size: var(--arena-font-size);
 }
 
+@media screen and (max-width: 768px) {
+  .lane-label {
+    margin-top: var(--lane-label-margin-top);
+  }
+}
+
 .dot {
   position: absolute;
   width: var(--dot-size);
@@ -200,7 +207,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .total-time-label {
-    margin-top: calc(var(--lane-row-2-margin) + var(--dot-size) - var(--arena-font-size));
+    margin-top: var(--lane-row-2-margin);
   }
 }
 

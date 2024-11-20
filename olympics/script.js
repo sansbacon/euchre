@@ -22,7 +22,7 @@ const minLaneHeight = parseInt(
   isMobile
   ? style.getPropertyValue('--lane-min-height-mobile')
   : style.getPropertyValue('--lane-min-height-desktop')
-)
+);
 
 /**
  * Populates the navigation menus with the event labels
