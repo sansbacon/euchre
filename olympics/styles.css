@@ -3,46 +3,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno Ace&display=swap');
 
 :root {
-  --dot-color: #f2f2f2;
-  --dot-size: 20px;
-  --event-title-font: "Bruno Ace";
-  --lane-min-height: 30px;
-  --lane-label-width: 150px;
-  --lanel-label-font: "Roboto Mono";
-  --lap-marker-font: "Roboto";
-  --page-background-color: white;
-  --nav-panel-color: #f2f2f2;
-  --nav-panel-hover-color: #e0e0e0;
-  --nav-panel-text-color: black;
-  --nav-panel-body-font: "Roboto";
-  --nav-panel-heading-font: "Bruno Ace";
-  --nav-panel-width: 300px;
-  --padding-horizontal: 20px;
   --arena-athletics-color: #A74C3A;
   --arena-swimming-color: #2BAED0;
   --arena-default-color: grey;
   --arena-default-height: 400px;
   --arena-text-color: white;
-  --arena-width: 1000px;
-  --time-label-longest: 100px;
-  --time-label-font: "Roboto Mono";
-  --title-bar-color: #607d8b;
+  --arena-font-size: 1em;
+  --arena-width: 70vw;
+  --body-margin-top: 120px;
+  --dot-color: #f2f2f2;
+  --dot-size: 20px;
+  --event-title-font: "Bruno Ace";
+  --event-title-font-size: 1.5em;
+  --lane-min-height-desktop: 30px;
+  --lane-label-width: 150px;
+  --lane-label-font: "Roboto Mono";
+  --lap-marker-font: "Roboto";
+  --medal-font-size: 1em;
+  --medal-size: 20px;
   --medal-1-color: #d4af37;
   --medal-2-color: #838996;
   --medal-3-color: #A97142;
+  --nav-panel-color: #f2f2f2;
+  --nav-panel-hover-color: #e0e0e0;
+  --nav-panel-text-color: black;
+  --nav-panel-body-font: "Roboto";
+  --nav-panel-heading-font: "Bruno Ace";
+  --nav-panel-width: 20vw;
+  --padding-horizontal: 20px;
+  --page-background-color: white;
+  --time-label-longest: 100px;
+  --time-label-font: "Roboto Mono";
+  --title-bar-color: #607d8b;
+  --title-font-size: 1em;
+  --title-padding: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --arena-font-size: 0.8em;
+    --arena-width: 90vw;
+    --body-margin-top: 40px;
+    --dot-size: 16px;
+    --lane-label-margin-top: 5px;
+    --lane-row-2-margin: 25px;
+    --lane-min-height-mobile: 55px;
+    --title-font-size: 0.6em;
+    --title-padding: 5px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --body-margin-top: 60px;
+    --title-font-size: 0.6em;
+    --title-padding: 5px;
+  }
 }
 
 body {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
   height: 100vh;
   margin: 0;
-  margin-top: 120px;
+  margin-top: var(--body-margin-top);
   background-color: var(--page-background-color);
   font-family: var(--default-font);
 }
 
-.nav-panel {
+#nav-panel {
   width: var(--nav-panel-width);
   height: 75%;
   margin-left: var(--padding-horizontal);
@@ -55,6 +84,11 @@ body {
   border-radius: 15px;
 }
 
+@media screen and (max-width: 768px) {
+  #nav-panel {
+    display: none;
+  }
+}
 
 .nav-item {
   padding-top: 5px;
@@ -83,33 +117,47 @@ body {
   padding-top: 0; /* Remove top padding for the first heading */
 }
 
-.arena-container {
+#nav-selector {
+  display: none;
+  margin: 0;
+  margin: var(--padding-horizontal);
+  text-align: center;
+  font-family: var(--nav-panel-body-font);
+  font-size: 1em;
+  
+}
+
+@media screen and (max-width: 768px) {
+  #nav-selector {
+    display: inline;
+  }
+}
+
+#arena-container {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
   overflow-y: auto;
   max-height: 100vh;
   width: var(--arena-width);
 }
 
-.arena {
+#arena {
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-y: scroll;
   width: 100%;
   height: var(--arena-default-height);
   border: none;
   background-color: var(--arena-default-color);
 }
 
-.arena[arena-sport = "Swimming"] {
+#arena[arena-sport = "Swimming"] {
   background-color: var(--arena-swimming-color);
 }
 
-.arena[arena-sport = "Athletics"] {
+#arena[arena-sport = "Athletics"] {
   background-color: var(--arena-athletics-color);
 }
 
@@ -123,12 +171,25 @@ body {
   border-bottom: 1px solid white;
 }
 
+@media screen and (max-width: 768px) {
+  .lane {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .lane-label {
   padding-left: var(--padding-horizontal);
   color: var(--arena-text-color);
   font-weight: bold;
-  font-family: var(--lanel-label-font);
-  text-align: center;
+  font-family: var(--lane-label-font);
+  font-size: var(--arena-font-size);
+}
+
+@media screen and (max-width: 768px) {
+  .lane-label {
+    margin-top: var(--lane-label-margin-top);
+  }
 }
 
 .dot {
@@ -141,21 +202,34 @@ body {
   box-shadow: 0px 2px 6px 3px rgba(0, 0, 0, 0.3);
 }
 
+@media screen and (max-width: 768px) {
+  .dot {
+    margin-top: var(--lane-row-2-margin);
+  }
+}
+
 .total-time-label {
   position: absolute;
   color: var(--arena-text-color);
   font-weight: bold;
   font-family: var(--time-label-font);
+  font-size: var(--arena-font-size);
+}
+
+@media screen and (max-width: 768px) {
+  .total-time-label {
+    margin-top: var(--lane-row-2-margin);
+  }
 }
 
 .medal {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: var(--medal-size);
+  height: var(--medal-size);
   border-radius: 50%;
   color: white;
   font-weight: bold;
-  font-size: 14px;
+  font-size: var(--medal-font-size);
   text-align: center;
   line-height: 20px;
   border: 0.5px solid white;
@@ -174,7 +248,7 @@ body {
   background-color: var(--medal-3-color);
 }
 
-.lap-marker {
+#lap-marker {
   color: grey;
   font-size: 18px;
   font-family: var(--lap-marker-font);
@@ -186,21 +260,27 @@ body {
 }
 
 #event-title {
-  font-size: 1.5em;
+  font-size: var(--event-title-font-size);
   font-family: var(--event-title-font);
   text-align: center;
   margin-bottom: var(--padding-horizontal);
   width: 100%;
 }
 
-.title-bar {
+@media screen and (max-width: 768px) {
+  #event-title {
+    display: none;
+  }
+}
+
+#title-bar {
   width: 100vw; /* Full width of the viewport */
   background: var(--title-bar-color);
   color: white;
   font-family: var(--event-title-font);
-  font-size: 1em;
+  font-size: var(--title-font-size);
   text-align: center;
-  padding: 15px;
+  padding: var(--title-padding);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -210,7 +290,7 @@ body {
   z-index: 1000; /* High z-index to keep it above other elements */
 }
 
-.title-bar h1 {
+#title-bar h1 {
   margin: 0;
   padding: 0;
 }

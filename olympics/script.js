@@ -11,19 +11,26 @@ fetch('./data/events.json')
     document.getElementById('arena').textContent = 'Failed to load event data. Please try again later.';
  });
 
- // Precomputed styles
+// Precomputed styles
+const mediaQuery = window.matchMedia("screen and (max-width: 768px)");
+const isMobile = mediaQuery.matches;
 const style = getComputedStyle(document.documentElement);
 const defaultArenaHeight = parseInt(style.getPropertyValue('--arena-default-height'));
-const minLaneHeight = parseInt(style.getPropertyValue('--lane-min-height'));
 const paddingHorizontal = style.getPropertyValue('--padding-horizontal');
-const timeLabelLongest = parseFloat(style.getPropertyValue('--time-label-longest'));
+const timeLabelLongest = parseInt(style.getPropertyValue('--time-label-longest'));
+const minLaneHeight = parseInt(
+  isMobile
+  ? style.getPropertyValue('--lane-min-height-mobile')
+  : style.getPropertyValue('--lane-min-height-desktop')
+);
 
 /**
- * Populates the navbar with the event labels
+ * Populates the navigation menus with the event labels
  * @param {list} events - List of events in json format
  */
 function populateNavbar(events) {
-  const navbar = document.getElementById('navbar');
+  const navPanel = document.getElementById('nav-panel');
+  const navSelector = document.getElementById('nav-selector');
   let lastSport = ''; // initialize
 
   events.forEach(event => {
@@ -32,19 +39,38 @@ function populateNavbar(events) {
 
     // Add a sport subheading if it is different to the previous value
     if (eventSport != lastSport) {
+      // Navigation panel
       const sportHeading = document.createElement('div');
       sportHeading.className = 'nav-heading';
       sportHeading.textContent = eventSport;
-      navbar.appendChild(sportHeading);
-      lastSport = eventSport; // update
+      navPanel.appendChild(sportHeading);
+
+      // Navigation selector
+      const sportOptGroup = document.createElement('optgroup');
+      sportOptGroup.label = eventSport;
+      navSelector.appendChild(sportOptGroup);
+
+      // Update the latest sport
+      lastSport = eventSport;
     }
 
     // Add the event button
+    // Navigation panel
     const eventButton = document.createElement('div');
     eventButton.textContent = event.event;
     eventButton.className = 'nav-item';
     eventButton.onclick = () => simulateEvent(event);
-    navbar.appendChild(eventButton);
+    navPanel.appendChild(eventButton);
+
+    // Navigation selector
+    const selectOption = document.createElement('option');
+    selectOption.value = event.event;
+    selectOption.textContent = event.event;
+    selectOption.className = 'select.item';
+    selectOption.onclick = () => simulateEvent(event);
+    navSelector.append(selectOption);
+    
+
   });
 }
 
@@ -153,25 +179,47 @@ function setDynamicPositions(event) {
   const maxLaneLabelWidth = calculateMaxLaneLabelWidth() + 'px';
   const lanes = document.querySelectorAll('.lane');
   const totalLaps = event.laps;
+  const finishOnRight = eventFinishesOnRight(totalLaps);
 
   lanes.forEach(lane => {
     // Dot position
     dot = lane.querySelector('.dot');
-    dot.style.left = `calc(${maxLaneLabelWidth} + ${paddingHorizontal})`;
+    if (isMobile) {
+      // Mobile
+      dot.style.left = paddingHorizontal;
+    } else {
+      // Desktop
+      dot.style.left = `calc(${maxLaneLabelWidth} + ${paddingHorizontal})`;
+    }
     dotLeft = getComputedStyle(dot).left;
     dotWidth = getComputedStyle(dot).width;
 
     // Total time label position
     totalTimeLabel = lane.querySelector('.total-time-label');
 
-    if (eventFinishesOnRight(totalLaps)) {
-      totalTimeLabel.style.left = 'auto';
-      totalTimeLabel.style.right = `calc(${dotWidth} + 2 * ${paddingHorizontal})`
+    if (isMobile) {
+      // Mobile
+      if (finishOnRight) {
+        // Mobile, finishes on right
+        totalTimeLabel.style.left = paddingHorizontal;
+        totalTimeLabel.style.right = 'auto';
+      } else {
+        // Mobile, finishes on left
+        totalTimeLabel.style.left = `calc(${dotWidth} + 2 * ${paddingHorizontal})`;
+        totalTimeLabel.style.right = 'auto';
+      }
     } else {
-      totalTimeLabel.style.left = `calc(${dotLeft} + ${dotWidth} + ${paddingHorizontal})`;
-      totalTimeLabel.style.right = 'auto';
+      // Desktop
+      if (finishOnRight) {
+        // Desktop, finishes on right
+        totalTimeLabel.style.left = 'auto';
+        totalTimeLabel.style.right = `calc(${dotWidth} + 2 * ${paddingHorizontal})`;
+      } else {
+        // Desktop, finishes on left
+        totalTimeLabel.style.left = `calc(${dotLeft} + ${dotWidth} + ${paddingHorizontal})`;
+        totalTimeLabel.style.right = 'auto';
+      }
     }
-
   });
 }
 
@@ -268,6 +316,7 @@ function addMedalIfWon(totalTimeLabel, placing, totalLaps) {
 
   // Determine whether the athlete wins a medal
   const isMedalWinner = placingAbbrevs.hasOwnProperty(placing);
+  const finishOnRight = eventFinishesOnRight(totalLaps);
 
   if (isMedalWinner) {
     // Create the medal
@@ -277,10 +326,16 @@ function addMedalIfWon(totalTimeLabel, placing, totalLaps) {
     medal.setAttribute('medal-placing', placing);
 
     // Set the medal's position
-    if (eventFinishesOnRight(totalLaps)) {
+    if (isMobile) {
+      // Mobile
+      medal.style.left = timeLabelLongest + 'px';
+      medal.style.right = 'auto'; // Reset right
+    } else if (finishOnRight) {
+      // Desktop, finish on right
       medal.style.right = timeLabelLongest + 'px';
       medal.style.left = 'auto'; // Reset left
     } else {
+      // Desktop, finish on left
       medal.style.left = timeLabelLongest + 'px';
       medal.style.right = 'auto'; // Reset right
     }
