@@ -84,7 +84,7 @@ def assign_teams(players, teams):
         player.team = teams[team_number]
         player.opp_team = teams[1-team_number]
         
-def create_shuffled_deck(min_rank=7):
+def create_shuffled_deck(min_rank=9):
     """Returns a shuffled deck of cards
     """
 
